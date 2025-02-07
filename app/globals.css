@@ -1,21 +1,92 @@
+/* globals.css */
+
+/* Asegúrate de que Tailwind está aplicando sus clases globales */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Variables CSS para los colores del tema */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-color-light: white;
+  --text-color-light: black;
+  --bg-color-dark: black; /* #121212*/
+  --text-color-dark: white;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Estilos globales de la página */
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-color-light);
+  color: var(--text-color-light);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: 'Montserrat', sans-serif;
 }
+
+/* Modo oscuro - aplicado a nivel de la etiqueta <html> */
+[data-theme='dark'] {
+  --bg-color-light: black; /* #121212*/
+  --text-color-light: white;
+  --bg-color-dark: black;
+  --text-color-dark: white;
+}
+
+[data-theme='light'] {
+  --bg-color-light: white;
+  --text-color-light: black;
+  --bg-color-dark: black;
+  --text-color-dark: white;
+}
+
+/* Aseguramos que el fondo y texto cambien dinámicamente según el tema */
+[data-theme='dark'] body {
+  background-color: var(--bg-color-dark);
+  color: var(--text-color-dark);
+}
+
+[data-theme='light'] body {
+  background-color: var(--bg-color-light);
+  color: var(--text-color-light);
+}
+
+/* Estilos específicos de la barra de navegación */
+nav {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Clases de Tailwind específicas */
+.bg-light {
+  background-color: var(--bg-color-light);
+}
+
+.bg-dark {
+  background-color: var(--bg-color-dark);
+}
+
+.text-light {
+  color: var(--text-color-light);
+}
+
+.text-dark {
+  color: var(--text-color-dark);
+}
+
+/* Efectos para las transiciones */
+a,
+button,
+li {
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Estilos generales para los enlaces */
+a:hover {
+  text-decoration: underline;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:active {
+  opacity: 0.8;
+}
+
+

@@ -1,101 +1,122 @@
 import Image from "next/image";
 
-export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+export default function Home() {
+  const services = [
+  {
+    icon: "/icons/quality.png",
+    text: "Aseguramos que cada producto cumpla con los estándares más altos de calidad y frescura.",
+  },
+  {
+    icon: "/icons/logistics.png",
+    text: "Contamos con una logística optimizada para que tus pedidos lleguen a tiempo.",
+  },
+  {
+    icon: "/icons/products.png",
+    text: "Ofrecemos una amplia gama de productos agrícolas empaquetados.",
+  },
+  {
+    icon: "/icons/support.png",
+    text: "Nuestro equipo estará siempre disponible para resolver tus dudas y necesidades.",
+  },
+];
+  return (
+    <div className="Montserrat">
+      {/* Hero Section */}
+      <section className="flex flex-col md:flex-row items-center justify-between px-8 py-16">
+        {/* Columna Izquierda: Título y Botones */}
+        <div className="md:w-1/2 text-center md:text-left">
+          <h1 className="text-3xl md:text-5xl font-bold italic  mb-6">
+            Flores Sons Farms
+          </h1>
+          <h3 className=" md:text-5x1 font-semibold italic mb-6" >Explora la riqueza de productos que ofrecemos, fruto del esfuerzo y dedicación de nuestros productores en el Valle de Palmarito.</h3>
+          <div className="flex flex-col md:flex-row gap-4">
+            <button className="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">
+              Ver productos
+            </button>
+            <button className="px-6 py-3 border-2 border-green-600 text-green-600 rounded-lg hover:bg-green-600 hover:text-white transition">
+              Contáctanos
+            </button>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+
+        {/* Columna Derecha: Imagen */}
+        <div className="md:w-1/2 flex justify-center mt-8 md:mt-0">
+          <img
+            src="/tuna.png"
+            alt="Vegetales"
+            className="w-80 h-auto object-cover transition-transform transform hover:scale-110 "
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        </div>
+      </section>
+
+      {/* Categorías */}
+      <section className="text-center py-12 bg-green-600">
+        <h2 className="text-xl text-black font-bold">Nuestras Categorías</h2>
+        <div className="gallery grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 py-10">
+        {[ 
+            { src:"/brocoli.png", alt: "Brócoli", name: "BRÓCOLI" },
+            { src: "/repollo.jpeg", alt: "Repollo", name: "REPOLLO" },
+            { src: "/cilantroo.jpeg", alt: "Cilantro", name: "CILANTRO" },
+            { src: "/tunaa.jpeg", alt: "Tuna", name: "TUNA" },
+            { src: "/cebollin.jpeg", alt: "Cebollin", name: "CEBOLLIN" },
+          ].map((item, index) => (
+            <div key={index} className="relative overflow-hidden group rounded-lg animate-fadeInUp">
+              <Image
+                className="mx-auto rounded transition-transform duration-300 group-hover:scale-150"
+                src={item.src}
+                alt={item.alt}
+                width={200}
+                height={200}
+              />
+              <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-white font-bold text-lg group-hover:text-2xl">
+                  {item.name}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      <section className="flex justify-around px-8 py-12">
+        <div>
+          <h3 className="text-xl text-white font-bold">NUESTROS PRODUCTOS</h3>
+          <p className="text-black">Nos especializamos en la venta de legumbres de la mejor calidad.</p>
+        </div>
+        <div>
+          <h3 className="text-xl text-white font-bold">ENTREGAS</h3>
+          <p className="text-black">Ofrecemos servicio de entrega. No dude en comunicarse con nosotros.</p>
+        </div>
+      </section>
+        
+      </section>
+
+     
+
+      {/* Video Placeholder */}
+    <div className="bg-gray-300 text-center py-16 mx-8">Video</div>
+
+      {/* Servicios Exclusivos */}
+      <section className="bg-green-600 text-white py-12 px-6 md:px-16">
+      <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 items-center">
+        {/* Título */}
+        <div className="md:col-span-1">
+          <h2 className="text-3xl font-semibold">Nuestros Servicios<br />Exclusivos</h2>
+        </div>
+
+        {/* Tarjetas */}
+        <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {services.map((service, index) => (
+            <div key={index} className="bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center text-center text-gray-800">
+              <Image src={service.icon} alt="Icono" width={40} height={40} />
+              <p className="mt-4">{service.text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+      
+
     </div>
   );
 }
