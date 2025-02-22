@@ -109,7 +109,7 @@ A lo largo de los años, hemos trabajado incansablemente para mantener los más 
   <div className="absolute md:relative md:w-1/2 inset-0 flex items-center justify-center">
     <div className="bg-white p-8 rounded-3xl shadow-lg max-w-lg text-center">
       <h2 className="text-3xl font-semibold mb-4 tracking-wide font-medium">
-        Nuestra Visión
+        Nuestra Misión
       </h2>
       <p className="text-lg text-gray-700 text-justify">
         Comenzamos como una pequeña empresa familiar, con la misión de ofrecer verduras frescas y saludables, aportando a la comunidad y al entorno. Hoy, nuestra visión se ha expandido con el compromiso de seguir creciendo.

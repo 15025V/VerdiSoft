@@ -1,133 +1,195 @@
 'use client';
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import Image from 'next/image';
+import { Phone, Mail, MapPin } from 'lucide-react';
 
-const Section = ({
-  title,
-  text,
-  imgSrc,
-  reverse,
-  bgColor,
-  titleColor,
-  textColor,
-  textCenter,
-  showLine = true,
-}) => (
-  <div
-    className={`flex flex-col md:flex-row ${
-      reverse ? 'md:flex-row-reverse' : ''
-    } items-center ${bgColor} p-8 md:p-16 rounded-xl max-w-7xl w-full mt-8 md:mt-16 shadow-md transition-all`}
-  >
-    <div className="md:w-1/2 p-4 md:p-6">
-      <h2 className={`text-3xl font-semibold leading-tight mb-4 md:mb-6 ${titleColor} uppercase ${textCenter ? 'text-center' : 'text-left'}`}>
-        {title}
-      </h2>
-      {showLine && <div className="h-1 w-16 bg-green-500 mx-auto mb-4 md:mb-6"></div>}
-      <p className={`mt-4 text-lg ${textColor} ${textCenter ? 'text-center' : 'text-justify'} leading-relaxed`}>
-        {text}
-      </p>
-    </div>
+export default function Page() {
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    message: '',
+  });
 
-    {imgSrc && (
-      <img
-        src={imgSrc}
-        alt={title}
-        className="md:w-1/2 w-full rounded-lg shadow-md transition-all hover:scale-105 duration-300 mx-auto mt-4 md:mt-0"
-      />
-    )}
-  </div>
-);
+  const [errors, setErrors] = useState({});
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  
+  const form = useRef(null);
 
-const ValueCard = ({ title, text }) => (
-  <div className="flex flex-col items-center bg-white p-6 md:p-8 rounded-lg shadow-md transition-all hover:shadow-xl hover:scale-105">
-    <h3 className="text-2xl font-semibold uppercase text-gray-800 mb-4">{title}</h3>
-    <p className="text-center text-base text-gray-600 leading-relaxed">{text}</p>
-  </div>
-);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
 
-export default function CompanyInfo() {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Validation logic
+    const newErrors = {};
+    if (!formData.name) newErrors.name = 'Este campo es obligatorio';
+    if (!formData.phone) newErrors.phone = 'Este campo es obligatorio';
+    if (!formData.email) newErrors.email = 'Este campo es obligatorio';
+    if (!formData.message) newErrors.message = 'Este campo es obligatorio';
+
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      return;
+    }
+
+    setErrors({});
+    setIsSubmitted(true);
+    // You can add form submission logic here (e.g., sending data to an API or email)
+    form.current.reset();
+  };
+
   return (
-    <div className="min-h-screen bg-gray-50 p-4 md:p-8 flex flex-col items-center relative">
-      {/* Video */}
-      <div className="w-full max-w-none mt-8 md:mt-16">
-        <video
-          className="w-full h-auto object-cover rounded-lg shadow-md"
-          controls
-          poster="/ruta-a-la-imagen-placeholder.jpg"
-        >
-          <source src="/Legumbres.mp4" type="video/mp4" />
-          Tu navegador no soporta el elemento de video.
-        </video>
-      </div>
-
-      {/* Publicidad */}
-      <div className="flex justify-center w-full mt-8">
-        <Image src="/1.jpg" alt="Publicidad" width={800} height={200} className="rounded-lg shadow-lg" />
-      </div>
-
-      <Section
-        title="Nuestra Historia"
-        text="Queremos ser reconocidos como la empresa líder en distribución de verduras frescas en el país, distinguiéndonos por la calidad de nuestros productos, la sostenibilidad y nuestro compromiso social."
-        imgSrc="/galeria_2.jpeg"
-        reverse={true}
-        bgColor="bg-[#14532D]"
-        titleColor="text-white center"
-        textColor="text-white"
-        showLine={false}
-      />
-
-      {/* Sección Nuestra Misión */}
-      <div className="flex justify-center items-center w-full mt-8 md:mt-16 relative">
-        <div className="w-full max-w-7xl">
-          <img src="/galeria_2.jpeg" alt="Campo de cultivo" className="w-full h-auto max-h-96 rounded-lg shadow-lg" />
+    <div>
+      {/* Sección principal */}
+      <section
+        className="relative bg-cover bg-center h-screen flex items-center justify-center text-center"
+        style={{
+          backgroundImage: "linear-gradient(to bottom, rgba(31,64,55,0.8), rgba(31,64,55,0.6)), url('/asistente.jpg')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        <div className="text-white px-6">
+          <h1 className="text-8xl font-serif font-bold tracking-wide font-playfair italic text-center">¡Conéctate con flores Sons farms!</h1>
         </div>
+      </section>
 
-        {/* Sección Nuestra Visión */}
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="bg-white p-6 md:p-8 rounded-lg shadow-lg max-w-lg text-center">
-            <h2 className="text-2xl md:text-3xl font-semibold mb-4">Nuestra Visión</h2>
-            <p className="text-gray-700 text-sm md:text-base">
-              Comenzamos como una pequeña empresa familiar, con la misión de ofrecer verduras frescas y saludables, aportando a la comunidad y al entorno. Hoy, nuestra visión se ha expandido con el compromiso de seguir creciendo.
-            </p>
+      {/* Atención al Cliente */}
+      <section className="bg-gray-100 py-12 w-full flex flex-col md:flex-row items-center justify-center px-4">
+        <div className="w-full md:w-1/2 flex justify-center">
+          <Image src="/12.jpeg" alt="Atención al Cliente" width={500} height={500} className="rounded-lg" />
+        </div>
+        <div className="w-full md:w-1/2 text-left px-5">
+          <h2 className="text-3xl font-bold text-left mb-4 text-green-900">ATENCIÓN DE CONTACTO</h2>
+          <p className="text-gray-600 mb-6">Estamos aquí para ayudarte. No dudes en contactarnos si tienes alguna pregunta o necesitas asistencia.</p>
+          <div className="space-y-6">
+            <div className="flex items-center">
+              <Phone className="text-[#014421] w-8 h-8 mr-4" />
+              <div>
+                <h3 className="text-xl font-semibold text-green-900">Teléfono</h3>
+                <p className="text-gray-600">Comunícate con nosotros a los siguientes números.</p>
+              </div>
+            </div>
+            <div className="flex items-center">
+              <Mail className="text-[#014421] w-8 h-8 mr-4" />
+              <div>
+                <h3 className="text-xl font-semibold text-green-900">Correo</h3>
+                <p>Envíanos un correo electrónico para más información.</p>
+              </div>
+            </div>
+            <div className="flex items-center">
+              <MapPin className="text-[#014421] w-8 h-8 mr-4" />
+              <div>
+                <h3 className="text-xl font-semibold text-green-900">Dirección</h3>
+                <p>Visítanos en nuestras instalaciones para atención personalizada.</p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <Section
-        title="Nuestra Misión"
-        text="Desde 2007, hemos sido líderes en la distribución de verduras frescas de alta calidad, con un enfoque constante en la sostenibilidad y el bienestar de nuestros clientes y el medio ambiente."
-        imgSrc="/galeria_2.jpeg"
-        bgColor="bg-[#14532D]"
-        titleColor="text-white"
-        textColor="text-white"
-        showLine={false}
-      />
-
-      {/* Sección Nuestros Valores */}
-      <div className="shadow-lg rounded-xl p-6 md:p-16 max-w-7xl w-full text-center mt-8 md:mt-16 bg-[#14532D]">
-        <h2 className="text-3xl font-semibold uppercase tracking-wide mb-6 md:mb-8 text-white">
-          Nuestros Valores
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mt-6">
-          <ValueCard
-            title="Calidad"
-            text="Nos aseguramos de que cada producto cumpla con los más altos estándares de frescura y sabor."
-          />
-          <ValueCard
-            title="Confianza"
-            text="Fomentamos relaciones transparentes con nuestros clientes y proveedores, siempre basadas en la honestidad."
-          />
-          <ValueCard
-            title="Compromiso"
-            text="Nuestro compromiso con la satisfacción de nuestros consumidores y el apoyo a las comunidades locales es firme."
-          />
+      {/* Horarios de Atención */}
+      <section className="bg-white py-12 w-full flex flex-col md:flex-row items-center justify-center px-4">
+        <div className="w-full md:w-1/2 text-left px-8">
+          <h2 className="text-3xl font-bold text-left mb-6 text-center text-green-900">HORARIOS DE ATENCIÓN</h2>
+          <p className="text-center text-gray-700 text-lg">Lunes a Viernes: 8:00 am - 10:00 pm </p>
+          <p className="text-center text-gray-700 text-lg">Sábado: 8:00 am - 10:00 pm</p>
+          <p className="text-center text-gray-700 text-lg">Domingo: 12:30 pm - 6:00 pm</p>
         </div>
-      </div>
+        <div className="w-full md:w-1/2 flex justify-center">
+          <Image src="/12.jpeg" alt="Horarios de Atención" width={500} height={500} className="rounded-lg" />
+        </div>
+      </section>
+
+      {/* Visítenos */}
+      <section className="bg-gray-100 py-12 w-full flex flex-col items-center justify-center px-4">
+        <div className="w-full flex flex-col items-start">
+          <h2 className="text-3xl font-bold text-left mb-6 text-green-900">VISÍTENOS EN</h2>
+          <p className="text-gray-700 text-lg text-left mb-4">Encuéntranos en nuestra ubicación y visítanos para conocer más sobre nuestros productos y servicios.</p>
+        </div>
+        <iframe
+          className="w-full h-96 rounded-lg"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10677.29880001141!2d-97.65535688162016!3d18.887294427587825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c565aa31a9d30b%3A0xa29268a004b4c9c8!2sSAN%20REY%20PRODUCE!5e0!3m2!1ses-419!2smx!4v1740106822096!5m2!1ses-419!2smx"
+          allowFullScreen=""
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </section>
+
+      {/* Message Form */}
+      <section className="px-6 pb-10 max-w-4xl mx-auto">
+        <div className="bg-white rounded-xl shadow-md p-6">
+          <h3 className="text-2xl font-bold text-green-700 mb-4">
+            Enviar Mensaje
+          </h3>
+          <form ref={form} onSubmit={handleSubmit} className="space-y-4">
+            <div>
+              <label className="block font-semibold text-gray-700 mb-1">Nombre Completo</label>
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                placeholder="Ingresa tu nombre"
+                className={`w-full border ${errors.name ? "border-red-500" : "border-gray-300" } rounded-md p-3 focus:ring-2 focus:ring-green-400`}
+              />
+              {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
+            </div>
+            <div>
+              <label className="block font-semibold text-gray-700 mb-1">Teléfono</label>
+              <input
+                type="tel"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                placeholder="Ingresa tu teléfono"
+                className={`w-full border ${errors.phone ? "border-red-500" : "border-gray-300" } rounded-md p-3 focus:ring-2 focus:ring-green-400`}
+              />
+              {errors.phone && <p className="text-red-500 text-sm">{errors.phone}</p>}
+            </div>
+            <div>
+              <label className="block font-semibold text-gray-700 mb-1">Correo electrónico</label>
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="Ingresa tu correo"
+                className={`w-full border ${errors.email ? "border-red-500" : "border-gray-300" } rounded-md p-3 focus:ring-2 focus:ring-green-400`}
+              />
+              {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
+            </div>
+            <div>
+              <label className="block font-semibold text-gray-700 mb-1">Mensaje</label>
+              <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                placeholder="Escribe tu mensaje"
+                className={`w-full border ${errors.message ? "border-red-500" : "border-gray-300" } rounded-md p-3 focus:ring-2 focus:ring-green-400`}
+              ></textarea>
+              {errors.message && <p className="text-red-500 text-sm">{errors.message}</p>}
+            </div>
+            <button
+              type="submit"
+              className="w-full bg-green-600 text-white font-semibold py-3 rounded-md hover:bg-green-700 transition"
+            >
+              {isSubmitted ? "Mensaje Enviado" : "Enviar"}
+            </button>
+          </form>
+        </div>
+      </section>
 
       {/* Botón de scroll arriba */}
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         className="fixed bottom-8 right-8 bg-[#014421] text-white p-5 rounded-full shadow-lg hover:bg-[#006400] transition-all"
+        aria-label="Subir"
       >
         ↑
       </button>
