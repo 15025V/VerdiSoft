@@ -20,7 +20,7 @@ export default function navBar() {
         </Link>
 
         <ul className="hidden md:flex gap-6">
-          {[{ path: '/', label: 'Inicio' }, { path: '/about', label: 'Nosotros' }, { path: '/products', label: 'Catálogo' }, { path: '/contact', label: 'Contacto' }].map(({ path, label }) => (
+          {[{ path: '/', label: 'Inicio' }, { path: '/about', label: 'Nosotros' }, { path: '/products', label: 'Catálogo' }, { path: '/contact', label: 'Contacto'}].map(({ path, label }) => (
             <li key={path}>
               <Link href={path} className={`relative px-4 py-2 ${isActive(path)} hover:text-green-500 transition-all`}>
                 {label}
