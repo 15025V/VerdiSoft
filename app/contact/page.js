@@ -1,7 +1,9 @@
 'use client';
+
 import React, { useState, useRef } from 'react';
 import Image from 'next/image';
 import { Phone, Mail, MapPin } from 'lucide-react';
+import Head from 'next/head'; // Importar el componente Head de Next.js
 
 export default function Page() {
   const [formData, setFormData] = useState({
@@ -43,7 +45,23 @@ export default function Page() {
   };
 
   return (
-    <div>
+    <>
+      {/* Metadatos para SEO */}
+      <Head>
+        <title>Contacto - Flores Sons Farms</title>
+        <meta name="description" content="Conéctate con Flores Sons Farms. Contáctanos para más información sobre nuestros productos agrícolas frescos y de alta calidad." />
+        <meta name="keywords" content="contacto, Flores Sons Farms, productos agrícolas, frescos, calidad, sostenibilidad" />
+        <link rel="canonical" href="https://www.floressonsfarms.com/contacto" />
+        <meta property="og:title" content="Contacto - Flores Sons Farms" />
+        <meta property="og:description" content="Conéctate con Flores Sons Farms. Contáctanos para más información sobre nuestros productos agrícolas frescos y de alta calidad." />
+        <meta property="og:image" content="https://www.floressonsfarms.com/logo.png" />
+        <meta property="og:url" content="https://www.floressonsfarms.com/contacto" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Contacto - Flores Sons Farms" />
+        <meta name="twitter:description" content="Conéctate con Flores Sons Farms. Contáctanos para más información sobre nuestros productos agrícolas frescos y de alta calidad." />
+        <meta name="twitter:image" content="https://www.floressonsfarms.com/logo.png" />
+      </Head>
+
       {/* Sección principal */}
       <section
         className="relative bg-cover bg-center h-screen flex items-center justify-center text-center"
@@ -55,7 +73,7 @@ export default function Page() {
         }}
       >
         <div className="text-white px-6">
-          <h1 className="text-8xl font-serif font-bold tracking-wide font-playfair italic text-center">¡Conéctate con flores Sons farms!</h1>
+          <h1 className="text-8xl font-serif font-bold tracking-wide font-playfair italic text-center">¡Conéctate con Flores Sons Farms!</h1>
         </div>
       </section>
 
@@ -118,6 +136,7 @@ export default function Page() {
           allowFullScreen=""
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
+          aria-label="Mapa de Ubicación de Flores Sons Farms"
         ></iframe>
       </section>
 
@@ -193,6 +212,6 @@ export default function Page() {
       >
         ↑
       </button>
-    </div>
+    </>
   );
 }
