@@ -2,14 +2,12 @@ import React from 'react';
 
 export default function UbicationSection() {
     return (
-        <div role="region" aria-labelledby="ubicacion-heading"> {/* Rol y etiqueta ARIA para accesibilidad */}
-            <section className="py-16 bg-gray-50 text-center">
+        <div role="region" aria-labelledby="ubicacion-heading">
+            <section className="py-16 text-center"> {/* bg-gray-50 eliminado */}
                 <div className="flex items-center justify-center mb-10">
-                    <span className="border-b-2 border-green-800 w-24 mr-4"></span>
                     <h2 id="ubicacion-heading" className="text-5xl font-bold text-[#014421] inline-block pb-3 font-serif">
-                        Ubicación
+                        Encuentranos en 
                     </h2>
-                    <span className="border-b-2 border-green-800 w-24 ml-4"></span>
                 </div>
                 <div className="flex flex-col md:flex-row gap-12 px-8 items-center">
                     <div className="md:w-1/2">
@@ -22,7 +20,7 @@ export default function UbicationSection() {
                         ></iframe>
                     </div>
                     <div className="md:w-1/2 text-left">
-                        <div className="bg-white p-10 rounded-xl shadow-lg border border-gray-200">
+                        <div className="p-10 rounded-xl shadow-lg border border-gray-200"> {/* bg-white eliminado */}
                             <h3 className="text-2xl font-semibold mb-6 text-[#014421] font-['Playfair_Display']">
                                 Flores Sons Farms
                             </h3>

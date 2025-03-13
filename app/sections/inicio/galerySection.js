@@ -8,7 +8,7 @@ export default function GalerySection() {
 
   return (
     <div role="region" aria-labelledby="galeria-heading">
-      <section className="py-16 bg-gray-100 text-center">
+      <section className="py-16 text-center"> {/* bg-gray-100 eliminado */}
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-center justify-center mb-10 relative">
             <h2 id="galeria-heading" className="text-5xl font-bold text-[#014421] inline-block pb-3 font-serif relative">
@@ -62,46 +62,37 @@ export default function GalerySection() {
                   />
                 </div>
               ))}
-
             </div>
           </div>
         </div>
       </section>
-      <div className="bg-gray-100 py-8">
-            <div className="max-w-5xl mx-auto text-center">
-              <h2 className="text-2xl font-semibold text-green-600 mb-4">Estamos Certificados en</h2>
-              <div className="border-t-2 border-b-2 border-green-600 py-6">
-                <div className="flex justify-around items-center">
-                  <div className="flex flex-col items-center">
-                    <Image src="/bro.jpg" alt="High Quality" width={50} height={50} />
-                    <span className="text-sm mt-2">High Quality</span>
-                    <span className="text-xs text-gray-500">crafted from top materials</span>
-                  </div>
-                  <div className="flex flex-col items-center">
-                    <Image src="/bro.jpg" alt="Warranty Protection" width={50} height={50} />
-                    <span className="text-sm mt-2">Warranty Protection</span>
-                    <span className="text-xs text-gray-500">Over 2 years</span>
-                  </div>
-                  <div className="flex flex-col items-center">
-                    <Image src="/bro.jpg" alt="Free Shipping" width={50} height={50} />
-                    <span className="text-sm mt-2">Free Shipping</span>
-                    <span className="text-xs text-gray-500">Order over 150 $</span>
-                  </div>
-                  <div className="flex flex-col items-center">
-                    <Image src="/bro.jpg" alt="24/7 Support" width={50} height={50} />
-                    <span className="text-sm mt-2">24 / 7 Support</span>
-                    <span className="text-xs text-gray-500">Dedicated support</span>
-                  </div>
-                </div>
-              </div>
-              <div className="mt-4">
-                {/* Add your pagination dots here */}
-                <span className="inline-block w-2 h-2 bg-green-600 rounded-full mx-1"></span>
-                <span className="inline-block w-2 h-2 bg-gray-300 rounded-full mx-1"></span>
-                <span className="inline-block w-2 h-2 bg-gray-300 rounded-full mx-1"></span>
-              </div>
+      {/* certificaciones  */}
+      <div className="max-w-6xl mx-auto text-center mt-12">
+        <div className="border-t-4 border-b -4 border-green-600 py-10">
+          <div className="flex justify-around items-center">
+            <div className="flex flex-col items-center">
+              <Image src="/bro.jpg" alt="High Quality" width={80} height={80} />
+              <span className="text-lg font-semibold mt-3">High Quality</span>
+              <span className="text-md text-gray-500">Crafted from top materials</span>
+            </div>
+            <div className="flex flex-col items-center">
+              <Image src="/bro.jpg" alt="Warranty Protection" width={80} height={80} />
+              <span className="text-lg font-semibold mt-3">Warranty Protection</span>
+              <span className="text-md text-gray-500">Over 2 years</span>
+            </div>
+            <div className="flex flex-col items-center">
+              <Image src="/bro.jpg" alt="Free Shipping" width={80} height={80} />
+              <span className="text-lg font-semibold mt-3">Free Shipping</span>
+              <span className="text-md text-gray-500">Order over $150</span>
+            </div>
+            <div className="flex flex-col items-center">
+              <Image src="/bro.jpg" alt="24/7 Support" width={80} height={80} />
+              <span className="text-lg font-semibold mt-3">24/7 Support</span>
+              <span className="text-md text-gray-500">Dedicated support</span>
             </div>
           </div>
+        </div>
+      </div>
     </div>
   );
 }
