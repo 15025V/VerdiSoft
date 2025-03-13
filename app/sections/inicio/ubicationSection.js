@@ -5,7 +5,7 @@ export default function UbicationSection() {
         <div role="region" aria-labelledby="ubicacion-heading">
             <section className="py-16 text-center"> {/* bg-gray-50 eliminado */}
                 <div className="flex items-center justify-center mb-10">
-                    <h2 id="ubicacion-heading" className="text-5xl font-bold text-[#014421] inline-block pb-3 font-serif">
+                    <h2 id="ubicacion-heading" className="text-5xl font-bold text-[#49c351] inline-block pb-3 font-serif">
                         Encuentranos en 
                     </h2>
                 </div>
@@ -21,17 +21,17 @@ export default function UbicationSection() {
                     </div>
                     <div className="md:w-1/2 text-left">
                         <div className="p-10 rounded-xl shadow-lg border border-gray-200"> {/* bg-white eliminado */}
-                            <h3 className="text-2xl font-semibold mb-6 text-[#014421] font-['Playfair_Display']">
+                            <h3 className="text-2xl font-semibold mb-6 text-[#49c351] font-['Playfair_Display']">
                                 Flores Sons Farms
                             </h3>
-                            <div className="mb-6 text-lg text-gray-700 leading-relaxed">
+                            <div className="mb-6 text-lg text leading-relaxed">
                                 <p>📍 Dirección: Froylán C. Manjarrez, 75470 Froylán C. Manjarrez, Pue.</p>
                                 <p>📞 Teléfono: 0000-000-00-00</p>
                                 <p>📧 Correo electrónico: ooooooogmail.com</p>
                             </div>
                             <a
                                 href="/contact"
-                                className="bg-[#014421] text-white px-8 py-3 rounded-xl text-lg font-medium hover:bg-[#008000] transition-all duration-300 shadow-md hover:shadow-xl inline-block"
+                                className="bg-green-500 text-white px-8 py-3 rounded-xl text-lg font-medium hover:bg-[#008000] transition-all duration-300 shadow-md hover:shadow-xl inline-block"
                                 aria-label="Visítanos"
                                 role="button" 
                             >

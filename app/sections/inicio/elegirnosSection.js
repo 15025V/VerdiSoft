@@ -4,7 +4,7 @@ export default function ElegirnosSection() {
     return (
         <div role="region" aria-labelledby="elegirnos-heading">
             <section className="py-12 text-center">
-                <h2 id="elegirnos-heading" className="text-3xl font-bold text-[#014421] mb-8 font-serif">
+                <h2 id="elegirnos-heading" className="text-5xl font-bold text-[#49c351] mb-8 font-serif">
                     ¿Por qué elegirnos?
                 </h2>
                 <div className="max-w-6xl mx-auto px-8 grid grid-cols-1 md:grid-cols-4 gap-6">

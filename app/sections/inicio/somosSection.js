@@ -5,7 +5,7 @@ export default function SomosSection() {
     <div role="main">
       <section className="py-12" aria-labelledby="quienes-somos-heading">
         <header>
-          <h2 id="quienes-somos-heading" className="text-5xl font-bold text-[#014421] mb-8 font-serif ml-14">
+          <h2 id="quienes-somos-heading" className="text-5xl font-bold text-[#49c351] mb-8 font-serif ml-14">
             ¿Quiénes somos?
           </h2>
         </header>

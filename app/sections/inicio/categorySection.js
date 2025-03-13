@@ -6,14 +6,14 @@ export default function CategorySection() {
   return (
     <div role="region" aria-labelledby="categorias-heading">
       <section className="py-12 text-center">
-        <h2 id="categorias-heading" className="text-5xl font-bold text-[#014421] mb-2 font-serif">
+        <h2 id="categorias-heading" className="text-5xl font-bold text-[#49c351] mb-2 font-serif">
           Conoce nuestros productos
         </h2>
         <p className="text-lg text-gray-600 mb-8">
           Descubre la frescura y calidad que nos caracteriza.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-8">
-          {["/bro.jpg", "/cilantroo.jpeg", "/zanahoria.jpg", "/Rabano.jpg"].map((src, index) => (
+          {["/cilantroo.jpeg", "/cilantroo.jpeg", "/cilantroo.jpeg", "/cilantroo.jpeg"].map((src, index) => (
             <div key={index} className="relative overflow-hidden group aspect-square">
               <Image
                 src={src}
