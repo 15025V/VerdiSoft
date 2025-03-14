@@ -10,6 +10,7 @@ const SomosSection = dynamic(() => import('./sections/inicio/somosSection'), { l
 const CategorySection = dynamic(() => import('./sections/inicio/categorySection'), { loading: () => <p>Cargando...</p> });
 const ElegirnosSection = dynamic(() => import('./sections/inicio/elegirnosSection'), { loading: () => <p>Cargando...</p> });
 const GalerySection = dynamic(() => import('./sections/inicio/galerySection'), { loading: () => <p>Cargando...</p> });
+const CertiSection = dynamic(() => import('./sections/inicio/certiSection'), { loading: () => <p>Cargando...</p> });
 const UbicationSection = dynamic(() => import('./sections/inicio/ubicationSection'), { loading: () => <p>Cargando...</p> });
 const ServicesSection = dynamic(() => import('./sections/inicio/servicesSection'), { loading: () => <p>Cargando...</p> });
 
@@ -38,6 +39,7 @@ export default function Hero() {
       <CategorySection />
       <ElegirnosSection />
       <GalerySection />
+      <CertiSection />
       <UbicationSection />
       <ServicesSection />
     </>

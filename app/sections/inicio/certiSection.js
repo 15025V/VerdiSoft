@@ -1,9 +1,11 @@
+'use client';
+import Image from 'next/image';
 import React from 'react'
 
 export default function CertiSection() {
   return (
     <div className="max-w-5xl mx-auto text-center">
-      <h2 className="text-4xl font-semibold text-black mb-4">Estamos Certificados en</h2>
+    
       <div className="border-t-2 border-b-2 border-green-600 py-6">
         <div className="flex justify-around items-center">
           <div className="flex flex-col items-center">

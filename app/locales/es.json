@@ -1,0 +1,71 @@
+{
+    "navbar": {
+      "home": "Inicio",
+      "about": "Acerca de",
+      "catalog": "Catálogo",
+      "contact": "Contacto",
+      "contactUs": "Contáctanos"
+    },
+    "hero": {
+      "title": "Flores Sons Farms",
+      "subtitle": "Calidad que se siente, frescura que se nota."
+    },
+    "somos": {
+      "title": "¿Quiénes somos?",
+      "description": "Somos una empresa dedicada a la exportación de flores frescas de la más alta calidad, cultivadas con pasión y cuidado en nuestros campos. Nuestro compromiso con la excelencia, la sostenibilidad y la innovación nos ha posicionado como un referente en el mercado internacional, llevando la belleza de nuestras flores a cada rincón del mundo. Desde la siembra hasta la entrega, garantizamos un proceso impecable, asegurando que cada flor conserve su frescura, color y aroma, ofreciendo a nuestros clientes un producto premium que supera las expectativas. En Sons Farms, florecemos con cada envío."
+    },
+    "category": {
+      "title": "Conoce nuestros productos",
+      "subtitle": "Descubre la frescura y calidad que nos caracteriza.",
+      "button": "Ver más productos"
+    },
+    "elegirnos": {
+      "title": "¿Por qué elegirnos?",
+      "cards": [
+        {
+          "title": "Calidad Garantizada",
+          "description": "Implementamos Rigurosos Controles De Calidad En Cada Etapa Del Proceso, Asegurando Que Nuestros Productos Cumplan Con Los Más Altos Estándares."
+        },
+        {
+          "title": "Tecnología e Innovación",
+          "description": "Contamos Con Maquinaria Moderna Y Procesos Eficientes Que Optimizan El Empaquetado Y Conservación De Los Productos."
+        },
+        {
+          "title": "Compromiso Con La Sustentabilidad",
+          "description": "Usamos Materiales Ecológicos Y Prácticas Responsables Para Minimizar Nuestro Impacto Ambiental."
+        },
+        {
+          "title": "Servicio Confiable",
+          "description": "Nos Adaptamos A Las Necesidades De Cada Cliente, Ofreciendo Soluciones Flexibles, Entregas Puntuales."
+        }
+      ]
+    },
+    "galeria": {
+      "title": "Descubre nuestras instalaciones, procesos, productos y más",
+      "subtitle": "Explora imágenes que reflejan nuestro compromiso con la calidad y la excelencia."
+    },
+    "ubicacion": {
+      "title": "Encuéntranos en",
+      "direccion": "📍 Dirección: Froylán C. Manjarrez, 75470 Froylán C. Manjarrez, Pue.",
+      "telefono": "📞 Teléfono: 0000-000-00-00",
+      "correo": "📧 Correo electrónico: ooooooogmail.com",
+      "boton": "Visítanos"
+    },
+    "servicios": {
+      "title": "CONOCE MÁS DE FLORES SONS FARMS",
+      "cards": [
+        {
+          "description": "Aseguramos que cada producto cumpla con los estándares más altos de calidad y frescura."
+        },
+        {
+          "description": "Ofrecemos una amplia gama de productos agrícolas empaquetados."
+        },
+        {
+          "description": "Contamos con una logística optimizada para que tus pedidos lleguen a tiempo."
+        },
+        {
+          "description": "Nuestro equipo estará siempre disponible para resolver tus dudas y necesidades."
+        }
+      ]
+    }
+  }
