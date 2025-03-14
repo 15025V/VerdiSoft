@@ -111,3 +111,21 @@ button:active {
   justify-content: center;
 }
 
+/* Ocultar barra de desplazamiento en todos los navegadores */
+* {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE y Edge */
+}
+
+/* Para navegadores basados en WebKit (Chrome, Safari, móviles) */
+*::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+  display: none;
+}
+
+/* Para ocultar el rebote en móviles (opcional) */
+html, body {
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: touch;
+}

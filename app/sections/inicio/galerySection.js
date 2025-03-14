@@ -1,7 +1,9 @@
 import Image from 'next/image';
 import React from 'react';
+import { useTranslation } from '@/app/hooks/useTranslation';
 
 export default function GalerySection() {
+  const translations = useTranslation();
   const imagesLeft = ["/13.webp", "/13.jpeg"];
   const imagesCenter = ["/galeria_2.jpeg", "/galeria_2.webp", "/galeria_3.jpeg"];
   const imagesRight = ["/13.webp", "/13.webp"];
@@ -11,17 +13,12 @@ export default function GalerySection() {
       <section className="text-center">
         <div className="max-w-7xl mx-auto">
           <div className="mb-10">
-            <h2
-              id="galeria-heading"
-              className="text-4xl md:text-6xl font-extrabold text-[#49c351] font-serif relative pb-3 inline-block"
-            >
-              <span className="relative z-10">Descubre nuestras instalaciones, procesos, productos y más</span>
+            <h2 id="galeria-heading" className="text-4xl md:text-6xl font-extrabold text-[#49c351] font-serif relative pb-3 inline-block">
+              <span className="relative z-10">{translations.galeria?.title}</span>
               <span className="absolute bottom-0 left-0 w-full h-1 bg-green-600 transform scale-x-0 origin-left transition-transform duration-500 hover:scale-x-100"></span>
             </h2>
           </div>
-          <p className="text-lg text-gray-700 mb-10 italic">
-            “Explora imágenes que reflejan nuestro compromiso con la calidad y la excelencia.”
-          </p>
+          <p className="text-lg text-gray-700 mb-10 italic">{translations.galeria?.subtitle}</p>
 
           {/* Galería de imágenes */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 justify-center items-start">
