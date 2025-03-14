@@ -1,15 +1,31 @@
-'use client'
-import { useState } from 'react';
+'use client'; // Indica que este es un Client Component
+import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import Image from 'next/image';
-import { FaSearch, FaBars, FaTimes, FaMicrophone, FaSun, FaMoon } from 'react-icons/fa';
-import { useLanguage } from '../context/languageContext';
+import { FaBars, FaTimes, FaSun, FaMoon, FaMicrophone } from 'react-icons/fa';
+import { useLanguage } from '@/app/context/languageContext'; // Importa useLanguage
 
 export default function Navbar() {
+  // Estados
   const [menuOpen, setMenuOpen] = useState(false);
   const [theme, setTheme] = useState('light');
   const [searchQuery, setSearchQuery] = useState('');
+  const [listening, setListening] = useState(false);
+
+  // Obtener la ruta actual
+  const pathname = usePathname();
+
+  // Usar el contexto de idioma
   const { language, changeLanguage } = useLanguage();
 
+  // Cargar el tema guardado en localStorage al montar el componente
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    setTheme(savedTheme);
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  }, []);
+
+  // Cambiar entre temas claro y oscuro
   const toggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
     setTheme(newTheme);
@@ -17,43 +33,34 @@ export default function Navbar() {
     localStorage.setItem('theme', newTheme);
   };
 
-  const handleLanguageChange = () => {
-    changeLanguage(language === 'es' ? 'en' : 'es');
-  };
-
-  const startVoiceSearch = () => {
-    if (!('webkitSpeechRecognition' in window)) {
-      alert('Tu navegador no soporta reconocimiento de voz.');
-      return;
-    }
-    const recognition = new window.webkitSpeechRecognition();
-    recognition.lang = language === 'es' ? 'es-ES' : 'en-US';
-    recognition.start();
-    recognition.onresult = (event) => {
-      const transcript = event.results[0][0].transcript;
-      setSearchQuery(transcript);
-      searchOnPage(transcript);
-    };
-  };
-
-  const searchOnPage = (query) => {
-    const elements = document.body.querySelectorAll('*');
-    for (let element of elements) {
-      if (element.textContent.toLowerCase().includes(query.toLowerCase())) {
-        element.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        return;
-      }
-    }
-    alert(`No se encontró "${query}" en la página.`);
-  };
-
-  // Traducciones del menú
+  // Elementos del menú
   const menuItems = [
     { path: '/', es: 'Inicio', en: 'Home' },
     { path: '/about', es: 'Acerca de', en: 'About' },
     { path: '/products', es: 'Catálogo', en: 'Catalog' },
     { path: '/contact', es: 'Contacto', en: 'Contact' },
   ];
+
+  // Iniciar el reconocimiento de voz
+  const startListening = () => {
+    if (typeof window !== 'undefined' && 'webkitSpeechRecognition' in window) {
+      const recognition = new window.webkitSpeechRecognition();
+      recognition.lang = 'es-ES';
+      recognition.continuous = false;
+      recognition.interimResults = false;
+
+      recognition.onstart = () => setListening(true);
+      recognition.onresult = (event) => {
+        setSearchQuery(event.results[0][0].transcript);
+      };
+      recognition.onerror = () => setListening(false);
+      recognition.onend = () => setListening(false);
+
+      recognition.start();
+    } else {
+      alert('Tu navegador no soporta reconocimiento de voz.');
+    }
+  };
 
   return (
     <nav className="fixed top-4 left-0 right-0 z-50 flex justify-center">
@@ -68,34 +75,35 @@ export default function Navbar() {
         <ul className="hidden md:flex space-x-8 font-semibold">
           {menuItems.map((item) => (
             <li key={item.path}>
-              <a href={item.path} className="hover:text-[#49c351]">
+              <a
+                href={item.path}
+                className={`hover:text-[#49c351] transition-colors duration-300 ${
+                  pathname === item.path ? 'text-[#49c351] font-bold' : ''
+                }`}
+              >
                 {language === 'es' ? item.es : item.en}
               </a>
             </li>
           ))}
         </ul>
 
-        {/* Ícono de búsqueda, micrófono, idioma y tema */}
-        <div className="flex items-center space-x-4">
-    <div className="hidden md:flex items-center bg-white/20 backdrop-blur-sm rounded-full">
-        <input 
-            type="text" 
-            className="p-2 bg-transparent rounded-l-full w-full max-w-xs text-white placeholder-black focus:outline-none"
-            placeholder={language === 'es' ? 'Buscar...' : 'Search...'}
+        {/* Barra de búsqueda con micrófono */}
+        <div className="hidden md:flex items-center border-b ">
+          <input
+            type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-        />
-   
-            <button className="p-2 rounded-r-full bg-[#49c351] text-white hover:bg-[#3aa742] transition-colors duration-300">
-              <FaSearch />
-            </button>
-          </div>
-
-          <button onClick={startVoiceSearch} className="text-black text-xl cursor-pointer hover:text-[#49c351]">
-            <FaMicrophone />
+            placeholder={language === 'es' ? 'Buscar...' : 'Search...'}
+            className="px-2 py-1 focus:outline-none bg-transparent text-black"
+          />
+          <button onClick={startListening} className="text-black text-xl ml-2 hover:text-[#49c351]">
+            <FaMicrophone className={listening ? 'text-[#49c351] animate-pulse' : ''} />
           </button>
+        </div>
 
-          <button onClick={handleLanguageChange} className="text-black text-xl cursor-pointer hover:text-[#49c351]">
+        {/* Íconos de idioma y tema */}
+        <div className="flex items-center space-x-4">
+          <button onClick={() => changeLanguage(language === 'es' ? 'en' : 'es')} className="text-black text-xl cursor-pointer hover:text-[#49c351]">
             {language === 'es' ? '🇪🇸' : '🇬🇧'}
           </button>
 
@@ -103,6 +111,7 @@ export default function Navbar() {
             {theme === 'light' ? <FaMoon /> : <FaSun />}
           </button>
 
+          {/* Botón para abrir/cerrar el menú móvil */}
           <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
             {menuOpen ? <FaTimes className="text-2xl" /> : <FaBars className="text-2xl" />}
           </button>
@@ -117,7 +126,9 @@ export default function Navbar() {
               <li key={item.path}>
                 <a
                   href={item.path}
-                  className="hover:text-green-600 block py-2"
+                  className={`hover:text-[#49c351] block py-2 ${
+                    pathname === item.path ? 'text-[#49c351] font-bold' : ''
+                  }`}
                   onClick={() => setMenuOpen(false)}
                 >
                   {language === 'es' ? item.es : item.en}

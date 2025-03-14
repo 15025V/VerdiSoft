@@ -1,16 +1,18 @@
+import { useTranslation } from '@/app/hooks/useTranslation';
 import Image from 'next/image';
 
 import React from 'react';
 
 export default function CategorySection() {
+  const  translations = useTranslation();
   return (
     <div role="region" aria-labelledby="categorias-heading">
       <section className="py-12 text-center">
         <h2 id="categorias-heading" className="text-5xl font-bold text-[#49c351] mb-2 font-serif">
-          Conoce nuestros productos
+          {translations.category?.title}
         </h2>
         <p className="text-lg text-gray-600 mb-8">
-          Descubre la frescura y calidad que nos caracteriza.
+        {translations.category?.subtitle}
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-8">
           {["/cilantroo.jpeg", "/cilantroo.jpeg", "/cilantroo.jpeg", "/cilantroo.jpeg"].map((src, index) => (
@@ -32,7 +34,7 @@ export default function CategorySection() {
           aria-label="Ver más productos"
           role="button"
         >
-          Ver más productos
+          {translations.button?.category}
         </a>
    
       </section>
