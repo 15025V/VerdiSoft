@@ -1,39 +1,44 @@
 import React from 'react';
+import Image from 'next/image';
 import { useTranslation } from '@/app/hooks/useTranslation';
-import { FaShieldAlt, FaMicrochip, FaLeaf } from 'react-icons/fa';
-import { BsFillCarFrontFill } from "react-icons/bs";
 
-export default function ElegirnosSection() {
+export default function AreaEmpresaSection() {
   const translations = useTranslation();
 
+  // URL de la imagen de fondo
+  const backgroundImage = '/galeria_5.jpeg';
+
   return (
-    <div role="region" aria-labelledby="elegirnos-heading">
-      <section className="py-12 text-center">
-        <h2 id="elegirnos-heading" className="text-5xl font-bold text-[#49c351] mb-8 font-serif">
-          {translations.elegirnos?.title}
-        </h2>
-        <div className="max-w-6xl mx-auto px-8 grid grid-cols-1 md:grid-cols-4 gap-6">
-          {translations.elegirnos?.cards.map((card, index) => (
-            <div key={index} className="bg-[#e0f2f7] rounded-lg text-center text-justify p-4 relative">
-              <div className="border border-green-600 bg-white rounded-full w-12 h-12 flex items-center justify-center mx-auto absolute -top-6 left-1/2 transform -translate-x-1/2">
-                {index === 0 ? (
-                  <FaShieldAlt className="w-6 h-6 text-green-600" />
-                ) : index === 1 ? (
-                  <FaMicrochip className="w-6 h-6 text-green-600" />
-                ) : index === 2 ? (
-                  <FaLeaf className="w-6 h-6 text-green-600" />
-                ) : (
-                  <BsFillCarFrontFill className="w-6 h-6 text-green-600" />
-                )}
-              </div>
-              <div className="mt-8">
-                <h3 className="text-lg font-semibold text-center text-gray-800 mb-2">{card.title}</h3>
-                <p className="text-sm text-gray-600">{card.description}</p>
-              </div>
+    <section className="relative py-24"> {/* Aumentar el padding vertical */}
+      <div className="relative max-w-7xl mx-auto">
+        {/* Imagen de fondo */}
+        <div className="absolute inset-0 w-full h-full">
+          <Image 
+            src={backgroundImage} 
+            alt="Área de la empresa" 
+            layout="fill" 
+            objectFit="cover" 
+            className="rounded-3xl shadow-2xl opacity-90" // Bordes redondeados y sombra más intensa
+          />
+        </div>
+
+        {/* Contenedor de contenido */}
+        <div className="relative bg-gradient-to-br from-green-200 to-green-300 bg-opacity-95 rounded-3xl p-12 max-w-lg shadow-2xl"> {/* Gradiente y sombra más intensa */}
+          <h2 className="text-4xl font-semibold text-green-800 font-serif mb-8 tracking-wide"> {/* Texto más grande y espaciado */}
+            {translations.area?.title}
+          </h2>
+          {translations.area?.cards.map((card, index) => (
+            <div key={index} className="mb-8"> {/* Aumentar el margen inferior */}
+              <h3 className="text-2xl font-serif text-gray-800 font-serif mb-4">
+                {card.title}
+              </h3>
+              <p className="text-lg text-gray-700 font-serif leading-relaxed">
+                {card.description}
+              </p>
             </div>
           ))}
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 }

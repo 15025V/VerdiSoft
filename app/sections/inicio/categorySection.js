@@ -1,28 +1,29 @@
+'use client';
 import { useTranslation } from '@/app/hooks/useTranslation';
 import Image from 'next/image';
-
 import React from 'react';
 
 export default function CategorySection() {
-  const  translations = useTranslation();
+  const translations = useTranslation();
+
   return (
     <div role="region" aria-labelledby="categorias-heading">
-      <section className="py-12 text-center">
-        <h2 id="categorias-heading" className="text-5xl font-bold text-[#49c351] mb-2 font-serif">
+      <section className="py-15 text-center bg-gradient-to-br  to-green-100"> 
+        <h2 id="categorias-heading" className="text-5xl font-semibold text-green-800 tracking-wide font-serif mb-4  border-green-300 pb-4 inline-block">
           {translations.category?.title}
         </h2>
-        <p className="text-lg text-gray-600 mb-8">
-        {translations.category?.subtitle}
+        <p className="text-lg text-gray-700  leading-relaxed mb-12 font-serif">
+          {translations.category?.subtitle}
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-8">
-          {["/cilantroo.jpeg", "/cilantroo.jpeg", "/cilantroo.jpeg", "/cilantroo.jpeg"].map((src, index) => (
-            <div key={index} className="relative overflow-hidden group aspect-square">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 px-8 max-w-6xl mx-auto"> 
+          {["/galeria_6.jpeg", "/galeria_2.webp", "/galeria_6.jpeg", "/galeria_2.webp"].map((src, index) => (
+            <div key={index} className="relative overflow-hidden rounded-3xl shadow-2xl group transition-transform transform hover:scale-105 duration-300"> 
               <Image
                 src={src}
                 alt={`Producto ${index + 1}`}
                 width={400}
                 height={400}
-                className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+                className="object-cover w-full h-full"
                 loading="lazy"
               />
             </div>
@@ -30,13 +31,12 @@ export default function CategorySection() {
         </div>
         <a
           href="/products"
-          className="mt-6 md:mt-9 inline-block px-8 py-3 text-[#014421] rounded-full transition-all"
-          aria-label="Ver más productos"
+          className="mt-12 inline-flex items-center text-green-600 font-semibold hover:text-green-800 transition-colors duration-300" 
+          aria-label="Ver producto"
           role="button"
         >
-          {translations.button?.category}
+          {translations.category?.button}
         </a>
-   
       </section>
     </div>
   );

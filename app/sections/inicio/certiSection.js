@@ -1,38 +1,30 @@
 'use client';
 import Image from 'next/image';
-import React from 'react'
+import React from 'react';
 
 export default function CertiSection() {
   return (
-    <div className="max-w-5xl mx-auto text-center">
-    
-      <div className="border-t-2 border-b-2 border-green-600 py-6">
-        <div className="flex justify-around items-center">
-          <div className="flex flex-col items-center">
-            <Image src="/bro.jpg" alt="High Quality" width={50} height={50} />
-            <span className="text-sm mt-2">High Quality</span>
-            <span className="text-xs text-gray-500">crafted from top materials</span>
+    <section className="max-w-7xl mx-auto py-18 px-8 bg-gradient-to-br to-gray-200 rounded-3xl"> 
+      <div className="border-t border-b border-gray-400 py-12 flex flex-col md:flex-row justify-center items-center gap-12"> 
+        <div className="flex flex-col items-center">
+          <div className="bg-white rounded-xl p-6 transition-transform transform hover:scale-105 duration-300 border border-gray-300"> 
+            <Image src="/primusGFS.png" alt="Primus GFS" width={220} height={110} className="object-contain" />
           </div>
-          <div className="flex flex-col items-center">
-            <Image src="/bro.jpg" alt="Warranty Protection" width={50} height={50} />
-            <span className="text-sm mt-2">Warranty Protection</span>
-            <span className="text-xs text-gray-500">Over 2 years</span>
+        </div>
+        <div className="flex flex-col items-center">
+          <div className="bg-white rounded-xl p-6 transition-transform transform hover:scale-105 duration-300 border border-gray-300">
+            <Image src="/senasica.png" alt="SENASICA" width={220} height={110} className="object-contain" />
           </div>
-          <div className="flex flex-col items-center">
-            <Image src="/bro.jpg" alt="Free Shipping" width={50} height={50} />
-            <span className="text-sm mt-2">Free Shipping</span>
-            <span className="text-xs text-gray-500">Order over 150 $</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <Image src="/bro.jpg" alt="24/7 Support" width={50} height={50} />
-            <span className="text-sm mt-2">24 / 7 Support</span>
-            <span className="text-xs text-gray-500">Dedicated support</span>
+        </div>
+        <div className="flex flex-col items-center">
+          <div className="bg-white rounded-xl p-6 transition-transform transform hover:scale-105 duration-300 border border-gray-300">
+            <Image src="/buma.png" alt="BUMA" width={220} height={110} className="object-contain" />
           </div>
         </div>
       </div>
-      <div className="mt-4">
-
+      <div className="mt-12 text-center text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto"> 
+        <p className="italic">Nuestra empresa está certificada con los más altos estándares de calidad y seguridad.</p>
       </div>
-    </div>
-  )
+    </section>
+  );
 }

@@ -3,18 +3,18 @@ import { FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa";
 
 export default function HeroSection() {
   return (
-    <section
-      className="relative w-full h-screen flex flex-col md:flex-row items-center justify-between px-4 md:px-20 bg-cover bg-center pt-16 md:pt-24"
-      style={{ backgroundImage: "url('/12.jpeg')" }}
-    >
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+    <section className="w-full h-screen flex flex-col md:flex-row items-center justify-between px-4 md:px-25 pt-28">
+
+      {/* Imagen de fondo */}
+      <div className="absolute top-0 left-0 w-full h-full bg-cover bg-center z-[-1]"
+        style={{ backgroundImage: "url('/12.jpeg')" }}></div>
 
       {/* Contenedor principal */}
-      <div className="relative z-10 w-full flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto">
+      <div className="relative z-16 w-full flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto">
+
         {/* Texto y botón a la izquierda */}
-        <div className="w-full md:w-1/2 flex mt-20 justify-center md:justify-start text-white flex-col items-center md:items-start text-center md:text-left">
-          <h1 className="text-4xl  md:text-8xl  font-serif font-bold tracking-wide font-playfair italic">
+        <div className="w-full md:w-1/2 flex justify-center md:justify-start text-white flex-col items-center md:items-start text-center md:text-left">
+          <h1 className="text-5xl md:text-6xl font-serif font-bold tracking-wide font-playfair italic text-white">
             Flores Sons Farms
           </h1>
           <p className="text-lg md:text-xl mt-4 md:mt-6 text-gray-200 italic">
@@ -33,7 +33,7 @@ export default function HeroSection() {
         {/* Imagen redonda a la derecha */}
         <div className="w-full md:w-1/2 flex justify-center items-center mt-8 md:mt-0">
           <Image
-            src="/repollo.jpeg"
+            src="/galeria_3.jpeg"
             alt="Imagen Redonda"
             width={320}
             height={380}
@@ -41,18 +41,31 @@ export default function HeroSection() {
           />
         </div>
 
-        {/* Redes Sociales */}
-        <div className="absolute bottom-10 right-10 flex space-x-6 text-white text-2xl">
-          <a href="https://instagram.com" className="hover:text-green-400" aria-label="Instagram">
-            <FaInstagram /> {/* Icono de Instagram */}
+        {/* Redes Sociales con estilo profesional */}
+        <div className="absolute bottom-[-55] left-1/2 transform -translate-x-1/2 flex flex-row gap-4 text-white text-3xl md:text-4xl">
+          <a
+            href="https://instagram.com"
+            className="p-1 rounded-full bg-white bg-opacity-20 hover:bg-opacity-40 transition-all"
+            aria-label="Instagram"
+          >
+            <FaInstagram />
           </a>
-          <a href="https://facebook.com" className="hover:text-green-400" aria-label="Facebook">
-            <FaFacebook /> {/* Icono de Facebook */}
+          <a
+            href="https://facebook.com"
+            className="p-1 rounded-full bg-white bg-opacity-20 hover:bg-opacity-40 transition-all"
+            aria-label="Facebook"
+          >
+            <FaFacebook />
           </a>
-          <a href="https://twitter.com" className="hover:text-green-400" aria-label="Twitter">
-            <FaTwitter /> {/* Icono de Twitter */}
+          <a
+            href="https://twitter.com"
+            className="p-1 rounded-full bg-white bg-opacity-20 hover:bg-opacity-40 transition-all"
+            aria-label="Twitter"
+          >
+            <FaTwitter />
           </a>
         </div>
+
       </div>
     </section>
   );

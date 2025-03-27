@@ -1,6 +1,8 @@
 'use client';
 import Head from 'next/head';
 import dynamic from 'next/dynamic'; // Importar dynamic para lazy loading
+import Navbar from '../components/navBar';
+import Footer from '../components/footer';
 
 // Carga diferida de secciones
 const HeroSection = dynamic(() => import('../sections/acercaDe/heroSection'), { loading: () => <p>Cargando...</p> });
@@ -27,13 +29,18 @@ export default function Hero() {
         <meta name="twitter:description" content="Explora la riqueza de productos agrícolas frescos y de alta calidad de Flores Sons Farms. Cultivados con pasión y dedicación en el Valle de Palmarito." />
         <meta name="twitter:image" content="https://www.floressonsfarms.com/logo.png" />
       </Head>
+      <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+      <script src="https://files.bpcontent.cloud/2025/02/23/04/20250223044823-TC06RID3.js"></script>
+
 
       {/* Secciones de la página */}
+      <Navbar/>
       <HeroSection />
       <HistoriaSection />
       <MisionSection />
       <VisionSection />
       <ValoresSection /> 
+      <Footer/>
     </>
   );
 }

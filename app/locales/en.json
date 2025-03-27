@@ -1,71 +1,283 @@
 {
-    "navbar": {
-      "home": "Home",
-      "about": "About",
-      "catalog": "Catalog",
-      "contact": "Contact",
-      "contactUs": "Contact Us"
-    },
-    "hero": {
-      "title": "Flores Sons Farms",
-      "subtitle": "Quality you can feel, freshness you can notice."
-    },
-    "somos": {
-      "title": "Our Story",
-      "description": "We are a company dedicated to exporting fresh flowers of the highest quality, grown with passion and care in our fields. Our commitment to excellence, sustainability, and innovation has positioned us as a benchmark in the international market, bringing the beauty of our flowers to every corner of the world. From planting to delivery, we guarantee an impeccable process, ensuring that each flower retains its freshness, color, and aroma, offering our customers a premium product that exceeds expectations. At Sons Farms, we flourish with every shipment."
-    },
-    "category": {
-      "title": "Explore Our Fresh Products",
-      "subtitle": "Explore the freshness and quality that define us.",
-      "button": "View more products"
-    },
-    "elegirnos": {
-      "title": "Why choose Flores Sons Farms?",
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "catalog": "Catalog",
+    "contact": "Contact",
+    "contactUs": "Contact Us"
+  },
+  "hero": {
+    "title": "Sons Farms Flowers",
+    "subtitle": "Quality you can feel, freshness you can see."
+  },
+ "somos": {
+    "title": "Who are we?",
+    "description": "A family-owned company dedicated to the production and export of vegetables, mainly cilantro, green onions, zucchini, and broccoli, of the highest quality, cultivated with passion and care in our fields. Our commitment to excellence, sustainability, and innovation has positioned us as a benchmark in the international market, reaching every corner. We guarantee an impeccable process, ensuring that each vegetable retains its freshness, color, and aroma, offering our customers a premium product that exceeds expectations. At Sons Farms, we flourish with every shipment."
+},
+
+  "category": {
+    "title": "Discover our products",
+    "subtitle": "Experience the freshness and quality that define us.",
+    "button": "See more products"
+  },
+  
+    "area": {
+      "title": "Company Area",
       "cards": [
         {
-          "title": "Guaranteed Quality",
-          "description": "We implement rigorous quality controls at every stage of the process, ensuring that our products meet the highest standards."
+          "title": "Field",
+          "description": "We have certified farms for the production of our products located in Puebla and Tlaxcala.",
+          "image": "galeria_5.jpeg"
         },
         {
-          "title": "Technology and Innovation",
-          "description": "We have modern machinery and efficient processes that optimize the packaging and preservation of products."
-        },
-        {
-          "title": "Commitment to Sustainability",
-          "description": "We use eco-friendly materials and responsible practices to minimize our environmental impact."
-        },
-        {
-          "title": "Reliable Service",
-          "description": "We adapt to the needs of each client, offering flexible solutions and timely deliveries."
+          "title": "Company",
+          "description": "We have certified packaging in Primus GFS.",
+          "image": "/galeria_6.jpeg"
         }
       ]
     },
-    "galeria": {
-      "title": "Take a Look at Our Facilities.",
-      "subtitle": "Explore images that reflect our commitment to quality and excellence."
-    },
-    "ubicacion": {
-      "title": "Visit Us Here",
-      "direccion": "📍 Address: Froylán C. Manjarrez, 75470 Froylán C. Manjarrez, Pue.",
-      "telefono": "📞 Phone: 0000-000-00-00",
-      "correo": "📧 Email: ooooooogmail.com",
-      "boton": "Visit us"
-    },
-    "servicios": {
-      "title": "Get to Know Flores Sons Farms",
-      "cards": [
-        {
-          "description": "We ensure that every product meets the highest standards of quality and freshness."
-        },
-        {
-          "description": "We offer a wide range of packaged agricultural products."
-        },
-        {
-          "description": "We have optimized logistics to ensure your orders arrive on time."
-        },
-        {
-          "description": "Our team will always be available to address your questions and needs."
-        }
-      ]
-    }
+  
+  "galeria": {
+    "title": "Discover our facilities, processes, products, and more",
+    "subtitle": "Explore images that reflect our commitment to quality and excellence."
+  },
+  "ubicacion": {
+    "title": "Find us at",
+    "direccion": "📍 Address: Froylán C. Manjarrez, 75470 Froylán C. Manjarrez, Pue.",
+    "telefono": "📞 Phone: 0000-000-00-00",
+    "correo": "📧 Email: ooooooogmail.com",
+    "boton": "Visit us"
+  },
+  "servicios": {
+    "title": "Learn more about sons farms flores "
+   
+  },
+  "anuncio0": {
+    "title": "At Sons Farms Flowers, we cultivate with passion and commitment, offering fresh and high-quality products."
+  },
+  "conoce": {
+    "title": "Discover Our Beginnings",
+    "description": "From planting to delivery, we guarantee an impeccable process, ensuring that each flower retains its freshness, color, and aroma, offering our customers a premium product that exceeds expectations. At Sons Farms, we bloom with every shipment.",
+    "button": "Since 2007",
+    "description2": "We are a company dedicated to exporting the highest quality fresh flowers, grown with passion and care in our fields. Our commitment to excellence, sustainability, and innovation has positioned us as a benchmark in the international market, bringing the beauty of our flowers to every corner of the world.",
+    "button2": "Our beginnings"
+  },
+  "mision": {
+    "title": "Our Mission",
+    "description": "Li Europan lingues es membres del sam familie. Lor separat existentie es un myth."
+  },
+  "tar1": {
+    "title": "Commitment to Quality",
+    "description": "Ensuring packaged products meet the highest hygiene and freshness standards, fulfilling customer expectations and market regulations."
+  },
+  "tar2": {
+    "title": "Innovation and Efficiency",
+    "description": "Implementing advanced technology and optimized processes to offer safe, efficient, and sustainable packaging solutions."
+  },
+  "tar3": {
+    "title": "Responsibility and Sustainability",
+    "description": "Operating with social and environmental responsibility, promoting eco-friendly practices and a fair working environment for our employees."
+  },
+  "vision": {
+    "title": "Our Vision",
+    "description": "We are a company dedicated to exporting the highest quality fresh flowers, grown with passion and care in our fields. Our commitment to excellence, sustainability, and innovation has positioned us as a benchmark in the international market, bringing the beauty of our flowers to every corner of the world."
+  },
+  "valores": {
+    "title": "Our Values",
+    "description": "Li Europan lingues es membres del sam familie. Lor separat existentie es un myth Por scientie, musica."
+  },
+  "valor1": {
+    "title": "Integrity",
+    "description": "We act with integrity and transparency, fulfilling our commitments with honesty and responsibility."
+  },
+  "valor2": {
+    "title": "Social Responsibility",
+    "description": "We actively contribute to the well-being of society and the environment through our actions and decisions."
+  },
+  "valor3": {
+    "title": "Teamwork",
+    "description": "We value collaboration and mutual respect to achieve our common goals."
+  },
+  "anuncio": {
+    "title": "Discover our selection of fresh and high-quality products."
+  },
+  "vendidos": {
+    "title": "Best-Selling Products"
+  },
+  "eslogan": {
+    "title": "Bring the freshness of our fields to your table: Building a Greener Future"
+  },
+  "catalogo": {
+    "title": "Our Catalog"
+  },
+  "buscar_pro": {
+    "description": "Search product..."
+  },
+  "categ0": {
+    "option0": "All categories"
+  },
+  "categ1": {
+    "option1": "Leafy Green Vegetables"
+  },
+  "categ2": {
+    "option2": "Herbs and Spices"
+  },
+  "categ3": {
+    "option3": "Root and Tuber Vegetables"
+  },
+  "categ4": {
+    "option4": "Cacti and Nopales"
+  },
+  "categ5": {
+    "option5": "Fruit Vegetables"
+  },
+  "ver_pro": {
+    "description": "  see product"
+  },
+  "no_encontrado": {
+    "description": "No product found."
+  },
+  "brocoli": {
+    "nombre": "Broccoli",
+    "categoria": "Green Leaf Vegetable",
+    "button": "View product"
+  },
+  "cilantro": {
+    "nombre": "Cilantro",
+    "categoria": "Herbs and Spices",
+    "button": "View product"
+  },
+  "zanahoria": {
+    "nombre": "Carrot",
+    "categoria": "Root and Tuber Vegetable",
+    "button": "View product"
+  },
+  "rabano": {
+    "nombre": "Radish",
+    "categoria": "Root and Tuber Vegetable",
+    "button": "View product"
+  },
+  "repollo": {
+    "nombre": "Cabbage",
+    "categoria": "Green Leaf Vegetable",
+    "button": "View product"
+  },
+  "betabel": {
+    "nombre": "Beetroot",
+    "categoria": "Root and Tuber Vegetable",
+    "button": "View product"
+  },
+  "calabaza": {
+    "nombre": "Pumpkin",
+    "categoria": "Fruit Vegetable",
+    "button": "View product"
+  },
+  "calabaza2": {
+    "nombre": "Ball Pumpkin",
+    "categoria": "Fruit Vegetable",
+    "button": "View product"
+  },
+  "tomatillo": {
+    "nombre": "Tomatillo milpero",
+    "categoria": "Fruit Vegetable",
+    "button": "View product"
+  },
+  "nopal": {
+    "nombre": "Nopal",
+    "categoria": "Cacti and Nopales",
+    "button": "View product"
+  },
+  "tuna_v": {
+    "nombre": "Green Tuna",
+    "categoria": "Cacti and Nopales",
+    "button": "View product"
+  },
+  "tuna_r": {
+    "nombre": "Red Tuna",
+    "categoria": "Cacti and Nopales",
+    "button": "View product"
+  },
+  "epazote": {
+    "nombre": "Epazote",
+    "categoria": "Herbs and Spices",
+    "button": "View product"
+  },
+  "cebollin": {
+    "nombre": "Chives",
+    "categoria": "Herbs and Spices",
+    "button": "View product"
+  },
+  "anuncio3": {
+    "title": "¡Connect with Flores Sons Farms!",
+    "description": "If you have any questions, comments, suggestions or are interested in any of our products, please fill out the following form and we will contact you as soon as possible."
+  },
+  "atencion": {
+    "title": "Contact Information",
+    "description": "Need phone assistance? Call us at the following number."
+  },
+  "tele": {
+    "title": "Phone",
+    "description": "222-222-2222"
+  },
+  "correo": {
+    "title": "Email",
+    "description": "email@example.com"
+  },
+  "dire": {
+    "title": "Address",
+    "description": "Froylán C. Manjarrez, 75470 Froylán C. Manjarrez, Pue."
+  },
+  "hora": {
+    "title": "Business Hours"
+  },
+  "lunes": {
+    "title": "Monday to Friday: 8:00 am – 10:00 pm"
+  },
+  "sabado": {
+    "title": "Saturday: 8:00 am – 10:00 pm"
+  },
+  "domi": {
+    "title": "Sunday: 8:00 am – 10:00 pm"
+  },
+  "ubi": {
+    "title": "Located at",
+    "description": "Visit us at Froylán C. Manjarrez, 75470, where quality and commitment are packed for you."
+  },
+  "suc1": {
+    "title": "Branch 1",
+    "description": "Froylán C. Manjarrez, 75470 Froylán C. Manjarrez, Pue."
+  },
+  "suc2": {
+    "title": "Branch 1",
+    "description": "Froylán C. Manjarrez, 75470 Froylán C. Manjarrez, Pue."
+  },
+  "for": {
+    "title": "Contact Us",
+    "description": "Please fill out the following form to get in touch with us",
+    "nombre": "Name",
+    "tel": "Phone",
+    "cor": "Email",
+    "mens": "Message"
+  },
+  "d_nom": {
+    "title": "The name is required"
+  },
+  "d_tel": {
+    "title": "The phone number is required"
+  },
+  "d_cor": {
+    "title": "The email is required"
+  },
+  "d_men": {
+    "title": "The message is required"
+  },
+  "but": {
+    "title": "Send"
+  },
+  "notFound": {
+    "title": "404 - Page Not Found",
+    "description": "Sorry, the page you are looking for does not exist.",
+    "fu": "Oops! The page you’re looking for is not available. It seems to have disappeared like a cilantro leaf.",
+    "backToHome": "Return to Home"
   }
+}

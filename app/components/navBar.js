@@ -64,8 +64,7 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-4 left-0 right-0 z-50 flex justify-center">
-      <div className="max-w-[1100px] w-full bg-white/30 backdrop-blur-lg shadow-md rounded-full px-6 lg:px-12 py-2 flex items-center justify-between">
-        
+    <div className="max-w-[1100px] w-full bg-white shadow-md rounded-full px-6 lg:px-12 py-2 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center">
           <Image src="/flores.png" alt="Logo" width={200} height={90} />

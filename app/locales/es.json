@@ -1,71 +1,283 @@
 {
-    "navbar": {
-      "home": "Inicio",
-      "about": "Acerca de",
-      "catalog": "Catálogo",
-      "contact": "Contacto",
-      "contactUs": "Contáctanos"
-    },
-    "hero": {
-      "title": "Flores Sons Farms",
-      "subtitle": "Calidad que se siente, frescura que se nota."
-    },
-    "somos": {
-      "title": "¿Quiénes somos?",
-      "description": "Somos una empresa dedicada a la exportación de flores frescas de la más alta calidad, cultivadas con pasión y cuidado en nuestros campos. Nuestro compromiso con la excelencia, la sostenibilidad y la innovación nos ha posicionado como un referente en el mercado internacional, llevando la belleza de nuestras flores a cada rincón del mundo. Desde la siembra hasta la entrega, garantizamos un proceso impecable, asegurando que cada flor conserve su frescura, color y aroma, ofreciendo a nuestros clientes un producto premium que supera las expectativas. En Sons Farms, florecemos con cada envío."
-    },
-    "category": {
-      "title": "Conoce nuestros productos",
-      "subtitle": "Descubre la frescura y calidad que nos caracteriza.",
-      "button": "Ver más productos"
-    },
-    "elegirnos": {
-      "title": "¿Por qué elegirnos?",
+  "navbar": {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "catalog": "Catálogo",
+    "contact": "Contacto",
+    "contactUs": "Contáctanos"
+  },
+  "hero": {
+    "title": "Flores Sons Farms",
+    "subtitle": "Calidad que se siente, frescura que se nota."
+  },
+  "somos": {
+    "title": "¿Quiénes somos?",
+    "description": "Una empresa familiar dedicada a la produccion y exportación de hortalizas, principalmente al cilantro ,cebollita,calabacita y brocoli.de la más alta calidad, cultivadas con pasión y cuidado en nuestros campos. Nuestro compromiso con la excelencia, la sostenibilidad y la innovación nos ha posicionado como un referente en el mercado internacional, llevando a cada rincón. Garantizamos un proceso impecable, asegurando que cada hortaliza conserve su frescura, color y aroma, ofreciendo a nuestros clientes un producto premium que supera las expectativas. En Sons Farms, florecemos con cada envío."
+  
+  },
+  "category": {
+    "title": "Conoce nuestros productos",
+    "subtitle": "Descubre la frescura y calidad que nos caracteriza.",
+    "button": "Ver más productos"
+  },
+  
+    "area": {
+      "title": "Aréa de la empresa",
       "cards": [
         {
-          "title": "Calidad Garantizada",
-          "description": "Implementamos Rigurosos Controles De Calidad En Cada Etapa Del Proceso, Asegurando Que Nuestros Productos Cumplan Con Los Más Altos Estándares."
+          "title": "Campo",
+          "description": "Contamos con ranchos certificados para la produccion de nuestros productos ubicados en puebla y Tlaxcala"
+        
         },
         {
-          "title": "Tecnología e Innovación",
-          "description": "Contamos Con Maquinaria Moderna Y Procesos Eficientes Que Optimizan El Empaquetado Y Conservación De Los Productos."
-        },
-        {
-          "title": "Compromiso Con La Sustentabilidad",
-          "description": "Usamos Materiales Ecológicos Y Prácticas Responsables Para Minimizar Nuestro Impacto Ambiental."
-        },
-        {
-          "title": "Servicio Confiable",
-          "description": "Nos Adaptamos A Las Necesidades De Cada Cliente, Ofreciendo Soluciones Flexibles, Entregas Puntuales."
+          "title": "Empresa",
+          "description": "Contamos con empaque certificado en Primus GFS"
+          
         }
       ]
     },
-    "galeria": {
-      "title": "Descubre nuestras instalaciones, procesos, productos y más",
-      "subtitle": "Explora imágenes que reflejan nuestro compromiso con la calidad y la excelencia."
-    },
-    "ubicacion": {
-      "title": "Encuéntranos en",
-      "direccion": "📍 Dirección: Froylán C. Manjarrez, 75470 Froylán C. Manjarrez, Pue.",
-      "telefono": "📞 Teléfono: 0000-000-00-00",
-      "correo": "📧 Correo electrónico: ooooooogmail.com",
-      "boton": "Visítanos"
-    },
+
+  "galeria": {
+    "title": "Descubre nuestras instalaciones, procesos, productos y más",
+    "subtitle": "Explora imágenes que reflejan nuestro compromiso con la calidad y la excelencia."
+  },
+  "ubicacion": {
+    "title": "Encuéntranos en",
+    "direccion": "📍 Dirección: Froylán C. Manjarrez, 75470 Froylán C. Manjarrez, Pue.",
+    "telefono": "📞 Teléfono: 0000-000-00-00",
+    "correo": "📧 Correo electrónico: ooooooogmail.com",
+    "boton": "Visítanos"
+  },
+
     "servicios": {
-      "title": "CONOCE MÁS DE FLORES SONS FARMS",
-      "cards": [
-        {
-          "description": "Aseguramos que cada producto cumpla con los estándares más altos de calidad y frescura."
-        },
-        {
-          "description": "Ofrecemos una amplia gama de productos agrícolas empaquetados."
-        },
-        {
-          "description": "Contamos con una logística optimizada para que tus pedidos lleguen a tiempo."
-        },
-        {
-          "description": "Nuestro equipo estará siempre disponible para resolver tus dudas y necesidades."
-        }
-      ]
-    }
+      "title": "Conoce más de Flores Sons Farms"
+    },
+  
+  "anuncio0": {
+    "title": "En Flores Sons Farms, cultivamos con pasión y compromiso, ofreciendo productos frescos y de calidad."
+  },
+  "conoce": {
+    "title": "Conoce nuestros inicios y nuestra historia",
+    "description":"Se fundó en el año 2007 con la iniciativa del gobierno de aquella época, ya que la producción de Puebla era exclusivamente para el mercado nacional. Con esta iniciativa, varios productores se unieron y, con el paso de los años, fueron creando diferentes empaques. En nuestro caso, esto dio origen a lo que hoy conocemos como Flores Farms, una empresa familiar que ha evolucionado con el tiempo para adaptarse a los estándares del mercado internacional.",
+    "button": "Desde 2007",
+    "description2": "Desde sus inicios, Flores Farms ha trabajado con dedicación y esfuerzo para ofrecer productos de la más alta calidad, expandiendo su presencia más allá de las fronteras nacionales. A través de los años, hemos implementado tecnología de vanguardia en el proceso de producción, sistemas de control de calidad y métodos de cultivo sustentables, asegurando así la frescura y excelencia de nuestros productos.Nuestra empresa no solo se ha consolidado en el ámbito de la exportación, sino que también ha fomentado el desarrollo de la comunidad agrícola local, generando empleo y brindando oportunidades de crecimiento a numerosas familias.",
+    "button2": "Sus inicios"
+  },
+  "mision": {
+    "title": "Nuestra Misión"
+   
+  },
+  "tar1": {
+    "title_": ".....",
+    "description": "Ser la empresa líder en la zona en la exportación de cilantro, reconocida por su calidad y compromiso con nuestros clientes. Nos enfocamos en ofrecer productos frescos y de excelencia, cumpliendo con los más altos estándares internacionales de inocuidad y sustentabilidad."
+  },
+  "tar2": {
+    "title:": "Innovación y Eficiencia",
+    "description": "Trabajamos con un enfoque basado en la innovación, el desarrollo sostenible y el respeto por el medio ambiente, implementando prácticas agrícolas responsables que garantizan la frescura y seguridad de nuestros productos."
+  },
+  "tar3": {
+    "title:": "Responsabilidad y Sostenibilidad",
+    "description": " Nos comprometemos a fortalecer nuestras relaciones comerciales con clientes y aliados estratégicos, brindando un servicio confiable, eficiente y personalizado.Además, buscamos generar un impacto positivo en nuestra comunidad."
+  },
+  "vision": {
+    "title": "Nuestra Visión",
+    "description": "Ser una empresa a la vanguardia en el área de producción y exportación, apoyando el desarrollo de la región y mejorando la calidad de vida de los productores y del personal que labore con nosotros."
+  },
+  "valores": {
+    "title": "Nuestros Valores"
+  },
+  "valor2": {
+    "title": "Honestidad",
+    "description": "Nos esforsamos por siempre garantizar y cumplir con lo que ofrecemos a nuestros clientes."
+  },
+  "valor1": {
+    "title": "Pasión",
+    "description": "Tenemos el gusto y admisión por la agricultura y nos empeñamos en hacer todas nuestras actividades con espiritu."
+  },
+  "valor3": {
+    "title": "Trabajo en Equipo",
+    "description": "Somos una empresa familiar donde cada mienbro aporta lo mejor de si y en conjunto lograr cada uno de nuestros objetivos."
+  },
+  "anuncio": {
+    "title": "Descubre nuestra selección de productos frescos y de alta calidad."
+  },
+  "vendidos": {
+    "title": "Productos Más Vendidos"
+  },
+  "eslogan": {
+    "title": "Lleva la frescura de nuestro campo a tu mesa: Building a Greener Future"
+  },
+  "catalogo": {
+    "title": "Nuestro Catalogo"
+  },
+  "buscar_pro": {
+    "description": "Buscar producto..."
+  },
+  "categ0": {
+    "option0": "Todas las categorias "
+  },
+  "categ1": {
+    "option1": "Hortaliza de Hoja Verde"
+  },
+  "categ2": {
+    "option2": "Hierbas y Especias"
+  },
+  "categ3": {
+    "option3": "Hortaliza de Raíces y Tubérculos"
+  },
+  "categ4": {
+    "option4": "Cactáceas y Nopales"
+  },
+  "categ5": {
+    "option5": "Hortaliza de Fruto"
+  },
+  "ver_pro": {
+    "description": "Ver producto"
+  },
+  "no_encontrado": {
+    "description": "No se encontro producto."
+  },
+  "brocoli": {
+    "nombre": "Brocoli",
+    "categoria": "Hortaliza de Hoja Verde",
+    "button": "Ver producto"
+  },
+  "cilantro": {
+    "nombre": "Cilantro",
+    "categoria": "Hierbas y Especias",
+    "button": "Ver producto"
+  },
+  "zanahoria": {
+    "nombre": "Zanahoria",
+    "categoria": "Hortaliza de Raíces y Tuberculos",
+    "button": "Ver producto"
+  },
+  "rabano": {
+    "nombre": "Rábano",
+    "categoria": "Hortaliza de Raíces y Tuberculos",
+    "button": "Ver producto"
+  },
+  "repollo": {
+    "nombre": "Repollo",
+    "categoria": "Hortaliza de Hoja Verde",
+    "button": "Ver producto"
+  },
+  "betabel": {
+    "nombre": "Repollo",
+    "categoria": "Hortaliza de Raíces y Tuberculos",
+    "button": "Ver producto"
+  },
+  "calabaza": {
+    "nombre": "Calabaza",
+    "categoria": "Hortaliza de Fruto",
+    "button": "Ver producto"
+  },
+  "calabaza2": {
+    "nombre": "Calabaza de bola",
+    "categoria": "Hortaliza de Fruto",
+    "button": "Ver producto"
+  },
+  "tomatillo": {
+    "nombre": "Tomatillo milpero",
+    "categoria": "Hortaliza de Fruto",
+    "button": "Ver producto"
+  },
+  "nopal": {
+    "nombre": "Tomatillo milpero",
+    "categoria": "Cactaceas y Nopales",
+    "button": "Ver producto"
+  },
+  "tuna_v": {
+    "nombre": "Tuna verde",
+    "categoria": "Cactaceas y Nopales",
+    "button": "Ver producto"
+  },
+  "tuna_r": {
+    "nombre": "Tuna roja",
+    "categoria": "Cactaceas y Nopales",
+    "button": "Ver producto"
+  },
+  "epazote": {
+    "nombre": "Epazote",
+    "categoria": "Hierbas y Especias",
+    "button": "Ver producto"
+  },
+  "cebollin": {
+    "nombre": "Cebollín",
+    "categoria": "Hierbas y Especias",
+    "button": "Ver producto"
+  },
+  "anuncio3": {
+    "title": "¡Conéctate con Flores Sons Farms!",
+    "description": "Si tienes alguna duda, comentario, sugerencia o te interesa alguno de nuestros productos complete el siguiente formulario y nos comunicaremos contigo lo antes posible"
+  },
+  "atencion": {
+    "title": "Información de contacto",
+    "description": "Necesitas atención vía telefónica comunícate con nosotros al siguiente número."
+  },
+  "tele": {
+    "title": "Teléfono",
+    "description": "222-222-2222"
+  },
+  "correo": {
+    "title": "Correo",
+    "description": "correo@ejemplo.com"
+  },
+  "dire": {
+    "title": "Dirección",
+    "description": "Froylán C. Manjarrez, 75470 Froylán C. Manjarrez, Pue."
+  },
+  "hora": {
+    "title": "Horario de atención."
+  },
+  "lunes": {
+    "title": "Lunes a Viernes: 8:00 am – 10:00 pm"
+  },
+  "sabado": {
+    "title": "Sábado: 8:00 am – 10:00 pm"
+  },
+  "domi": {
+    "title": "Domingo: 8:00 am – 10:00 pm"
+  },
+  "ubi": {
+    "title": "Ubicados en",
+    "description": "Visítanos en Froylán C. Manjarrez, 75470, donde la calidad y el compromiso se empacan para ti."
+  },
+  "suc1": {
+    "title": "Sucursal 1",
+    "description": "Froylán C. Manjarrez, 75470 Froylán C. Manjarrez, Pue."
+  },
+  "suc2": {
+    "title": "Sucursal 2",
+    "description": "Froylán C. Manjarrez, 75470 Froylán C. Manjarrez, Pue."
+  },
+  "for": {
+    "title": "Contáctanos",
+    "description": "Por favor rellene el siguiente formulario para ponerse en contacto con nosotros",
+    "nombre": "Nombre",
+    "tel": "Telefono",
+    "cor": "Coreo",
+    "mens": "Mensaje"
+  },
+  "d_nom": {
+    "title": "El nombre es obligatorio"
+  },
+  "d_tel": {
+    "title": "El telefono es obligatorio"
+  },
+  "d_cor": {
+    "title": "El correo es obligatorio"
+  },
+  "d_men": {
+    "title": "El mensaje es obligatorio"
+  },
+  "but": {
+    "title": "Enviar"
+  },
+  "notFound": {
+    "title": "404 - Página no encontrada",
+    "description": "Lo sentimos, la página que estás buscando no existe.",
+    "fu": "¡Ups! La página que buscas no está disponible. Parece que se ha perdido como una hoja de cilantro.",
+    "backToHome": "Volver al inicio"
   }
+}

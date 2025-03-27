@@ -1,8 +1,10 @@
 'use client';
 import React from 'react';
 import { FaBalanceScale, FaGlobeAmericas, FaRegHandshake } from 'react-icons/fa';
+import { useTranslation } from '@/app/hooks/useTranslation';
 
 function ValueCard({ title, icon, text, bgColor, headerColor }) {
+  
   return (
     <div className={`p-8 sm:p-12 rounded-lg text-white w-full sm:w-80 relative ${bgColor} h-auto`}> 
       <div
@@ -18,34 +20,35 @@ function ValueCard({ title, icon, text, bgColor, headerColor }) {
 }
 
 export default function ValoresSection() {
+   const translations = useTranslation();
   return (
-    <div className="px-6 py-12 md:px-16 lg:px-32 text-center">
+    <div className="px-8 py-12 md:px-16 lg:px-32 text-center">
       <div>
         <h2 id="quienes-somos-heading" className="text-5xl font-bold text-[#014421] text-center mb-6 font-serif">
-          Nuestros Valores
+        {translations.valores?.title}
+         
         </h2>
-        <p className="text-center font-sans mt-2 mb-12">
-          Li Europan lingues es membres del sam familie. Lor separat existente es un myth Por scientie, musica.
-        </p>
-        <div className="flex flex-col md:flex-row gap-6 md:gap-6 justify-center items-center mt-6 space-y-10 md:space-y-0">
+        
+        <div className="text-lg  leading-relaxed text-justify px-7 font-serif flex flex-col px-7 font-serif md:flex-row gap-6 md:gap-6 justify-center items-center mt-6 space-y-10 md:space-y-0">
           <ValueCard
-            title="Integridad"
+  
+            title= {translations.valor1?.title}
             icon={<FaBalanceScale />}
-            text="Actuamos con rectitud y transparencia, cumpliendo nuestros compromisos con honestidad y responsabilidad."
+            text= {translations.valor1?.description}
             bgColor="bg-green-900"
             headerColor="bg-green-600"
           />
           <ValueCard
-            title="Responsabilidad Social"
+            title= {translations.valor2?.title}
             icon={<FaGlobeAmericas />}
-            text="Contribuimos activamente al bienestar de la sociedad y el medio ambiente mediante nuestras acciones y decisiones."
+            text= {translations.valor2?.description}
             bgColor="bg-green-600"
             headerColor="bg-green-900"
           />
           <ValueCard
-            title="Trabajo en Equipo"
+            title= {translations.valor3?.title}
             icon={<FaRegHandshake />}
-            text="Valoramos la colaboración y el respeto mutuo para alcanzar nuestros objetivos comunes."
+            text={translations.valor3?.description}
             bgColor="bg-green-900"
             headerColor="bg-green-600"
           />
