@@ -5,8 +5,8 @@
 /* Variables CSS para los colores del tema */
 :root {
   --bg-color-light: white;
-  --text-color-light: black;
-  --bg-color-dark: black;
+  --text-color-light: #19212c;
+  --bg-color-dark: #19212c;
   --text-color-dark: white;
 
   /* Colores para los títulos */
@@ -24,16 +24,16 @@ body {
 
 /* Modo oscuro - aplicado a nivel de la etiqueta <html> */
 [data-theme='dark'] {
-  --bg-color-light: black;
+  --bg-color-light: #19212c;
   --text-color-light: white;
-  --bg-color-dark: black;
+  --bg-color-dark: #19212c;
   --text-color-dark: white;
 }
 
 [data-theme='light'] {
   --bg-color-light: white;
-  --text-color-light: black;
-  --bg-color-dark: black;
+  --text-color-light: #19212c;
+  --bg-color-dark: #19212c;
   --text-color-dark: white;
 }
 
