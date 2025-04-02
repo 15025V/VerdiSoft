@@ -148,3 +148,19 @@ html, body {
   overscroll-behavior: none;
   -webkit-overflow-scrolling: touch;
 }
+
+/* Evita el clic derecho y el arrastre de imágenes */
+img {
+  pointer-events: none; /* Deshabilita eventos del ratón */
+  user-select: none; /* Evita selección */
+  -webkit-user-drag: none; /* Evita arrastrar en WebKit */
+  -webkit-touch-callout: none; /* Deshabilita menú largo en móviles */
+}
+
+/* Opcional: aplicar solo a imágenes dentro de un contenedor específico */
+.protected-images img {
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
+}

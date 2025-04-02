@@ -9,12 +9,15 @@ export default function VendidoSection() {
   return (
     <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto text-center">
-        <h2
-          id="categorias-heading"
-          className="text-5xl font-bold text-green-800 tracking-wide font-['Playfair_Display'] pb-8"
-        >
-          {translations.vendidos?.title}
-        </h2>
+      <div className="flex items-center justify-center mb-12 md:mb-16">
+            <h2 
+              id="ubicacion-heading" 
+              className="text-5xl md:text-5xl font-semibold  tracking-wide font-serif pb-3 relative inline-block"
+            >
+              {translations.vendidos?.title}
+              <span className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-green-400 to-transparent dark:from-green-500 dark:to-transparent"></span>
+            </h2>
+          </div>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 px-6 md:px-12">
           {["/galeria_6.jpeg", "/galeria_2.webp", "/galeria_6.jpeg", "/galeria_2.webp"].map((src, index) => (

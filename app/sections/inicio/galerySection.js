@@ -1,84 +1,128 @@
-import Image from 'next/image';
-import React from 'react';
-import { useTranslation } from '@/app/hooks/useTranslation';
+import Image from "next/image";
+import React, { useState } from "react";
+import { useTranslation } from "@/app/hooks/useTranslation";
 
 export default function GallerySplitSection() {
   const translations = useTranslation();
-  
+  const [selectedImage, setSelectedImage] = useState(null); // Estado para el modal
+
   const enterpriseImages = [
     { src: "/galeria_2.webp", alt: "Nuestras instalaciones" },
     { src: "/galeria_2.webp", alt: "Equipo de trabajo" },
     { src: "/galeria_2.webp", alt: "Proceso de empaque" },
-    { src: "/galeria_2.webp", alt: "Control de calidad" }
+    { src: "/galeria_2.webp", alt: "Control de calidad" },
   ];
 
   const fieldImages = [
     { src: "/galeria_2.webp", alt: "Cultivos en campo abierto" },
-    { src: "/galeria_2.webp", alt: "Invernaderos de producción" },
+    { src: "/galeria_2.webp", alt: "Invernaderos de producci贸n" },
     { src: "/galeria_2.webp", alt: "Cosecha sostenible" },
-    { src: "/galeria_2.webp", alt: "Tecnología agrícola" }
+    { src: "/galeria_2.webp", alt: "Tecnolog铆a agr铆cola" },
   ];
 
   return (
-    <section className="relative py-20 ">
+    <section className="relative py-8">
       <div className="max-w-7xl mx-auto px-6">
-        {/* Sección Empresa */}
-        <div className="mb-28">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold font-serif relative inline-block">
-              {translations.gallery?.enterpriseTitle || "Nuestra Empresa"}
-              <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-green-500 to-transparent"></span>
-            </h2>
-            <p className="mt-6 text-lgmax-w-3xl mx-auto font-serif">
-              {translations.gallery?.enterpriseSubtitle || "Conoce nuestras instalaciones y procesos internos"}
-            </p>
-          </div>
+        <GallerySection
+          title={translations.gallery?.enterpriseTitle || "Nuestra Empresa"}
+          subtitle={translations.gallery?.enterpriseSubtitle || "Conoce nuestras instalaciones y procesos internos"}
+          images={enterpriseImages}
+          onImageClick={setSelectedImage}
+        />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {enterpriseImages.map((image, index) => (
-              <GalleryCard key={`empresa-${index}`} image={image} />
-            ))}
-          </div>
-        </div>
-
-        {/* Sección Campo */}
-        <div>
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold font-serif relative inline-block">
-              {translations.gallery?.fieldTitle || "Nuestro Campo"}
-              <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-green-500 to-transparent"></span>
-            </h2>
-            <p className="mt-6 text-lg max-w-3xl mx-auto font-serif">
-              {translations.gallery?.fieldSubtitle || "Descubre nuestros cultivos y prácticas sostenibles"}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {fieldImages.map((image, index) => (
-              <GalleryCard key={`campo-${index}`} image={image} />
-            ))}
-          </div>
-        </div>
+        <GallerySection
+          title={translations.gallery?.fieldTitle || "Nuestro Campo"}
+          subtitle={translations.gallery?.fieldSubtitle || "Descubre nuestros cultivos y practicas sostenibles"}
+          images={fieldImages}
+          onImageClick={setSelectedImage}
+        />
       </div>
+
+      {selectedImage && <Lightbox image={selectedImage} onClose={() => setSelectedImage(null)} />}
     </section>
   );
 }
 
-// Componente de tarjeta reutilizable
-function GalleryCard({ image }) {
+// 馃搶 Secci贸n de galer铆a con t铆tulo, subt铆tulo y grid de im谩genes
+function GallerySection({ title, subtitle, images, onImageClick }) {
   return (
-    <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 bg-white dark:bg-gray-700 h-64">
+    <div className="mb-28">
+      <div className="text-center mb-16">
+        <h2 className="text-4xl md:text-5xl font-bold font-serif relative inline-block pb-3">
+          {title}
+          <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-green-500 to-transparent"></span>
+        </h2>
+        <p className="mt-6 text-lg max-w-3xl mx-auto font-light">
+          {subtitle}
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        {images.map((image, index) => (
+          <GalleryCard key={index} image={image} onClick={() => onImageClick(image)} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// 馃搶 Tarjeta de imagen con hover y overlay elegante
+function GalleryCard({ image, onClick }) {
+  return (
+    <div
+      className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 bg-white dark:bg-gray-800 h-72 cursor-pointer"
+      onClick={onClick}
+    >
       <Image
         src={image.src}
         alt={image.alt}
         fill
-        className="object-cover transition-transform duration-500 group-hover:scale-110"
-        quality={85}
+        className="object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
+        quality={90}
+        placeholder="blur"
+        blurDataURL={image.src}
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-        <p className="text-white text-sm font-medium translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+        <p className="text-white text-lg font-medium translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
           {image.alt}
         </p>
+      </div>
+    </div>
+  );
+}
+// 馃搶 Lightbox con animaci贸n y bot贸n de cierre elegante
+function Lightbox({ image, onClose }) {
+  return (
+    <div
+      className="fixed inset-0 bg-black bg-opacity-80 backdrop-blur-md flex items-center justify-center z-50 animate-fade-in"
+      onClick={onClose}
+    >
+      <div className="relative max-w-4xl w-full p-4">
+        {/* 馃敟 Bot贸n de cierre elegante */}
+        <button
+          className="absolute top-5 right-5 bg-white/20 hover:bg-white/40 text-white rounded-full p-3 transition-all duration-300 shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-white/50"
+          onClick={onClose}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={2}
+            stroke="currentColor"
+            className="w-6 h-6"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+
+        <Image
+          src={image.src}
+          alt={image.alt}
+          width={1200}
+          height={800}
+          className="rounded-lg shadow-lg object-contain w-full"
+        />
       </div>
     </div>
   );

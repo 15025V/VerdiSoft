@@ -32,6 +32,15 @@ export default function Hero() {
       <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
       <script src="https://files.bpcontent.cloud/2025/02/23/04/20250223044823-TC06RID3.js"></script>
 
+      {/* Chatbot de WhatsApp */}
+      <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+      <script src="https://files.bpcontent.cloud/2025/02/23/04/20250223044823-TC06RID3.js"></script>
+
+      {/* Icono de WhatsApp (puedes personalizar el estilo) */}
+      <a href="https://wa.me/2491387526" target="_blank" rel="noopener noreferrer" style={{ position: 'fixed', bottom: '110px', right: '25px', zIndex: 1000 }}>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/240px-WhatsApp.svg.png" alt="WhatsApp" width="50" height="50" />
+      </a>
+
 
       {/* Secciones de la página */}
       <Navbar/>

@@ -7,12 +7,12 @@ export default function UbicationSection() {
 
   return (
     <div role="region" aria-labelledby="ubicacion-heading">
-      <section className="py-16 md:py-24 text-center transition-colors duration-500">
+      <section className="py-1 md:py-1 text-center transition-colors duration-500">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-center mb-12 md:mb-16">
             <h2 
               id="ubicacion-heading" 
-              className="text-5xl md:text-5xl font-semibold  tracking-wide font-serif pb-4 relative inline-block"
+              className="text-5xl md:text-5xl font-semibold  tracking-wide font-serif pb-3 relative inline-block"
             >
               {translations.ubicacion?.title}
               <span className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-green-400 to-transparent dark:from-green-500 dark:to-transparent"></span>

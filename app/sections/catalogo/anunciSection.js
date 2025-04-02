@@ -16,7 +16,7 @@ export default function AnunciSection() {
       }}
     >
       <div className="text-white px-6">
-        <h1 className="text-6xl font-serif font-bold tracking-wide font-playfair italic text-center">
+        <h1 className="text-5xl font-serif font-bold tracking-wide font-playfair italic text-center">
           {translations.anuncio0?.title}</h1>
 
       </div>

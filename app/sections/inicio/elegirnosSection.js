@@ -25,9 +25,9 @@ export default function AreaEmpresaSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Sección de texto */}
           <div className="bg-white/90 dark:bg-gray-900/90 backdrop-blur-md p-10 rounded-3xl shadow-2xl border border-white/20 dark:border-gray-700/50 transition-all duration-500 hover:shadow-xl">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white font-serif mb-10 leading-tight">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white font-serif mb-10 leading-tight">
               {translations.area?.title}
-            </h2>
+            </h1>
             
             <div className="space-y-8">
               {translations.area?.cards.map((card, index) => (

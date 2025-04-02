@@ -29,11 +29,11 @@ export default function CertiSection() {
       <div className="max-w-7xl mx-auto px-6">
         {/* Encabezado */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-green-800 dark:text-green-100 font-serif relative inline-block">
+          <h2 className="text-4xl md:text-5xl font-bold text-green-800 font-serif relative inline-block pb-3">
             {translations.certifications?.title || "Certificaciones"}
             <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-green-500 to-transparent"></span>
           </h2>
-          <p className="mt-6 text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto font-serif">
+          <p className="mt-6 text-lg max-w-3xl mx-auto font-serif">
             {translations.certifications?.subtitle || "Garantía de calidad y excelencia en nuestros procesos"}
           </p>
         </div>
@@ -43,9 +43,9 @@ export default function CertiSection() {
           {certifications.map((cert, index) => (
             <div 
               key={index} 
-              className="group relative bg-white dark:bg-gray-700 rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-600 flex flex-col items-center"
+              className="group relative bg-white dark:bg-green-900 rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-600 flex flex-col items-center"
             >
-              <div className="mb-6 p-4 bg-gray-50 dark:bg-gray-600 rounded-lg w-full flex justify-center">
+              <div className="mb-6 p-4 bg-gray-50 dark:bg-white rounded-lg w-full flex justify-center">
                 <Image 
                   src={cert.src} 
                   alt={cert.alt}
@@ -64,7 +64,7 @@ export default function CertiSection() {
 
         {/* Texto final */}
         <div className="text-center">
-          <p className="text-lg italic text-gray-600 dark:text-gray-400 max-w-3xl mx-auto font-serif border-t border-gray-200 dark:border-gray-700 pt-8">
+          <p className="text-lg italic max-w-3xl mx-auto font-serif border-t border-gray-200 dark:border-gray-700 pt-8">
             {translations.certifications?.footer || "Nuestros certificados reflejan el compromiso con la excelencia y la calidad en cada etapa de producción."}
           </p>
         </div>

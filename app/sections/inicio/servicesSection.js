@@ -38,13 +38,13 @@ export default function VisualServicesSection() {
 
       <div className="relative max-w-7xl mx-auto px-6">
         {/* Encabezado */}
-        <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-boldfont-serif mb-6">
-            {translations.services?.title || "Nuestros Servicios Integrales"}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-green-800 font-serif relative inline-block pb-3">
+            {translations.servicios?.title}
+            <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-green-500 to-transparent"></span>
           </h2>
-          <div className="w-24 h-1 bg-green-500 mx-auto mb-8"></div>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            {translations.services?.subtitle || "Soluciones completas para la industria floral"}
+          <p className="mt-6 text-lg max-w-3xl mx-auto font-serif">
+            {translations.servicios?.subtitle}
           </p>
         </div>
 
@@ -82,7 +82,7 @@ export default function VisualServicesSection() {
 
         {/* Texto descriptivo adicional */}
         <div className="mt-16 text-center max-w-4xl mx-auto">
-          <p className="text-gray-500 dark:text-gray-400 italic">
+          <p className="italic">
             {translations.services?.footer || "Cada servicio diseñado para mantener los más altos estándares de calidad en toda la cadena de producción"}
           </p>
         </div>

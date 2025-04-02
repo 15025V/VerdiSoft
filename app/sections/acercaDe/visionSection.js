@@ -22,10 +22,10 @@ export default function VisionSection() {
   };
 
   return (
-    <section className="w-screen overflow-hidden">
-      <h1 id="quienes-somos-heading" className="text-6xl font-bold text-[#014421] text-center mb-8 pt-12 font-serif">
+    <section className="w-screen overflow-hidden px-6 py-14 md:px-20 lg:px-36 flex flex-col items-center text-center space-y-8">
+      <h2 id="quienes-somos-heading" className="text-5xl text-center font-bold text-[#014421] font-serif border-l-8 border-[#5DBE66] pl-4 mx-auto inline-block">
         {translations.vision?.title}
-      </h1>
+      </h2>
       <p className="text-justify font-serif max-w-4xl text-xl mx-auto px-6">
         {translations.vision?.description}
       </p>
@@ -35,7 +35,7 @@ export default function VisionSection() {
         
         {/* Botón izquierdo */}
         <button 
-          className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-900 bg-opacity-50 text-white p-3"
+          className="absolute left-0 top-1/2 transform -translate-y-1/2 p-4 bg-white/20 backdrop-blur-md border border-white/30 shadow-lg rounded-full transition hover:bg-white/40 hover:scale-110 hover:shadow-xl text-gray-800"
           onClick={prevSlide}
         >
           <ChevronLeft size={40} />
@@ -43,7 +43,7 @@ export default function VisionSection() {
         
         {/* Botón derecho */}
         <button 
-          className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-900 bg-opacity-50 text-white p-3"
+          className="absolute top-1/2 right-0 transform -translate-y-1/2 p-4 bg-white/20 backdrop-blur-md border border-white/30 shadow-lg rounded-full transition hover:bg-white/40 hover:scale-110 hover:shadow-xl text-gray-800"
           onClick={nextSlide}
         >
           <ChevronRight size={40} />

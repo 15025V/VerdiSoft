@@ -57,7 +57,7 @@
     "title": "En Flores Sons Farms, cultivamos con pasión y compromiso, ofreciendo productos frescos y de calidad."
   },
   "conoce": {
-    "title": "Conoce nuestros inicios y nuestra historia",
+    "title": "Conoce nuestra historia",
     "description":"Se fundó en el año 2007 con la iniciativa del gobierno de aquella época, ya que la producción de Puebla era exclusivamente para el mercado nacional. Con esta iniciativa, varios productores se unieron y, con el paso de los años, fueron creando diferentes empaques. En nuestro caso, esto dio origen a lo que hoy conocemos como Flores Farms, una empresa familiar que ha evolucionado con el tiempo para adaptarse a los estándares del mercado internacional.",
     "button": "Desde 2007",
     "description2": "Desde sus inicios, Flores Farms ha trabajado con dedicación y esfuerzo para ofrecer productos de la más alta calidad, expandiendo su presencia más allá de las fronteras nacionales. A través de los años, hemos implementado tecnología de vanguardia en el proceso de producción, sistemas de control de calidad y métodos de cultivo sustentables, asegurando así la frescura y excelencia de nuestros productos.Nuestra empresa no solo se ha consolidado en el ámbito de la exportación, sino que también ha fomentado el desarrollo de la comunidad agrícola local, generando empleo y brindando oportunidades de crecimiento a numerosas familias.",
@@ -231,13 +231,13 @@
     "title": "Horario de atención."
   },
   "lunes": {
-    "title": "Lunes a Viernes: 8:00 am – 10:00 pm"
+    "title": "8:00 am – 10:00 pm"
   },
   "sabado": {
-    "title": "Sábado: 8:00 am – 10:00 pm"
+    "title": "8:00 am – 10:00 pm"
   },
   "domi": {
-    "title": "Domingo: 8:00 am – 10:00 pm"
+    "title": "8:00 am – 10:00 pm"
   },
   "ubi": {
     "title": "Ubicados en",

@@ -12,16 +12,16 @@ export default function SomosSection() {
     >
       {/* Elementos decorativos */}
       <div className="absolute inset-0  duration-700">
-        <div className="absolute top-20 left-20 w-40 h-40 rounded-full bg-green-300 dark:bg-green-300 mix-blend-multiply animate-blob animation-delay-2000 transition-colors duration-500"></div>
-        <div className="absolute top-1/3 right-32 w-48 h-48 rounded-full bg-green-200 dark:bg-green-200 mix-blend-multiply animate-blob transition-colors duration-500"></div>
-        <div className="absolute bottom-20 left-1/3 w-52 h-52 rounded-full bg-green-100 dark:bg-green-100 mix-blend-multiply animate-blob animation-delay-4000 transition-colors duration-500"></div>
+        <div className="absolute top-20 left-20 w-40 h-40 rounded-full bg-green-300 dark:bg-green-300 animate-blob animation-delay-2000 transition-colors duration-500"></div>
+        <div className="absolute top-1/3 right-32 w-48 h-48 rounded-full bg-green-200 dark:bg-green-200 animate-blob transition-colors duration-500"></div>
+        <div className="absolute bottom-20 left-1/3 w-52 h-52 rounded-full bg-green-100 dark:bg-green-100 animate-blob animation-delay-4000 transition-colors duration-500"></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-6">
         <header className="mb-20 text-center">
           <h2 
             id="quienes-somos-heading" 
-            className="text-4xl md:text-5xl lg:text-6xl font-bold  tracking-tight font-serif inline-block relative transition-colors duration-500"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold  tracking-tight font-serif inline-block relative transition-colors duration-500 pb-3"
           >
             {translations.somos?.title}
             <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-green-500 via-green-400 to-transparent dark:from-green-400 dark:via-green-300 transition-colors duration-500"></span>

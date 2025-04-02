@@ -7,13 +7,13 @@ export default function HeroSection() {
     const translations = useTranslation();
     
     return (
-        <section className="px-8 py-16 md:px-20 lg:px-36 flex flex-col md:flex-row items-center gap-12 bg-gray-50">
+        <section className="px-8 py-16 md:px-20 lg:px-36 flex flex-col md:flex-row items-center gap-12">
             {/* Información de contacto */}
             <div className="md:w-1/2 space-y-8">
                 <h2 id="quienes-somos-heading" className="text-5xl font-bold text-[#014421] font-serif border-l-8 border-[#5DBE66] pl-4">
                     {translations.atencion?.title}
                 </h2>
-                <p className="text-lg text-gray-700 leading-relaxed px-2 font-serif">
+                <p className="text-lg leading-relaxed px-2 font-serif">
                     {translations.atencion?.description}
                 </p>
                 <div className="space-y-6">

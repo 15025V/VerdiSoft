@@ -10,10 +10,10 @@ export default function HistoriaSection() {
         <section className="px-6 py-12 md:px-16 lg:px-32">
 
             <div className="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h1 id="quienes-somos-heading" className="text-5xl font-bold text-[#014421] mb-8 font-serif ml-14">
+                <div className="space-y-8">
+                    <h2 id="quienes-somos-heading" className="text-5xl font-bold text-[#014421] font-serif border-l-8 border-[#5DBE66] pl-4">
                     {translations.conoce?.title}
-                    </h1>
+                    </h2>
                     <p className="text-lg  leading-relaxed text-justify px-7 font-serif">
                     {translations.conoce?.description}
                     </p>

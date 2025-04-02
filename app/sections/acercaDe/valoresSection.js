@@ -24,7 +24,7 @@ export default function ValoresSection() {
   return (
     <div className="px-8 py-12 md:px-16 lg:px-32 text-center">
       <div>
-        <h2 id="quienes-somos-heading" className="text-5xl font-bold text-[#014421] text-center mb-6 font-serif">
+        <h2 id="quienes-somos-heading" className="text-5xl font-bold text-[#014421] text-center mb-16 font-serif border-l-8 border-[#5DBE66] pl-4 mx-auto inline-block">
         {translations.valores?.title}
          
         </h2>

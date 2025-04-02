@@ -1,36 +1,99 @@
 'use client';
 import React, { useState, useRef } from 'react';
 import { useTranslation } from '@/app/hooks/useTranslation';
+import emailjs from '@emailjs/browser';
 
 export default function FormSection() {
   const translations = useTranslation();
-  const [formData, setFormData] = useState({ nombre: '', telefono: '', correo: '', mensaje: '' });
+  const [formData, setFormData] = useState({ name: '', phone: '', email: '', message: '' });
   const [errors, setErrors] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
   const form = useRef(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+    
+    // Validación en tiempo real para el nombre (solo letras)
+    if (name === 'name') {
+      const lettersOnly = value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ\s]/g, '');
+      setFormData({ ...formData, [name]: lettersOnly });
+      return;
+    }
+    
+    // Validación en tiempo real para el teléfono (solo números)
+    if (name === 'phone') {
+      const numbersOnly = value.replace(/\D/g, '');
+      setFormData({ ...formData, [name]: numbersOnly });
+      return;
+    }
+    
     setFormData({ ...formData, [name]: value });
+  };
+
+  const validateForm = () => {
+    const newErrors = {};
+    
+    // Validación del nombre
+    if (!formData.name.trim()) {
+      newErrors.name = translations.d_nom?.title || 'Nombre es requerido';
+    } else if (!/^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/.test(formData.name)) {
+      newErrors.name = 'El nombre solo debe contener letras';
+    } else if (formData.name.length > 25) {
+      newErrors.name = 'El nombre no debe exceder 25 caracteres';
+    }
+    
+    // Validación del teléfono
+    if (!formData.phone) {
+      newErrors.phone = translations.d_tel?.title || 'Teléfono es requerido';
+    } else if (!/^\d{10}$/.test(formData.phone)) {
+      newErrors.phone = 'El teléfono debe tener exactamente 10 dígitos';
+    }
+    
+    // Validaciones básicas para email y mensaje
+    if (!formData.email) newErrors.email = translations.d_cor?.title || 'Email es requerido';
+    if (!formData.message) newErrors.message = translations.d_men?.title || 'Mensaje es requerido';
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const newErrors = {};
-    if (!formData.nombre) newErrors.nombre = translations.d_nom?.title;
-    if (!formData.telefono) newErrors.telefono = translations.d_tel?.title;
-    if (!formData.correo) newErrors.correo = translations.d_cor?.title;
-    if (!formData.mensaje) newErrors.mensaje = translations.d_men?.title;
-
-    if (Object.keys(newErrors).length > 0) {
-      setErrors(newErrors);
+    
+    if (!validateForm()) {
       return;
     }
 
-    setErrors({});
-    setIsSubmitted(true);
-    form.current.reset();
-    setFormData({ nombre: '', telefono: '', correo: '', mensaje: '' });
+    // Variables de entorno
+    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+    const userId = process.env.NEXT_PUBLIC_EMAILJS_USER_ID;
+
+    if (!serviceId || !templateId || !userId) {
+      console.error("Error: Variables de entorno de EmailJS no están configuradas correctamente.");
+      return;
+    }
+
+    if (!form.current) {
+      console.error("Error: El formulario no está definido.");
+      return;
+    }
+
+    emailjs.send(serviceId, templateId, {
+      name: formData.name,
+      phone: formData.phone,
+      email: formData.email,
+      message: formData.message,
+    }, userId)
+      .then((result) => {
+        console.log("Formulario enviado con éxito:", result.text);
+        setIsSubmitted(true);
+        form.current.reset();
+        setFormData({ name: '', phone: '', email: '', message: '' });
+      })
+      .catch((error) => {
+        console.error("Error al enviar el formulario:", error);
+      });
   };
 
   return (
@@ -43,56 +106,58 @@ export default function FormSection() {
         />
 
         <div className="w-3/4 bg-[#033521] p-10 text-white flex flex-col items-center justify-center relative z-10">
-          <h2 className="text-5xl text-white font-bold mb-2 text-center">{translations.for?.title}</h2>
+          <h1 className="text-5xl text-white font-bold mb-2 text-center">{translations.for?.title}</h1>
           <p className="text-gray-300 text-2x1 mb-4 text-center w-3/4">{translations.for?.description}</p>
 
           <form ref={form} onSubmit={handleSubmit} className="space-y-3 w-2/3">
             <div className="w-full">
               <input
                 type="text"
-                name="nombre"
-                value={formData.nombre}
+                name="name"
+                value={formData.name}
                 onChange={handleChange}
+                maxLength={25}
                 placeholder={translations.for?.nombre}
                 className="w-full p-2 text-black text-sm border-none rounded-tl-[15px] rounded-br-[15px] focus:ring-2 focus:ring-white"
               />
-              {errors.nombre && <p className="text-red-400 text-xs">{errors.nombre}</p>}
+              {errors.name && <p className="text-red-400 text-xs">{errors.name}</p>}
             </div>
 
             <div className="w-full">
               <input
                 type="text"
-                name="telefono"
-                value={formData.telefono}
+                name="phone"
+                value={formData.phone}
                 onChange={handleChange}
+                maxLength={10}
                 placeholder={translations.for?.tel}
                 className="w-full p-2 text-black text-sm border-none rounded-tl-[15px] rounded-br-[15px] focus:ring-2 focus:ring-white"
               />
-              {errors.telefono && <p className="text-red-400 text-xs">{errors.telefono}</p>}
+              {errors.phone && <p className="text-red-400 text-xs">{errors.phone}</p>}
             </div>
 
             <div className="w-full">
               <input
                 type="email"
-                name="correo"
-                value={formData.correo}
+                name="email"
+                value={formData.email}
                 onChange={handleChange}
                 placeholder={translations.for?.cor}
                 className="w-full p-2 text-black text-sm border-none rounded-tl-[15px] rounded-br-[15px] focus:ring-2 focus:ring-white"
               />
-              {errors.correo && <p className="text-red-400 text-xs">{errors.correo}</p>}
+              {errors.email && <p className="text-red-400 text-xs">{errors.email}</p>}
             </div>
 
             <div className="w-full">
               <textarea
-                name="mensaje"
-                value={formData.mensaje}
+                name="message"
+                value={formData.message}
                 onChange={handleChange}
                 placeholder={translations.for?.mens}
                 rows="3"
                 className="w-full p-2 text-black text-sm border-none rounded-tl-[15px] rounded-br-[15px] focus:ring-2 focus:ring-white"
               ></textarea>
-              {errors.mensaje && <p className="text-red-400 text-xs">{errors.mensaje}</p>}
+              {errors.message && <p className="text-red-400 text-xs">{errors.message}</p>}
             </div>
 
             <div className="flex justify-end">

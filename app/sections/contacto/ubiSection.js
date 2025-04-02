@@ -7,10 +7,10 @@ export default function UbiSection() {
   const translations = useTranslation();
   return (
     <section className="px-8 py-16 md:px-24 lg:px-40 ">
-      <h2 id="quienes-somos-heading" className="text-6xl font-bold text-[#014421] mb-10 font-serif ml-14  border-[#014421] pb-2">
+      <h2 id="quienes-somos-heading" className="text-5xl font-bold text-[#014421] mb-10 font-serif ml-14  border-[#014421] pb-2 font-serif border-l-8 border-[#5DBE66] pl-4">
         {translations.ubi?.title}
       </h2>
-      <p className="text-lg leading-relaxed text-gray-800 text-justify px-7 font-serif max-w-3xl mx-auto">
+      <p className="text-lg leading-relaxed text-justify px-7 font-serif max-w-3xl mx-auto ">
         {translations.ubi?.description}
       </p>
 
