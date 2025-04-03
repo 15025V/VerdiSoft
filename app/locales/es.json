@@ -8,7 +8,10 @@
   },
   "hero": {
     "title": "Flores Sons Farms",
-    "subtitle": "Calidad que se siente, frescura que se nota."
+    "subtitle": "Calidad que se siente, frescura que se nota.",
+    "boton":" Contáctanos",
+    "boton1":" Nuestra historia"
+
   },
   "somos": {
     "title": "¿Quiénes somos?",
@@ -68,7 +71,6 @@
    
   },
   "tar1": {
-    "title_": ".....",
     "description": "Ser la empresa líder en la zona en la exportación de cilantro, reconocida por su calidad y compromiso con nuestros clientes. Nos enfocamos en ofrecer productos frescos y de excelencia, cumpliendo con los más altos estándares internacionales de inocuidad y sustentabilidad."
   },
   "tar2": {
@@ -113,23 +115,35 @@
   "buscar_pro": {
     "description": "Buscar producto..."
   },
+  "catego": {
+    "description": "Categorías "
+  },
+  "pres": {
+    "description": "Presentación "
+  },
+  "pieza":{
+    "description":"Piezas"
+  },
+  "kilos": {
+    "description": "Kilos "
+  },
+  "but_contacto": {
+    "description": "Contactar para pedidos"
+  },
   "categ0": {
     "option0": "Todas las categorias "
   },
   "categ1": {
-    "option1": "Hortaliza de Hoja Verde"
+    "option1": "Hortaliza de Hoja"
   },
   "categ2": {
-    "option2": "Hierbas y Especias"
+    "option2": "Hortaliza Raíz"
   },
   "categ3": {
-    "option3": "Hortaliza de Raíces y Tubérculos"
+    "option3": "Cactáceas y Nopales"
   },
   "categ4": {
-    "option4": "Cactáceas y Nopales"
-  },
-  "categ5": {
-    "option5": "Hortaliza de Fruto"
+    "option4": "Hortaliza de Fruto"
   },
   "ver_pro": {
     "description": "Ver producto"
@@ -137,76 +151,67 @@
   "no_encontrado": {
     "description": "No se encontro producto."
   },
-  "brocoli": {
-    "nombre": "Brocoli",
-    "categoria": "Hortaliza de Hoja Verde",
-    "button": "Ver producto"
-  },
-  "cilantro": {
-    "nombre": "Cilantro",
-    "categoria": "Hierbas y Especias",
-    "button": "Ver producto"
-  },
-  "zanahoria": {
-    "nombre": "Zanahoria",
-    "categoria": "Hortaliza de Raíces y Tuberculos",
-    "button": "Ver producto"
-  },
-  "rabano": {
-    "nombre": "Rábano",
-    "categoria": "Hortaliza de Raíces y Tuberculos",
-    "button": "Ver producto"
-  },
-  "repollo": {
-    "nombre": "Repollo",
-    "categoria": "Hortaliza de Hoja Verde",
-    "button": "Ver producto"
-  },
-  "betabel": {
-    "nombre": "Repollo",
-    "categoria": "Hortaliza de Raíces y Tuberculos",
-    "button": "Ver producto"
-  },
-  "calabaza": {
-    "nombre": "Calabaza",
-    "categoria": "Hortaliza de Fruto",
-    "button": "Ver producto"
-  },
-  "calabaza2": {
-    "nombre": "Calabaza de bola",
-    "categoria": "Hortaliza de Fruto",
-    "button": "Ver producto"
-  },
-  "tomatillo": {
-    "nombre": "Tomatillo milpero",
-    "categoria": "Hortaliza de Fruto",
-    "button": "Ver producto"
-  },
-  "nopal": {
-    "nombre": "Tomatillo milpero",
-    "categoria": "Cactaceas y Nopales",
-    "button": "Ver producto"
-  },
-  "tuna_v": {
-    "nombre": "Tuna verde",
-    "categoria": "Cactaceas y Nopales",
-    "button": "Ver producto"
-  },
-  "tuna_r": {
-    "nombre": "Tuna roja",
-    "categoria": "Cactaceas y Nopales",
-    "button": "Ver producto"
-  },
-  "epazote": {
-    "nombre": "Epazote",
-    "categoria": "Hierbas y Especias",
-    "button": "Ver producto"
-  },
-  "cebollin": {
-    "nombre": "Cebollín",
-    "categoria": "Hierbas y Especias",
-    "button": "Ver producto"
-  },
+    "cebollita": {
+      "nombre": "Cebollita",
+      "categoria": "Hortaliza de Raíz",
+      "presentacion": ["Charola", "Caja de madera"],
+      "piezas": "40 - 42 pza",
+      "kilos": "Máximo 9 - 10"
+    },
+    "calabacita": {
+      "nombre": "Calabacita",
+      "categoria": "Hortaliza de Fruto",
+      "presentacion": ["Caja plástico"],
+      "kilos": "16"
+    },
+    "brocoli": {
+      "nombre": "Brócoli",
+      "categoria": "Hortaliza de Hoja",
+      "presentacion": ["Caja de cartón genérica"],
+      "piezas": "24",
+      "kilos": "10"
+    },
+    "zanahoria": {
+      "nombre": "Zanahoria",
+      "categoria": " Hortaliza de Raíz",
+      "presentacion": ["Bolsa de plástico"],
+      "kilos": "22"
+    },
+    "repollo": {
+      "nombre": "Repollo",
+      "categoria": "Hortaliza de Hoja",
+      "presentacion": ["Caja de cartón"],
+      "piezas": "30",
+      "kilos": "23"
+    },
+    "tomatillo": {
+      "nombre": "Tomatillo",
+      "categoria": "Hortaliza de Fruto",
+      "presentacion": ["Caja de plástico"],
+      "kilos": "18 ½"
+    },
+    "epazote": {
+      "nombre": "Epazote",
+      "categoria": "Hortaliza de Hoja",
+      "presentacion": ["Caja de plástico", "Caja de madera"],
+      "piezas": "40 rollos por caja",
+      "kilos": "6 - 7"
+    },
+    "betabel": {
+      "nombre": "Betabel",
+      "categoria": "Hortaliza de Raíz",
+      "presentacion": ["Caja de plástico"],
+      "piezas": "24",
+      "kilos": "10"
+    },
+    "hoja_de_platano": {
+      "nombre": "Hoja de plátano",
+      "categoria": "Hortaliza de Hoja",
+      "presentacion": ["Caja de plástico"],
+      "piezas": "6 paquetes por bolsa",
+      "kilos": "8"
+    },
+  
   "anuncio3": {
     "title": "¡Conéctate con Flores Sons Farms!",
     "description": "Si tienes alguna duda, comentario, sugerencia o te interesa alguno de nuestros productos complete el siguiente formulario y nos comunicaremos contigo lo antes posible"

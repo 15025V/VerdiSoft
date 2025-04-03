@@ -16,7 +16,7 @@ export default function UbiSection() {
 
       <div className="flex flex-col md:flex-row justify-center gap-10 mt-12">
         {/* Sucursal 1 */}
-        <div className="w-full md:w-1/3 bg-gray-50 p-6 rounded-xl shadow-lg transition-transform duration-500 hover:scale-105">
+        <div className="w-full md:w-3/5 lg:w-2/3 bg-gray-50 p-6 rounded-xl shadow-lg transition-transform duration-500 hover:scale-105">
           <h3 className="text-3xl font-semibold text-[#014421] border-b pb-2 mb-4">
             {translations.suc1?.title}
           </h3>
@@ -34,7 +34,7 @@ export default function UbiSection() {
         </div>
 
         {/* Sucursal 2 */}
-        <div className="w-full md:w-1/3 bg-gray-50 p-6 rounded-xl shadow-lg transition-transform duration-500 hover:scale-105">
+        <div className="w-full md:w-3/5 lg:w-2/3 bg-gray-50 p-6 rounded-xl shadow-lg transition-transform duration-500 hover:scale-105">
           <h3 className="text-3xl font-semibold text-[#014421] border-b pb-2 mb-4">
             {translations.suc2?.title}
           </h3>

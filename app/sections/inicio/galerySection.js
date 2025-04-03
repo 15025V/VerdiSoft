@@ -15,9 +15,9 @@ export default function GallerySplitSection() {
 
   const fieldImages = [
     { src: "/galeria_2.webp", alt: "Cultivos en campo abierto" },
-    { src: "/galeria_2.webp", alt: "Invernaderos de producci贸n" },
+    { src: "/galeria_2.webp", alt: "Invernaderos de producción" },
     { src: "/galeria_2.webp", alt: "Cosecha sostenible" },
-    { src: "/galeria_2.webp", alt: "Tecnolog铆a agr铆cola" },
+    { src: "/galeria_2.webp", alt: "Tecnologia agricola" },
   ];
 
   return (
@@ -43,7 +43,7 @@ export default function GallerySplitSection() {
   );
 }
 
-// 馃搶 Secci贸n de galer铆a con t铆tulo, subt铆tulo y grid de im谩genes
+// Seccion de galeria con titulo, subtitulo y grid de imagenes
 function GallerySection({ title, subtitle, images, onImageClick }) {
   return (
     <div className="mb-28">
@@ -66,7 +66,7 @@ function GallerySection({ title, subtitle, images, onImageClick }) {
   );
 }
 
-// 馃搶 Tarjeta de imagen con hover y overlay elegante
+//  Tarjeta de imagen con hover y overlay elegante
 function GalleryCard({ image, onClick }) {
   return (
     <div
@@ -91,7 +91,7 @@ function GalleryCard({ image, onClick }) {
     </div>
   );
 }
-// 馃搶 Lightbox con animaci贸n y bot贸n de cierre elegante
+//  Lightbox con animacion y boton de cierre elegante
 function Lightbox({ image, onClose }) {
   return (
     <div
@@ -99,7 +99,7 @@ function Lightbox({ image, onClose }) {
       onClick={onClose}
     >
       <div className="relative max-w-4xl w-full p-4">
-        {/* 馃敟 Bot贸n de cierre elegante */}
+        {/*  Boton de cierre elegante */}
         <button
           className="absolute top-5 right-5 bg-white/20 hover:bg-white/40 text-white rounded-full p-3 transition-all duration-300 shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-white/50"
           onClick={onClose}
