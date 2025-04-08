@@ -19,7 +19,7 @@ export default function CertiSection() {
       description: translations.senasica?.title 
     },
     { 
-      src: "/buma.png", 
+      src: "/_buma_.png", 
       alt: "Certificación BUMA",
       description: translations.buma?.title
     }
@@ -66,7 +66,7 @@ export default function CertiSection() {
         {/* Texto final */}
         <div className="text-center">
           <p className="text-lg italic max-w-3xl mx-auto font-serif border-t border-gray-200 dark:border-gray-700 pt-8">
-            {translations.certi?.tex}
+            {translations.certi?.text}
           </p>
         </div>
       </div>
