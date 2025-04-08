@@ -19,7 +19,7 @@ export default function CertiSection() {
       description: translations.senasica?.title 
     },
     { 
-      src: "/_buma_.png", 
+      src: "/buma.png", 
       alt: "Certificación BUMA",
       description: translations.buma?.title
     }
@@ -44,7 +44,7 @@ export default function CertiSection() {
           {certifications.map((cert, index) => (
             <div 
               key={index} 
-              className="group relative bg-white dark:bg-green-900 rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-600 flex flex-col items-center"
+              className="group relative bg-white dark:bg-[#1f2937] rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-600 flex flex-col items-center"
             >
               <div className="mb-6 p-4 bg-gray-50 dark:bg-white rounded-lg w-full flex justify-center">
                 <Image 

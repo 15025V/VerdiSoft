@@ -91,8 +91,18 @@ export default function FormSection() {
   };
 
   return (
-    <section  id='contact-form' className="flex justify-center items-center min-h-screen px-6 py-10 font-serif">
-      <div className="relative w-full max-w-5xl flex rounded-tl-[80px] rounded-br-[80px] shadow-2xl overflow-hidden">
+    <section id='contact-form' className="relative flex justify-center items-center min-h-screen px-6 py-10 font-serif">
+      {/* Fondo de cilantro para móvil */}
+      <div className="md:hidden absolute inset-0 overflow-hidden z-0">
+        <img
+          src="/cill.png"
+          alt="Hoja de cilantro"
+          className="w-full h-full object-cover opacity-90"
+        />
+      </div>
+
+      <div className="relative w-full max-w-5xl flex rounded-tl-[80px] rounded-br-[80px] shadow-2xl overflow-hidden z-10">
+        {/* Imagen de cilantro para desktop (posición absoluta) */}
         <img
           src="/cill.png"
           alt="Hoja de cilantro"
@@ -163,6 +173,7 @@ export default function FormSection() {
                 className="w-full sm:w-32 bg-green-500 hover:bg-green-600 text-white font-bold py-2 text-sm rounded-tl-[10px] sm:rounded-tl-[15px] rounded-br-[10px] sm:rounded-br-[15px] transition"
               >
                 {isSubmitted ? `${translations.but?.title} ✅` : translations.but?.title}
+
               </button>
             </div>
           </form>

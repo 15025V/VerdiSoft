@@ -1,10 +1,10 @@
 import Image from "next/image";
-import { FaInstagram, FaFacebook, FaTwitter, FaArrowDown } from "react-icons/fa";
+import { FaInstagram, FaFacebook,FaTiktok, FaTwitter, FaArrowDown } from "react-icons/fa";
 import { useTranslation } from '@/app/hooks/useTranslation';
 
 export default function HeroSection() {
-   const translations = useTranslation();
-  
+  const translations = useTranslation();
+
   return (
     <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
       {/* Imagen de fondo con overlay */}
@@ -30,18 +30,18 @@ export default function HeroSection() {
               Flores Sons Farms
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 italic mb-8 font-serif">
-             {translations.hero?.subtitle}
+              {translations.hero?.subtitle}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <a
                 href="/contact"
                 className="px-8 py-3 bg-green-600 hover:bg-green-700 text-white rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300 text-lg"
-                aria-label="Contáctanos"
+                aria-label="ContÃ¡ctanos"
               >
                 {translations.hero?.boton}
               </a>
               <a
-                href="#servicios"
+                href="/about"
                 className="px-8 py-3 bg-white/10 hover:bg-white/20 text-white rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300 text-lg flex items-center justify-center gap-2"
                 aria-label="Conoce nuestros servicios"
               >
@@ -66,11 +66,13 @@ export default function HeroSection() {
           </div>
         </div>
 
+        
         {/* Redes sociales */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-6 text-white text-2xl">
           {[
-            { icon: <FaInstagram />, url: "https://instagram.com", label: "Instagram" },
             { icon: <FaFacebook />, url: "https://facebook.com", label: "Facebook" },
+            { icon: <FaTiktok />, url: "https://tiktok.com", label: "TikTok" },
+            { icon: <FaInstagram />, url: "https://instagram.com", label: "Instagram" },
             { icon: <FaTwitter />, url: "https://twitter.com", label: "Twitter" }
           ].map((social, index) => (
             <a
@@ -85,12 +87,13 @@ export default function HeroSection() {
             </a>
           ))}
         </div>
-      </div>
+      
+    </div>
 
-      {/* Indicador de scroll */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <FaArrowDown className="text-white text-2xl" />
-      </div>
-    </section>
+      {/* Indicador de scroll */ }
+  <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 animate-bounce">
+    <FaArrowDown className="text-white text-2xl" />
+  </div>
+    </section >
   );
 }
