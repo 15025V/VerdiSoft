@@ -1,5 +1,4 @@
 'use client';
-
 import { useState, useEffect } from 'react';
 import { Presentation, X } from 'lucide-react';
 import { CldImage } from 'next-cloudinary';
