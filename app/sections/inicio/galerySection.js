@@ -1,38 +1,41 @@
+'Use client'
 import Image from "next/image";
 import React, { useState } from "react";
 import { useTranslation } from "@/app/hooks/useTranslation";
 
 export default function GallerySplitSection() {
+  
   const translations = useTranslation();
+
   const [selectedImage, setSelectedImage] = useState(null); // Estado para el modal
 
   const enterpriseImages = [
-    { src: "/galeria_2.webp", alt: "Nuestras instalaciones" },
-    { src: "/galeria_2.webp", alt: "Equipo de trabajo" },
-    { src: "/galeria_2.webp", alt: "Proceso de empaque" },
-    { src: "/galeria_2.webp", alt: "Control de calidad" },
+    { src: "/galeria_2.webp", alt: translations.galeria?.foto1},
+    { src: "/galeria_2.webp", alt: translations.galeria?.foto2},
+    { src: "/galeria_2.webp", alt: translations.galeria?.foto3},
+    { src: "/galeria_2.webp", alt: translations.galeria?.foto4 },
   ];
 
   const fieldImages = [
-    { src: "/galeria_2.webp", alt: "Cultivos en campo abierto" },
-    { src: "/galeria_2.webp", alt: "Invernaderos de producci贸n" },
-    { src: "/galeria_2.webp", alt: "Cosecha sostenible" },
-    { src: "/galeria_2.webp", alt: "Tecnolog铆a agr铆cola" },
+    { src: "/galeria_2.webp", alt: translations.galeria1?.foto5 },
+    { src: "/galeria_2.webp", alt: translations.galeria1?.foto6 },
+    { src: "/galeria_2.webp", alt: translations.galeria1?.foto7},
+    { src: "/galeria_2.webp", alt: translations.galeria1?.foto8},
   ];
 
   return (
-    <section className="relative py-8">
+    <section  id='gallery' className="relative py-8">
       <div className="max-w-7xl mx-auto px-6">
         <GallerySection
-          title={translations.gallery?.enterpriseTitle || "Nuestra Empresa"}
-          subtitle={translations.gallery?.enterpriseSubtitle || "Conoce nuestras instalaciones y procesos internos"}
+          title={translations.galeria?.title}
+          subtitle={translations.galeria?.description}
           images={enterpriseImages}
           onImageClick={setSelectedImage}
         />
 
         <GallerySection
-          title={translations.gallery?.fieldTitle || "Nuestro Campo"}
-          subtitle={translations.gallery?.fieldSubtitle || "Descubre nuestros cultivos y practicas sostenibles"}
+          title={translations.galeria1?.title}
+          subtitle={translations.galeria1?.description}
           images={fieldImages}
           onImageClick={setSelectedImage}
         />
@@ -43,7 +46,7 @@ export default function GallerySplitSection() {
   );
 }
 
-// 馃搶 Secci贸n de galer铆a con t铆tulo, subt铆tulo y grid de im谩genes
+// Seccion de galeria con titulo, subtitulo y grid de imagenes
 function GallerySection({ title, subtitle, images, onImageClick }) {
   return (
     <div className="mb-28">
@@ -66,7 +69,7 @@ function GallerySection({ title, subtitle, images, onImageClick }) {
   );
 }
 
-// 馃搶 Tarjeta de imagen con hover y overlay elegante
+//  Tarjeta de imagen con hover y overlay elegante
 function GalleryCard({ image, onClick }) {
   return (
     <div
@@ -91,7 +94,7 @@ function GalleryCard({ image, onClick }) {
     </div>
   );
 }
-// 馃搶 Lightbox con animaci贸n y bot贸n de cierre elegante
+//  Lightbox con animacion y boton de cierre elegante
 function Lightbox({ image, onClose }) {
   return (
     <div
@@ -99,7 +102,7 @@ function Lightbox({ image, onClose }) {
       onClick={onClose}
     >
       <div className="relative max-w-4xl w-full p-4">
-        {/* 馃敟 Bot贸n de cierre elegante */}
+        {/*  Boton de cierre elegante */}
         <button
           className="absolute top-5 right-5 bg-white/20 hover:bg-white/40 text-white rounded-full p-3 transition-all duration-300 shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-white/50"
           onClick={onClose}

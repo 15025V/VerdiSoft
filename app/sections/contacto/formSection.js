@@ -97,7 +97,7 @@ export default function FormSection() {
   };
 
   return (
-    <section className="flex justify-center items-center min-h-screen px-6 py-10 font-serif">
+    <section  id='contact-form' className="flex justify-center items-center min-h-screen px-6 py-10 font-serif">
       <div className="relative w-full max-w-5xl flex rounded-tl-[80px] rounded-br-[80px] shadow-2xl overflow-hidden">
         <img
           src="/cill.png"

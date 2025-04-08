@@ -1,7 +1,10 @@
 import Image from "next/image";
 import { FaInstagram, FaFacebook, FaTwitter, FaArrowDown } from "react-icons/fa";
+import { useTranslation } from '@/app/hooks/useTranslation';
 
 export default function HeroSection() {
+   const translations = useTranslation();
+  
   return (
     <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
       {/* Imagen de fondo con overlay */}
@@ -15,6 +18,7 @@ export default function HeroSection() {
           priority
         />
         <div className="absolute inset-0 bg-black/40 bg-gradient-to-t from-black/60 via-black/30 to-transparent"></div>
+        <span className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-green-400 to-transparent dark:from-green-500 dark:to-transparent"></span>
       </div>
 
       {/* Contenido principal */}
@@ -26,7 +30,7 @@ export default function HeroSection() {
               Flores Sons Farms
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 italic mb-8 font-serif">
-              "Calidad que se siente, frescura que se nota."
+             {translations.hero?.subtitle}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <a
@@ -34,14 +38,14 @@ export default function HeroSection() {
                 className="px-8 py-3 bg-green-600 hover:bg-green-700 text-white rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300 text-lg"
                 aria-label="Contáctanos"
               >
-                Contáctanos
+                {translations.hero?.boton}
               </a>
               <a
                 href="#servicios"
                 className="px-8 py-3 bg-white/10 hover:bg-white/20 text-white rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300 text-lg flex items-center justify-center gap-2"
                 aria-label="Conoce nuestros servicios"
               >
-                Nuestros servicios <FaArrowDown className="animate-bounce" />
+                {translations.hero?.boton1}<FaArrowDown className="animate-bounce" />
               </a>
             </div>
           </div>

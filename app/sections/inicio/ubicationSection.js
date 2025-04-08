@@ -1,5 +1,6 @@
 import React from 'react';
 import { HiPhone, HiMail, HiLocationMarker } from "react-icons/hi";
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import { useTranslation } from '@/app/hooks/useTranslation';
 
 export default function UbicationSection() {
@@ -7,18 +8,18 @@ export default function UbicationSection() {
 
   return (
     <div role="region" aria-labelledby="ubicacion-heading">
-      <section className="py-1 md:py-1 text-center transition-colors duration-500">
+      <section id='find us on' className="py-1 md:py-1 text-center transition-colors duration-500">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-center mb-12 md:mb-16">
-            <h2 
-              id="ubicacion-heading" 
+            <h2
+              id="ubicacion-heading"
               className="text-5xl md:text-5xl font-semibold  tracking-wide font-serif pb-3 relative inline-block"
             >
               {translations.ubicacion?.title}
               <span className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-green-400 to-transparent dark:from-green-500 dark:to-transparent"></span>
             </h2>
           </div>
-          
+
           <div className="flex flex-col md:flex-row gap-10 md:gap-12 items-center max-w-7xl mx-auto">
             {/* Mapa de ubicación */}
             <div className="w-full md:w-1/2 transform hover:scale-[1.01] transition-transform duration-300">
@@ -41,24 +42,39 @@ export default function UbicationSection() {
                   Flores Sons Farms
                   <span className="absolute bottom-0 left-0 w-16 h-1 bg-green-500 dark:bg-green-400"></span>
                 </h1>
-                
+
                 <div className="mb-6 md:mb-8 text-base md:text-lg leading-relaxed font-serif text-gray-700 dark:text-gray-300 space-y-4">
-                  <p className="flex items-center gap-4 p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200">
-                    <HiLocationMarker className="text-green-500 dark:text-green-400 text-3xl flex-shrink-0" />
-                    <span>{translations.ubicacion?.direccion}</span>
-                  </p>
-                  
-                  <p className="flex items-center gap-4 p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200">
-                    <HiPhone className="text-green-500 dark:text-green-400 text-3xl flex-shrink-0" />
-                    <span>{translations.ubicacion?.telefono}</span>
-                  </p>
-                  
-                  <p className="flex items-center gap-4 p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200">
-                    <HiMail className="text-green-500 dark:text-green-400 text-3xl flex-shrink-0" />
-                    <span>{translations.ubicacion?.correo}</span>
-                  </p>
+                  {[
+                    {
+                      icon: <FaMapMarkerAlt className="text-2xl " />,
+                      label: translations.ubicacion?.direccion,
+                      aria: "Dirección",
+                    },
+                    {
+                      icon: <FaPhoneAlt className="text-2xl" />,
+                      label: translations.ubicacion?.telefono,
+                      aria: "Teléfono",
+                    },
+                    {
+                      icon: <FaEnvelope className="text-2xl" />,
+                      label: translations.ubicacion?.correo,
+                      aria: "Correo",
+                    }
+                  ].map((item, index) => (
+                    <p
+                      key={index}
+                      className="flex items-center gap-4 p-3 rounded-lg transition-all duration-300 hover:scale-[1.02] hover:bg-white/10 dark:hover:bg-white/10 backdrop-blur-sm"
+                      aria-label={item.aria}
+                    >
+                      <span className="p-3 bg-white/10 hover:bg-white/20 rounded-full backdrop-blur-sm transition-all duration-300">
+                        {item.icon}
+                      </span>
+                      <span>{item.label}</span>
+                    </p>
+                  ))}
                 </div>
-                
+
+
                 <a
                   href="/contact"
                   className="relative overflow-hidden bg-gradient-to-r from-green-700 to-green-900 dark:from-green-600 dark:to-green-800 text-white px-8 md:px-12 py-3 md:py-4 rounded-full text-base md:text-lg font-semibold hover:opacity-90 transition-all duration-300 shadow-xl hover:shadow-2xl inline-block group"

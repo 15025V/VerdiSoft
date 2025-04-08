@@ -7,7 +7,7 @@ export default function HistoriaSection() {
       const translations = useTranslation();
     
     return (
-        <section className="px-6 py-12 md:px-16 lg:px-32">
+        <section id='history' className="px-6 py-12 md:px-16 lg:px-32">
 
             <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div className="space-y-8">

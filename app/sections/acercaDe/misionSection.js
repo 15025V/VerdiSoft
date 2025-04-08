@@ -6,7 +6,7 @@ export default function MisionSection() {
   const translations = useTranslation();
 
   return (
-    <section className="w-screen overflow-hidden px-6 py-14 md:px-20 lg:px-36 flex flex-col items-center text-center">
+    <section id='mission' className="w-screen overflow-hidden px-6 py-14 md:px-20 lg:px-36 flex flex-col items-center text-center">
       <h2 id="quienes-somos-heading" className="text-5xl text-center font-bold text-[#014421] font-serif border-l-8 border-[#5DBE66] pl-4 mx-auto inline-block">
         {translations.mision?.title}
       </h2>

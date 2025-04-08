@@ -1,4 +1,5 @@
 'use client';
+
 import Image from 'next/image';
 import React from 'react';
 import { useTranslation } from '@/app/hooks/useTranslation';
@@ -9,32 +10,32 @@ export default function CertiSection() {
   const certifications = [
     { 
       src: "/primusGFS.png", 
-      alt: "Certificación Primus GFS",
-      description: translations.certifications?.primus || "Certificación internacional en seguridad alimentaria"
+      alt:  translations.primus?.title ,
+      description: translations.primus?.title
     },
     { 
       src: "/senasica.png", 
       alt: "Certificación SENASICA",
-      description: translations.certifications?.senasica || "Reconocimiento oficial de sanidad vegetal"
+      description: translations.senasica?.title 
     },
     { 
-      src: "/buma.png", 
+      src: "/_buma_.png", 
       alt: "Certificación BUMA",
-      description: translations.certifications?.buma || "Excelencia en buenas prácticas agrícolas"
+      description: translations.buma?.title
     }
   ];
 
   return (
-    <section className="relative py-24">
+    <section id='certifications' className="relative py-24">
       <div className="max-w-7xl mx-auto px-6">
         {/* Encabezado */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-green-800 font-serif relative inline-block pb-3">
-            {translations.certifications?.title || "Certificaciones"}
+            {translations.certi?.title}
             <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-green-500 to-transparent"></span>
           </h2>
           <p className="mt-6 text-lg max-w-3xl mx-auto font-serif">
-            {translations.certifications?.subtitle || "Garantía de calidad y excelencia en nuestros procesos"}
+            {translations.certi?.description}
           </p>
         </div>
 
@@ -65,7 +66,7 @@ export default function CertiSection() {
         {/* Texto final */}
         <div className="text-center">
           <p className="text-lg italic max-w-3xl mx-auto font-serif border-t border-gray-200 dark:border-gray-700 pt-8">
-            {translations.certifications?.footer || "Nuestros certificados reflejan el compromiso con la excelencia y la calidad en cada etapa de producción."}
+            {translations.certi?.tex}
           </p>
         </div>
       </div>

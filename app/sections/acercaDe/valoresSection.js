@@ -22,7 +22,7 @@ function ValueCard({ title, icon, text, bgColor, headerColor }) {
 export default function ValoresSection() {
    const translations = useTranslation();
   return (
-    <div className="px-8 py-12 md:px-16 lg:px-32 text-center">
+    <div id='values' className="px-8 py-12 md:px-16 lg:px-32 text-center">
       <div>
         <h2 id="quienes-somos-heading" className="text-5xl font-bold text-[#014421] text-center mb-16 font-serif border-l-8 border-[#5DBE66] pl-4 mx-auto inline-block">
         {translations.valores?.title}

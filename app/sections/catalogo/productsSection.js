@@ -1,46 +1,41 @@
 'use client';
-import { useState, useEffect } from 'react';
-import { X } from 'lucide-react';
-import { CldImage } from 'next-cloudinary';
 
+import { useState, useEffect } from 'react';
+import { Presentation, X } from 'lucide-react';
+import { CldImage } from 'next-cloudinary';
+import { useTranslation } from '@/app/hooks/useTranslation';
+import { FaAngleDown } from 'react-icons/fa';
 
 export default function ProductsSection() {
-  
-  // Lista de productos
+  const translations = useTranslation();
+
   const allProducts = [
-    { name: "Brócoli", category: "Hortaliza de Hoja Verde", img: "brocolii_zo1vy8" },
-    { name: "Zanahoria", category: "Hortaliza de Raíces y Tuberculos", img: "zanahoria_iauh13" },
-    { name: "Rábano", category: "Hortaliza de Raíces y Tuberculos", img: "Rabano_j7xmnv" },
-    { name: "Tuna verde", category: "Cactaceas y Nopales", img: "Tuna_verde_wdv7ok" },
-    { name: "Tuna roja", category: "Cactaceas y Nopales", img: "tunaa_hzpmit" },
-    { name: "Tomatillo milpero", category: "Hortaliza de Fruto", img: "tomate_ay5n88" },
-    { name: "Cilantro", category: "Hierbas y Especias", img: "cilantroo_tzjgva" },
-    { name: "Repollo", category: "Hortaliza de Hoja Verde", img: "repollo_mltjbn" },
-    { name: "Betabel", category: "Hortaliza de Raíces y Tuberculos", img: "betabel_ti1igv" },
-    { name: "Calabaza de bola", category: "Hortaliza de Fruto", img: "calabazaa_hlnads" },
-    { name: "Nopal", category: "Cactaceas y Nopales", img: "nopall_ckidee" },
-    { name: "Epazote", category: "Hierbas y Especias", img: "epazote_sn2uij" },
-    { name: "Cebollín", category: "Hierbas y Especias", img: "cebollinn_y1fnpw" },
-    // ... (resto de tus productos)
+    { name: translations.cebollita?.nombre ?? "Nombre no disponible", category: translations.categ2?.option2, img: "brocolii_zo1vy8", presentacion: translations.cebollita?.presentacion, piezas: translations.cebollita?.piezas, kilos: translations.cebollita?.kilos },
+    { name: translations.calabacita?.nombre ?? "Nombre no disponible", category: translations.categ4?.option4, img: "zanahoria_iauh13", presentacion: translations.calabacita?.presentacion, kilos: "16" },
+    { name: translations.brocoli?.nombre ?? "Nombre no disponible", category: translations.categ1?.option1, img: "Rabano_j7xmnv", presentacion: translations.brocoli?.presentacion, piezas: "24", kilos: "10" },
+    { name: translations.zanahoria?.nombre ?? "Nombre no disponible", category: translations.categ2?.option2, img: "calabazaa_hlnads", presentacion: translations.zanahoria?.presentacion, kilos: "22" },
+    { name: translations.repollo?.nombre ?? "Nombre no disponible", category: translations.categ1?.option1, img: "repollo_mltjbn", presentacion: translations.repollo?.presentacion, piezas: "30", kilos: "23" },
+    { name: translations.tomatillo?.nombre ?? "Nombre no disponible", category: translations.categ4?.option4, img: "tomate_ay5n88", presentacion: translations.tomatillo?.presentacion, kilos: "18 ½" },
+    { name: translations.epazote?.nombre ?? "Nombre no disponible", category: translations.categ1?.option1, img: "epazote_sn2uij", presentacion: translations.epazote?.presentacion, piezas: translations.epazote?.piezas, kilos: "6 - 7" },
+    { name: translations.betabel?.nombre ?? "Nombre no disponible", category: translations.categ2?.option2, img: "betabel_ti1igv", presentacion: translations.betabel?.presentacion, piezas: "24", kilos: "10" },
+    { name: translations.hoja_de_platano?.nombre ?? "Nombre no disponible", category: translations.categ1?.option1, img: "cebollinn_y1fnpw", presentacion: translations.hoja_de_platano?.presentacion, piezas: translations.hoja_de_platano?.piezas, kilos: "8" },
+    { name: "Cilantro", category: translations.categ1?.option1, img: "cilantroo_tzjgva", presentacion: [], kilos: "" },
+    { name: "Tuna verde", category: translations.categ3?.option3, img: "Tuna_verde_wdv7ok", presentacion: [], kilos: "" },
+    { name: "Tuna roja", category: translations.categ3?.option3, img: "tunaa_hzpmit", presentacion: [], kilos: "" },
+    { name: "Nopal", category: translations.categ3?.option3, img: "nopall_ckidee", presentacion: [], kilos: "" },
+    { name: "Cebollín", category: translations.categ1?.option1, img: "cebollinn_y1fnpw", presentacion: [], kilos: "" },
   ];
 
-  // Estados
   const [search, setSearch] = useState('');
   const [filter, setFilter] = useState('');
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
-  // Bloquear scroll cuando el modal está abierto
   useEffect(() => {
-    if (modalIsOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
-    }
+    document.body.style.overflow = modalIsOpen ? 'hidden' : 'auto';
     return () => { document.body.style.overflow = 'auto'; };
   }, [modalIsOpen]);
 
-  // Filtrar productos
   const filteredProducts = allProducts.filter(
     (product) =>
       product.name.toLowerCase().includes(search.toLowerCase()) &&
@@ -49,34 +44,38 @@ export default function ProductsSection() {
 
   return (
     <div className="container mx-auto px-4 pt-24 pb-16">
-      {/* Encabezado */}
       <h2 className="text-5xl font-bold text-[#014421] text-center mb-8 border-b-2 border-[#014421] pb-2 font-serif">
-        Nuestro Catálogo
+        {translations.catalogo?.title}
       </h2>
 
-      {/* Controles de búsqueda */}
-      <div className="flex flex-col font-serif md:flex-row justify-center gap-4 mb-8">
+      <div className="flex flex-col font-serif md:flex-row justify-center gap-4 mb-8 relative">
         <input
           type="text"
-          placeholder="Buscar producto..."
-          className="border border-gray-300 px-4 py-2 rounded-lg w-full md:w-1/2 focus:outline-none focus:ring-2 focus:ring-green-200"
+          placeholder={translations.buscar_pro?.description}
+          className="border border-gray-300 px-4 py-2 rounded-lg w-full md:w-1/2 focus:outline-none focus:ring-2 focus:ring-green-200 placeholder-black"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
-        <select
-          className="border border-gray-300 px-4 py-2 rounded-lg w-full md:w-1/4 focus:outline-none focus:ring-2 focus:ring-green-200"
-          value={filter}
-          onChange={(e) => setFilter(e.target.value)}
-        >
-          <option value="">Todas las categorías</option>
-          <option value="Hortaliza de Hoja Verde">Hortaliza de Hoja Verde</option>
-          <option value="Hierbas y Especias">Hierbas y Especias</option>
-          {/* ... (resto de opciones) */}
-        </select>
+        <div className="relative w-full md:w-1/4">
+          <select
+            className="border border-gray-300 px-4 py-2 rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-green-200 text-black appearance-none pr-10"
+            value={filter}
+            onChange={(e) => setFilter(e.target.value)}
+          >
+            <option value="">{translations.categ0?.option0}</option>
+            {[...new Set(allProducts.map((product) => product.category))].map((category) => (
+              <option key={category} value={category}>
+                {category}
+              </option>
+            ))}
+          </select>
+          <div className="absolute inset-y-0 right-3 flex items-center pointer-events-none">
+            <FaAngleDown className="text-black" />
+          </div>
+        </div>
       </div>
 
-      {/* Listado de productos */}
-      <div className="grid grid-cols-1 font-serif sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div className="grid font-serif sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {filteredProducts.length > 0 ? (
           filteredProducts.map((product, index) => (
             <div
@@ -104,24 +103,23 @@ export default function ProductsSection() {
                 }}
                 className="mt-auto px-4 py-2 bg-green-100 text-green-700 rounded hover:bg-green-200 transition-colors"
               >
-                Ver detalles
+                {translations.ver_pro?.description}
               </button>
             </div>
           ))
         ) : (
           <p className="text-center font-serif text-gray-500 col-span-full py-8">
-            No se encontraron productos con esos criterios.
+            {translations.no_encontrado?.description}
           </p>
         )}
       </div>
 
-      {/* Modal profesional */}
       {modalIsOpen && selectedProduct && (
-        <div 
+        <div
           className="fixed inset-0 z-50 font-serif flex items-center justify-center p-4 bg-black bg-opacity-70 backdrop-blur-sm"
           onClick={() => setModalIsOpen(false)}
         >
-          <div 
+          <div
             className="relative bg-white rounded-xl shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
@@ -134,7 +132,6 @@ export default function ProductsSection() {
             </button>
 
             <div className="flex flex-col md:flex-row h-full">
-              {/* Imagen del producto */}
               <div className="md:w-1/2 h-64 md:h-auto relative group overflow-hidden">
                 <CldImage
                   src={selectedProduct.img}
@@ -146,53 +143,56 @@ export default function ProductsSection() {
                 />
               </div>
 
-              {/* Información del producto */}
               <div className="md:w-1/2 p-6 md:p-8 overflow-y-auto">
                 <div className="space-y-6">
                   <div>
                     <h1 className="text-3xl font-bold text-gray-900">{selectedProduct.name}</h1>
-                    <span className="inline-block mt-2 px-3 py-1 text-sm font-medium bg-green-100 text-green-800 rounded-full">
-                      {selectedProduct.category}
-                    </span>
                   </div>
 
                   <div className="space-y-4">
                     <div>
-                      <h3 className="text-lg font-semibold text-gray-900 border-b pb-2">Características</h3>
-                      <ul className="mt-2 space-y-2 text-gray-600">
-                        <li className="flex items-start">
-                          <svg className="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                          </svg>
-                          <span>Disponibilidad: Todo el año</span>
-                        </li>
-                        <li className="flex items-start">
-                          <svg className="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                          </svg>
-                          <span>Origen: Cultivo local</span>
-                        </li>
-                      </ul>
+                      <h3 className="text-lg font-semibold text-gray-900 border-b pb-2">{translations.catego?.description}</h3>
+                      <span className="inline-block mt-3 px-4 py-1 text-sm font-serif font-semibold text-green-800">
+                        {selectedProduct.category}
+                      </span>
                     </div>
 
-                    <div>
-                      <h3 className="text-lg font-semibold text-gray-900 border-b pb-2">Beneficios</h3>
-                      <div className="mt-2 grid grid-cols-2 gap-2">
-                        {['Rico en vitaminas', 'Alto en fibra', 'Bajo en calorías', 'Antioxidantes'].map((benefit) => (
-                          <span key={benefit} className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
-                            {benefit}
+                    {selectedProduct.presentacion?.length > 0 && (
+                      <div>
+                        <h3 className="text-lg font-semibold text-gray-900 border-b pb-2">{translations.pres?.description}</h3>
+                        {selectedProduct.presentacion.map((pres, index) => (
+                          <span key={index} className="inline-block mt-3 px-4 py-1 text-sm font-serif font-semibold text-green-800">
+                            {pres}
                           </span>
                         ))}
                       </div>
-                    </div>
-                  </div>
+                    )}
 
-                  <button
-                    onClick={() => window.location.href = '/contact'}
-                    className="w-full px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-medium rounded-lg transition-colors shadow-md"
-                  >
-                    Contactar para pedidos
-                  </button>
+                    {selectedProduct.piezas && (
+                      <div>
+                        <h3 className="text-lg font-semibold text-gray-900 border-b pb-2">{translations.pieza?.description}</h3>
+                        <span className="inline-block mt-3 px-4 py-1 text-sm font-serif font-semibold text-green-800">
+                          {selectedProduct.piezas}
+                        </span>
+                      </div>
+                    )}
+
+                    {selectedProduct.kilos && (
+                      <div>
+                        <h3 className="text-lg font-semibold text-gray-900 border-b pb-2">{translations.kilos?.description}</h3>
+                        <span className="inline-block mt-3 px-4 py-1 text-sm font-serif font-semibold text-green-800">
+                          {selectedProduct.kilos}
+                        </span>
+                      </div>
+                    )}
+
+                    <button
+                      onClick={() => window.location.href = '/contact'}
+                      className="w-full px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-medium rounded-lg transition-colors shadow-md"
+                    >
+                      {translations.but_contacto?.description}
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>

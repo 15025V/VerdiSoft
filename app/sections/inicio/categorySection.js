@@ -20,7 +20,7 @@ export default function CategorySection() {
 
   return (
     <div role="region" aria-labelledby="categorias-heading" className="relative">
-      <section className="py-16 text-center bg-gradient-to-br  to-gray-200">
+      <section id='get to know our products' className="py-16 text-center bg-gradient-to-br  to-gray-200">
       <h2 className="text-4xl md:text-5xl font-bold font-serif relative inline-block pb-3">
             {translations.category?.title }
             <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-green-500 to-transparent"></span>

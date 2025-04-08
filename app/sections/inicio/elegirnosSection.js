@@ -6,8 +6,12 @@ export default function AreaEmpresaSection() {
   const translations = useTranslation();
 
   return (
-    <section className="relative py-28 md:py-36 overflow-hidden">
+    
+    <section  id='área'
+    className="relative py-28 md:py-36 overflow-hidden">
+      
       {/* Fondo con imagen y overlay */}
+      
       <div className="absolute inset-0 w-full h-full">
         <Image 
           src="/galeria_5.jpeg" 
@@ -18,6 +22,7 @@ export default function AreaEmpresaSection() {
           quality={100}
         />
         <div className="absolute inset-0 bg-black/40 dark:bg-black/60 backdrop-blur-sm transition-all duration-500" />
+        <span className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-green-400 to-transparent dark:from-green-500 dark:to-transparent"></span>
       </div>
 
       {/* Contenido principal */}
@@ -61,6 +66,7 @@ export default function AreaEmpresaSection() {
               quality={90}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+         
           </div>
         </div>
       </div>

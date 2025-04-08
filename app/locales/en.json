@@ -7,213 +7,251 @@
     "contactUs": "Contact Us"
   },
   "hero": {
-    "title": "Sons Farms Flowers",
-    "subtitle": "Quality you can feel, freshness you can see."
-  },
- "somos": {
-    "title": "Who are we?",
-    "description": "A family-owned company dedicated to the production and export of vegetables, mainly cilantro, green onions, zucchini, and broccoli, of the highest quality, cultivated with passion and care in our fields. Our commitment to excellence, sustainability, and innovation has positioned us as a benchmark in the international market, reaching every corner. We guarantee an impeccable process, ensuring that each vegetable retains its freshness, color, and aroma, offering our customers a premium product that exceeds expectations. At Sons Farms, we flourish with every shipment."
-},
+    "title": "Flores Sons Farms",
+    "subtitle": "Quality you can feel, freshness you can see.",
+    "boton":" Contact Us",
+    "boton1":" Our Story"
 
-  "category": {
-    "title": "Discover our products",
-    "subtitle": "Experience the freshness and quality that define us.",
-    "button": "See more products"
+
   },
-  
-    "area": {
-      "title": "Company Area",
-      "cards": [
-        {
-          "title": "Field",
-          "description": "We have certified farms for the production of our products located in Puebla and Tlaxcala.",
-          "image": "galeria_5.jpeg"
-        },
-        {
-          "title": "Company",
-          "description": "We have certified packaging in Primus GFS.",
-          "image": "/galeria_6.jpeg"
-        }
-      ]
-    },
-  
+  "somos": {
+    "title": "Who Are We?",
+    "description": "A family business dedicated to the production and export of vegetables, mainly cilantro, spring onion, zucchini, and broccoli of the highest quality, cultivated with passion and care in our fields. Our commitment to excellence, sustainability, and innovation has positioned us as a benchmark in the international market, reaching every corner. We guarantee an impeccable process, ensuring that each vegetable retains its freshness, color, and aroma, offering our customers a premium product that exceeds expectations. At Sons Farms, we bloom with every shipment."
+  },
+  "category": {
+    "title": "Discover Our Products",
+    "subtitle": "Explore the freshness and quality that define us.",
+    "button": "See More Products"
+  },
+  "area": {
+    "title": "Company Area",
+    "cards": [
+      {
+        "title": "Field",
+        "description": "We have certified farms for the production of our products located in Puebla and Tlaxcala."
+      },
+      {
+        "title": "Company",
+        "description": "We have packaging certified by Primus GFS."
+      }
+    ]
+  },
   "galeria": {
-    "title": "Discover our facilities, processes, products, and more",
-    "subtitle": "Explore images that reflect our commitment to quality and excellence."
+    "title": "Discover and More",
+    "description": "Explouality and excellence.",
+    "foto1":"Our facilities",
+    "foto2":"Work team",
+    "foto3":"Packaging process",
+    "foto4":"Quality control"
+    
+  },
+  "galeria1": {
+    "title": "Our Field",
+    "description": "Discover our crops and sustainable practices",
+    "foto5":"Open field crops",
+    "foto6":"Production greenhouses",
+    "foto7":"Sustainable harvesting",
+    "foto8":"Agricultural technology"
   },
   "ubicacion": {
-    "title": "Find us at",
+    "title": "Find Us At",
+    "description":" Flores Sons Farms",
     "direccion": "Address: Froylán C. Manjarrez, 75470 Froylán C. Manjarrez, Pue.",
-    "telefono": " Phone: 0000-000-00-00",
+    "telefono": "Phone: 0000-000-00-00",
     "correo": "Email: ooooooogmail.com",
-    "boton": "Visit us"
+    "boton": "Visit Us"
   },
-  "servicios": {
-    "title": "Learn more about sons farms flores "
-   
-  },
+"certi": {
+  "title": "Certifications ",
+  "description": "Guarantee of quality and excellence in our processes.",
+  "text":"Our certificates reflect our commitment to excellence and quality at every stage of production"
+},
+"primus": {
+  "title": "International Food Safety Certification"
+},
+"senasica": {
+  "title": "Official Plant Health Recognition"
+},
+"buma": {
+  "title": "Excellence in Good Agricultural Practices"
+},
+"servicios": {
+  "title": "Learn more about Flores Sons Farms",
+  "img1":"Specialized Crop",
+  "text1":"Advanced techniques for maximum quality and production",
+  "img2":"Selective Harvesting",
+  "text2":"Careful process to preserve freshness",
+  "img3":"Premium Packaging",
+  "text3":"Presentation that protects and highlights its quality",
+  "img4":"Global Logistics",
+  "text4":"Efficient distribution to international markets"
+
+},
+"text_final": {
+  "title": "Each service designed to maintain the highest quality standards throughout the entire production chain."
+},
   "anuncio0": {
-    "title": "At Sons Farms Flowers, we cultivate with passion and commitment, offering fresh and high-quality products."
+    "title": "At Flores Sons Farms, we cultivate with passion and commitment, offering fresh and high-quality products."
   },
   "conoce": {
-    "title": "Learn about our history",
-    "description": "From planting to delivery, we guarantee an impeccable process, ensuring that each flower retains its freshness, color, and aroma, offering our customers a premium product that exceeds expectations. At Sons Farms, we bloom with every shipment.",
+    "title": "Discover Our History",
+    "description": "Founded in 2007 as an initiative of the government at that time, since Puebla’s production was exclusively for the national market. With this initiative, several producers united and, over the years, created different packaging facilities. This led to the creation of what we now know as Flores Farms, a family business that has evolved over time to meet international market standards.",
     "button": "Since 2007",
-    "description2": "We are a company dedicated to exporting the highest quality fresh flowers, grown with passion and care in our fields. Our commitment to excellence, sustainability, and innovation has positioned us as a benchmark in the international market, bringing the beauty of our flowers to every corner of the world.",
-    "button2": "Our beginnings"
+    "description2": "Since its inception, Flores Farms has worked with dedication and effort to offer the highest quality products, expanding its presence beyond national borders. Over the years, we have implemented cutting-edge technology in production processes, quality control systems, and sustainable farming methods, ensuring the freshness and excellence of our products. Our company has not only solidified itself in the export sector but has also fostered the development of the local agricultural community, creating jobs and providing growth opportunities for numerous families.",
+    "button2": "Our Beginnings"
   },
   "mision": {
-    "title": "Our Mission",
-    "description": "Li Europan lingues es membres del sam familie. Lor separat existentie es un myth."
+    "title": "Our Mission"
   },
   "tar1": {
-    "title": "Commitment to Quality",
-    "description": "Ensuring packaged products meet the highest hygiene and freshness standards, fulfilling customer expectations and market regulations."
+    "description": "To be the leading company in the region in cilantro export, recognized for its quality and commitment to our customers. We focus on offering fresh and excellent products, meeting the highest international food safety and sustainability standards."
   },
   "tar2": {
     "title": "Innovation and Efficiency",
-    "description": "Implementing advanced technology and optimized processes to offer safe, efficient, and sustainable packaging solutions."
+    "description": "We work with a focus on innovation, sustainable development, and environmental respect, implementing responsible agricultural practices that guarantee the freshness and safety of our products."
   },
   "tar3": {
     "title": "Responsibility and Sustainability",
-    "description": "Operating with social and environmental responsibility, promoting eco-friendly practices and a fair working environment for our employees."
+    "description": "We are committed to strengthening our business relationships with customers and strategic partners, providing a reliable, efficient, and personalized service. Additionally, we aim to generate a positive impact in our community."
   },
   "vision": {
     "title": "Our Vision",
-    "description": "We are a company dedicated to exporting the highest quality fresh flowers, grown with passion and care in our fields. Our commitment to excellence, sustainability, and innovation has positioned us as a benchmark in the international market, bringing the beauty of our flowers to every corner of the world."
+    "description": "To be a leading company in production and export, supporting regional development and improving the quality of life of producers and staff working with us."
   },
   "valores": {
-    "title": "Our Values",
-    "description": "Li Europan lingues es membres del sam familie. Lor separat existentie es un myth Por scientie, musica."
-  },
-  "valor1": {
-    "title": "Integrity",
-    "description": "We act with integrity and transparency, fulfilling our commitments with honesty and responsibility."
+    "title": "Our Values"
   },
   "valor2": {
-    "title": "Social Responsibility",
-    "description": "We actively contribute to the well-being of society and the environment through our actions and decisions."
+    "title": "Honesty",
+    "description": "We strive to always guarantee and deliver what we promise to our customers."
+  },
+  "valor1": {
+    "title": "Passion",
+    "description": "We have a deep love and admiration for agriculture and are committed to carrying out all our activities with enthusiasm."
   },
   "valor3": {
     "title": "Teamwork",
-    "description": "We value collaboration and mutual respect to achieve our common goals."
+    "description": "We are a family business where each member contributes their best, and together we achieve each of our goals."
   },
   "anuncio": {
-    "title": "Discover our selection of fresh and high-quality products."
+    "title": "Discover Our Selection of Fresh and High-Quality Products."
   },
   "vendidos": {
     "title": "Best-Selling Products"
   },
   "eslogan": {
-    "title": "Bring the freshness of our fields to your table: Building a Greener Future"
+    "title": "Bring the Freshness of Our Fields to Your Table: Building a Greener Future"
   },
   "catalogo": {
     "title": "Our Catalog"
   },
   "buscar_pro": {
-    "description": "Search product..."
+    "description": "Search for a product..."
+  },
+  "catego": {
+    "description": "Categories"
+  },
+  "pres": {
+    "description": "Presentation"
+  },
+  "pieza": {
+    "description": "Pieces"
+  },
+  "kilos": {
+    "description": "Kilograms"
+  },
+  "but_contacto": {
+    "description": "Contact for Orders"
   },
   "categ0": {
-    "option0": "All categories"
+    "option0": "All Categories"
   },
   "categ1": {
-    "option1": "Leafy Green Vegetables"
+    "option1": "Leafy Vegetable"
   },
   "categ2": {
-    "option2": "Herbs and Spices"
+    "option2": "Root Vegetable"
   },
   "categ3": {
-    "option3": "Root and Tuber Vegetables"
+    "option3": "Cacti and Nopales"
   },
   "categ4": {
-    "option4": "Cacti and Nopales"
-  },
-  "categ5": {
-    "option5": "Fruit Vegetables"
+    "option4": "Fruit Vegetable"
   },
   "ver_pro": {
-    "description": "  see product"
+    "description": "View Product"
   },
   "no_encontrado": {
     "description": "No product found."
   },
+  "cebollita": {
+    "nombre": "Spring Onion",
+    "categoria": "Root Vegetable",
+    "presentacion": ["Tray", "Wooden Box"],
+    "piezas": "40 - 42  pcs",
+    "kilos": "Maximum 9 - 10"
+  },
+  "calabacita": {
+    "nombre": "Zucchini",
+    "categoria":  "Fruit Vegetable",
+    "presentacion":["Plastic Box"],
+    "kilos": "16"
+  },
   "brocoli": {
     "nombre": "Broccoli",
-    "categoria": "Green Leaf Vegetable",
-    "button": "View product"
-  },
-  "cilantro": {
-    "nombre": "Cilantro",
-    "categoria": "Herbs and Spices",
-    "button": "View product"
+    "categoria": "Leafy Vegetable",
+    "presentacion":["Generic Cardboard Box"],
+    "piezas": "24",
+    "kilos": "10"
   },
   "zanahoria": {
     "nombre": "Carrot",
-    "categoria": "Root and Tuber Vegetable",
-    "button": "View product"
-  },
-  "rabano": {
-    "nombre": "Radish",
-    "categoria": "Root and Tuber Vegetable",
-    "button": "View product"
+    "categoria":  "Root Vegetable",
+    "presentacion": ["Plastic Bag"],
+    "kilos": "22"
   },
   "repollo": {
     "nombre": "Cabbage",
-    "categoria": "Green Leaf Vegetable",
-    "button": "View product"
-  },
-  "betabel": {
-    "nombre": "Beetroot",
-    "categoria": "Root and Tuber Vegetable",
-    "button": "View product"
-  },
-  "calabaza": {
-    "nombre": "Pumpkin",
-    "categoria": "Fruit Vegetable",
-    "button": "View product"
-  },
-  "calabaza2": {
-    "nombre": "Ball Pumpkin",
-    "categoria": "Fruit Vegetable",
-    "button": "View product"
+    "categoria":  "Leafy Vegetable",
+    "presentacion":  ["Cardboard Box"],
+    "piezas": "30",
+    "kilos": "23"
   },
   "tomatillo": {
-    "nombre": "Tomatillo milpero",
+    "nombre": "Tomatillo",
     "categoria": "Fruit Vegetable",
-    "button": "View product"
-  },
-  "nopal": {
-    "nombre": "Nopal",
-    "categoria": "Cacti and Nopales",
-    "button": "View product"
-  },
-  "tuna_v": {
-    "nombre": "Green Tuna",
-    "categoria": "Cacti and Nopales",
-    "button": "View product"
-  },
-  "tuna_r": {
-    "nombre": "Red Tuna",
-    "categoria": "Cacti and Nopales",
-    "button": "View product"
+    "presentacion": ["Plastic Box"],
+    "kilos": "18 ½"
   },
   "epazote": {
     "nombre": "Epazote",
-    "categoria": "Herbs and Spices",
-    "button": "View product"
+    "categoria": "Leafy Vegetable",
+    "presentacion": ["Plastic Box", "Wooden Box"],
+    "piezas":"40 bundles per box",
+    "kilos": "6 - 7"
   },
-  "cebollin": {
-    "nombre": "Chives",
-    "categoria": "Herbs and Spices",
-    "button": "View product"
+  "betabel": {
+    "nombre":  "Beetroot",
+    "categoria": "Root Vegetable",
+    "presentacion":  ["Plastic Box"],
+    "piezas": "24",
+    "kilos": "10"
   },
+  "hoja_de_platano": {
+    "nombre": "Banana Leaf",
+    "categoria":  "Leafy Vegetable",
+    "presentacion": ["Plastic Box"],
+    "piezas": "6 packages per bag",
+    "kilos": "8"
+  },
+
   "anuncio3": {
-    "title": "¡Connect with Flores Sons Farms!",
-    "description": "If you have any questions, comments, suggestions or are interested in any of our products, please fill out the following form and we will contact you as soon as possible."
+    "title": "Get in Touch with Flores Sons Farms!",
+    "description": "If you have any questions, comments, suggestions, or are interested in our products, please fill out the form below and we will contact you as soon as possible."
   },
   "atencion": {
     "title": "Contact Information",
-    "description": "Need phone assistance? Call us at the following number."
+    "description": "If you need telephone assistance, please contact us at the following number."
   },
   "tele": {
     "title": "Phone",
@@ -228,19 +266,19 @@
     "description": "Froylán C. Manjarrez, 75470 Froylán C. Manjarrez, Pue."
   },
   "hora": {
-    "title": "Business Hours"
+    "title": "Customer Service Hours"
   },
   "lunes": {
-    "title": "Monday to Friday: 8:00 am – 10:00 pm"
+    "title": "Monday to Friday 8:00 am – 10:00 pm"
   },
   "sabado": {
-    "title": "Saturday: 8:00 am – 10:00 pm"
+    "title": "Saturday 12:00 am – 06:00 pm"
   },
   "domi": {
-    "title": "Sunday: 8:00 am – 10:00 pm"
+    "title": "Sunday 8:00 am – 10:00 pm"
   },
   "ubi": {
-    "title": "Located at",
+    "title": "Located In",
     "description": "Visit us at Froylán C. Manjarrez, 75470, where quality and commitment are packed for you."
   },
   "suc1": {
@@ -248,28 +286,28 @@
     "description": "Froylán C. Manjarrez, 75470 Froylán C. Manjarrez, Pue."
   },
   "suc2": {
-    "title": "Branch 1",
+    "title": "Branch 2",
     "description": "Froylán C. Manjarrez, 75470 Froylán C. Manjarrez, Pue."
   },
   "for": {
     "title": "Contact Us",
-    "description": "Please fill out the following form to get in touch with us",
+    "description": "Please fill out the form below to get in touch with us.",
     "nombre": "Name",
     "tel": "Phone",
     "cor": "Email",
     "mens": "Message"
   },
   "d_nom": {
-    "title": "The name is required"
+    "title": "Name is required"
   },
   "d_tel": {
-    "title": "The phone number is required"
+    "title": "Phone number is required"
   },
   "d_cor": {
-    "title": "The email is required"
+    "title": "Email is required"
   },
   "d_men": {
-    "title": "The message is required"
+    "title": "Message is required"
   },
   "but": {
     "title": "Send"
@@ -277,7 +315,18 @@
   "notFound": {
     "title": "404 - Page Not Found",
     "description": "Sorry, the page you are looking for does not exist.",
-    "fu": "Oops! The page you’re looking for is not available. It seems to have disappeared like a cilantro leaf.",
+    "fu": "Oops! The page you are looking for is not available. It seems to have gotten lost like a cilantro leaf.",
     "backToHome": "Return to Home"
+  },
+
+  "foo": {
+    "title": "Contact Information",
+    "correo":"info@example.com",
+    "rapidos":"Quick Links",
+    "poli":"Privacy Policies",
+    "ter":"Terms and Conditions",
+    "redes":"Follow us",
+    "derechos_rosy":"TAll rights reserved"
   }
+
 }

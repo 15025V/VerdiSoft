@@ -5,6 +5,9 @@ import Head from 'next/head';
 import dynamic from 'next/dynamic'; // Importar dynamic para lazy loading
 import Navbar from '../components/navBar';
 import Footer from '../components/footer';
+import WhatsAppButton from '../components/Chatboot/whatsAppButton';
+import BotpressChatbot from '../components/Chatboot/bootpress';
+
 
 // Carga diferida de secciones
 const AnunciSection = dynamic(() => import('../sections/catalogo/anunciSection'), { loading: () => <p>Cargando...</p> });
@@ -32,20 +35,12 @@ export default function Hero() {
         <meta name="twitter:image" content="https://www.floressonsfarms.com/logo.png" />
 
       </Head>
-      <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
-      <script src="https://files.bpcontent.cloud/2025/02/23/04/20250223044823-TC06RID3.js"></script>
-
-      {/* Chatbot de WhatsApp */}
-      <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
-      <script src="https://files.bpcontent.cloud/2025/02/23/04/20250223044823-TC06RID3.js"></script>
-
-      {/* Icono de WhatsApp (puedes personalizar el estilo) */}
-      <a href="https://wa.me/2491387526" target="_blank" rel="noopener noreferrer" style={{ position: 'fixed', bottom: '110px', right: '25px', zIndex: 1000 }}>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/240px-WhatsApp.svg.png" alt="WhatsApp" width="50" height="50" />
-      </a>
+    
 
 
       {/* Secciones de la página */}
+      <WhatsAppButton/>
+      <BotpressChatbot/>
       <Navbar/>
       <AnunciSection />
       <VendidoSection/>
