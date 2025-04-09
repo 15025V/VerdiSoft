@@ -49,7 +49,7 @@ export default function AnunciSection() {
         {/* Contenido */}
         <div className="relative z-10 text-white px-6 w-full text-center">
           <h1 
-            className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold tracking-wide italic"
+            className="text-4xl sm:text-5xl md:text-6xl font-bold text-white font-serif italic mb-6 leading-tight"
             aria-label={translations.anuncio0?.title}
           >
             {translations.anuncio0?.title}

@@ -54,7 +54,7 @@ export default function ProductsSection() {
           <input
             type="text"
             placeholder={translations.buscar_pro?.description}
-            className="border border-gray-300 px-4 py-2 rounded-lg w-full md:w-1/2 focus:outline-none focus:ring-2 focus:ring-green-200 placeholder-black"
+            className="border border-gray-300 text-black px-4 py-2 rounded-lg w-full md:w-1/2 focus:outline-none focus:ring-2 focus:ring-green-200 placeholder-black"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />

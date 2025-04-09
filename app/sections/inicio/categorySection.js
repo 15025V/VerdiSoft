@@ -1,13 +1,12 @@
 'use client';
 import { useTranslation } from '@/app/hooks/useTranslation';
-import { CldImage } from 'next-cloudinary'; // Asegúrate de tener el paquete de Cloudinary
+import { CldImage } from 'next-cloudinary';
 import React, { useState, useEffect } from 'react';
 
 export default function CategorySection() {
   const translations = useTranslation();
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // Lista de imágenes
   const images = ["galeria_2_dfb2nj", "galeria_3_mage9c", "galeria_6_pacikz", "galeria_6_pacikz"];
 
   const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % images.length);
@@ -20,79 +19,78 @@ export default function CategorySection() {
 
   return (
     <div role="region" aria-labelledby="categorias-heading" className="relative">
-      <section id='get to know our products' className="py-16 text-center bg-gradient-to-br  to-gray-200">
-        <h2 className="text-4xl md:text-5xl font-bold font-serif relative inline-block pb-3">
-          {translations.category?.title }
+      <section
+        id="get to know our products"
+        className="py-16 text-center bg-gradient-to-br to-gray-200 px-4 sm:px-6 lg:px-8"
+      >
+        {/* Título */}
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-serif relative inline-block pb-3">
+          {translations.category?.title}
           <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-green-500 to-transparent"></span>
         </h2>
-        <p className="mt-6 text-lg max-w-3xl mx-auto font-serif mb-12">
-          {translations.category?.subtitle }
+        <p className="mt-6 text-base sm:text-lg max-w-3xl mx-auto font-serif mb-12">
+          {translations.category?.subtitle}
         </p>
 
-        {/* Carrusel */}
-        <div className="relative w-full overflow-hidden max-w-5xl mx-auto flex justify-center space-x-4 items-center">
+        {/* Carrusel tipo ruleta */}
+        <div className="relative w-full h-64 sm:h-72 md:h-80 lg:h-[22rem] flex justify-center items-center overflow-hidden">
           {images.map((src, index) => {
             const position = (index - currentSlide + images.length) % images.length;
+            let style = '';
+            let blurEffect = '';
+
+            if (position === 0) {
+              // Imagen central
+              style = 'z-30 scale-110 sm:scale-[1.2] md:scale-[1.25] translate-x-0 opacity-100';
+            } else if (position === 1) {
+              // Imagen a la derecha
+              style = 'z-20 scale-90 sm:scale-100 md:scale-[1.05] translate-x-20 sm:translate-x-28 md:translate-x-32 opacity-60';
+              blurEffect = 'blur-sm';
+            } else if (position === images.length - 1) {
+              // Imagen a la izquierda
+              style = 'z-20 scale-90 sm:scale-100 md:scale-[1.05] -translate-x-20 sm:-translate-x-28 md:-translate-x-32 opacity-60';
+              blurEffect = 'blur-sm';
+            } else {
+              // Oculta otras
+              style = 'hidden sm:block opacity-0 scale-75';
+            }
 
             return (
               <div
                 key={index}
-                className={`relative w-64 h-80 transition-all duration-500 ease-in-out transform ${
-                  position === 0 ? 'scale-110 brightness-110 z-10 shadow-2xl' : 
-                  position === 1 || position === images.length - 1 ? 'scale-90 opacity-50' : 'hidden'
-                }`}
+                className={`absolute transition-all duration-700 ease-in-out transform 
+          w-40 h-56 sm:w-60 sm:h-72 md:w-72 md:h-80 lg:w-80 lg:h-[22rem] 
+          ${style}`}
               >
                 <CldImage
                   src={src}
                   alt={`Producto ${index + 1}`}
                   layout="fill"
-                  className="object-cover rounded-3xl shadow-lg"
-                  loading="lazy"
-                  quality="90" // Ajusta la calidad según lo necesites
-                   // Si deseas que la imagen se cargue con prioridad
+                  className={`object-cover rounded-3xl shadow-xl ${blurEffect}`}
                 />
               </div>
             );
           })}
         </div>
 
-        {/* Botones de Navegación */}
-        <button
-          className="absolute left-40 top-1/2 transform -translate-y-1/2 p-4 bg-white/20 backdrop-blur-md border border-white/30 shadow-lg rounded-full transition hover:bg-white/40 hover:scale-110 hover:shadow-xl text-gray-800"
-          onClick={prevSlide}
-          aria-label="Slide anterior"
-        >
-          <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <polyline points="15 18 9 12 15 6"></polyline>
-          </svg>
-        </button>
-        
-        <button
-          className="absolute right-40 top-1/2 transform -translate-y-1/2 p-4 bg-white/20 backdrop-blur-md border border-white/30 shadow-lg rounded-full transition hover:bg-white/40 hover:scale-110 hover:shadow-xl text-gray-800"
-          onClick={nextSlide}
-          aria-label="Slide siguiente"
-        >
-          <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <polyline points="9 18 15 12 9 6"></polyline>
-          </svg>
-        </button>
 
-        {/* Indicadores de Posición (Verdes) */}
+
+
+        {/* Indicadores */}
         <div className="flex justify-center mt-6 space-x-2">
           {images.map((_, index) => (
             <div
               key={index}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                currentSlide === index ? 'bg-green-600 scale-125 shadow-md' : 'bg-green-300 opacity-70'
-              }`}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${currentSlide === index ? 'bg-green-600 scale-125 shadow-md' : 'bg-green-300 opacity-70'
+                }`}
             />
           ))}
         </div>
 
-        {/* Botón Ver Más */}
+        {/* Botón Ver más */}
         <a
           href="/products"
-          className="mt-12 inline-flex items-center text-green-600 font-semibold hover:text-green-800 transition duration-300 text-lg px-6 py-3 rounded-full border border-green-600 shadow-md"
+          className="mt-12 inline-flex items-center text-green-600 font-semibold hover:text-green-800 transition duration-300 text-base sm:text-lg px-5 sm:px-6 py-3 rounded-full border border-green-600 shadow-md"
           aria-label="Ver productos"
         >
           {translations.category?.button}

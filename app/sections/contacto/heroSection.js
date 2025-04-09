@@ -45,10 +45,11 @@ export default function HeroSection() {
 
         {/* Contenido del hero */}
         <div className="relative z-10 text-white max-w-4xl p-8 rounded-lg">
-          <h1 className="text-4xl md:text-6xl font-serif font-bold tracking-wide italic">
+        
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white font-serif italic mb-6 leading-tight">
             {translations.anuncio3?.title}
           </h1>
-          <p className="text-lg md:text-2xl font-light mt-6 max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-gray-200 italic mb-8 font-serif">
             {translations.anuncio3?.description}
           </p>
         </div>

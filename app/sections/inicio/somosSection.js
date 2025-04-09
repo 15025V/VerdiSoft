@@ -14,8 +14,8 @@ export default function SomosSection() {
     >
       {/* Elementos decorativos */}
       <div className="absolute inset-0  duration-700">
-        <div className="absolute top-20 left-20 w-40 h-40 rounded-full bg-green-500 dark:bg-green-300 animate-blob animation-delay-2000 transition-colors duration-500"></div>
-        <div className="absolute top-1/3 right-32 w-48 h-48 rounded-full bg-green-500 dark:bg-green-500 animate-blob transition-colors duration-500"></div>
+        <div className="absolute top-20 left-20 w-40 h-40 rounded-full bg-green-200 dark:bg-green-200 animate-blob animation-delay-2000 transition-colors duration-500"></div>
+        {/*<div className="absolute top-1/3 right-32 w-48 h-48 rounded-full bg-green-500 dark:bg-green-500 animate-blob transition-colors duration-500"></div>*/}
         <div className="absolute bottom-20 left-1/3 w-52 h-52 rounded-full bg-green-500 dark:bg-green-500 animate-blob animation-delay-4000 transition-colors duration-500"></div>
       </div>
 
