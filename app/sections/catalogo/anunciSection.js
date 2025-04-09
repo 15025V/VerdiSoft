@@ -29,7 +29,7 @@ export default function AnunciSection() {
         <meta name="description" content={translations.anuncio0?.description || 'Sección de anuncios'} />
       </Head>
 
-      <section className="relative w-full h-screen flex flex-col md:flex-row items-center justify-between px-4 md:px-25 pt-28">
+      <section className="relative w-full h-screen flex  items-center justify-between px-4 md:px-25 pt-28">
         {/* Imagen de fondo con Cloudinary */}
         <div className="absolute inset-0 z-0">
           <CldImage
@@ -37,7 +37,7 @@ export default function AnunciSection() {
             alt={backgroundImage.alt}
             fill
             sizes="100vw"
-            priority
+            loading='lazy'
             className="object-cover object-top"
             crop={backgroundImage.transformations.crop}
             gravity={backgroundImage.transformations.gravity}
@@ -54,8 +54,8 @@ export default function AnunciSection() {
           >
             {translations.anuncio0?.title}
           </h1>
-          <span className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-green-400 to-transparent dark:from-green-500 dark:to-transparent"></span>
         </div>
+          <span className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-green-400 to-transparent dark:from-green-500 dark:to-transparent"></span>
       </section>
     </>
   );

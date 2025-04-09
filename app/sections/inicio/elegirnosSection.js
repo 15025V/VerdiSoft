@@ -13,7 +13,7 @@ export default function AreaEmpresaSection() {
           src="galeria_5_fwglum" 
           alt="Área de la empresa"
           fill
-          priority
+          
           className="object-cover object-center"
           quality={100}
           loading="lazy"

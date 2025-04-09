@@ -8,13 +8,13 @@ export default function AnunciSection() {
   const translations = useTranslation();
 
   return (
-    <section className="relative h-screen flex items-center justify-start text-left p-10 overflow-hidden">
+    <section className="relative h-screen flex items-center justify-center text-center p-10 overflow-hidden">
       {/* Imagen de fondo */}
       <CldImage
         src="12_fs6kw7" // Asegúrate que el publicId "12" corresponde a tu imagen en Cloudinary
         alt="Fondo Anuncio"
         fill
-        priority
+        loading="lazy"
         className="object-cover object-center z-0"
       />
 
@@ -22,7 +22,7 @@ export default function AnunciSection() {
       <div className="absolute inset-0 bg-black bg-opacity-30 z-10" />
 
       {/* Contenido sobre la imagen */}
-      <div className="text-white max-w-2xl z-20">
+      <div className="text-white max-w-2xl z-20 text-center">
         <h1 className="text-7xl font-serif font-bold tracking-wide font-playfair italic">
           {translations.eslogan?.title}
         </h1>

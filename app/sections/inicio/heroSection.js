@@ -15,7 +15,7 @@ export default function HeroSection() {
           layout="fill"
           className="object-cover"
           quality={100}
-          priority
+          loading="lazy"
         />
         <div className="absolute inset-0 bg-black/40 bg-gradient-to-t from-black/60 via-black/30 to-transparent"></div>
         <span className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-green-400 to-transparent dark:from-green-500 dark:to-transparent"></span>
@@ -59,7 +59,7 @@ export default function HeroSection() {
                 layout="fill"
                 className="rounded-full object-cover border-4 border-white/30 shadow-2xl"
                 quality={90}
-                priority
+                loading="lazy"
               />
               <div className="absolute inset-0 rounded-full border-2 border-white/20 animate-ping opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>

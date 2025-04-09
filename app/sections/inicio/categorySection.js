@@ -49,7 +49,7 @@ export default function CategorySection() {
                   className="object-cover rounded-3xl shadow-lg"
                   loading="lazy"
                   quality="90" // Ajusta la calidad según lo necesites
-                  priority // Si deseas que la imagen se cargue con prioridad
+                   // Si deseas que la imagen se cargue con prioridad
                 />
               </div>
             );

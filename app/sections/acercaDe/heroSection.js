@@ -14,7 +14,7 @@ export default function HeroSection() {
         src="12_fs6kw7" // Asegúrate de que este sea tu `publicId` en Cloudinary
         alt="Fondo Hero"
         fill
-        priority
+        loading='lazy'
         className="object-cover object-top z-0"
       />
 

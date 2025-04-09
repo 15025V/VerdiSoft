@@ -12,8 +12,6 @@ export default function HeroSection() {
     publicId: 'c1_uei6l3', // Reemplaza con tu publicId en Cloudinary
     alt: translations.anuncio3?.title || 'Imagen de fondo heroica',
     transformations: {
-      width: 1920,
-      height: 1080,
       crop: 'fill',
       quality: 'auto',
       gravity: 'auto'
@@ -39,15 +37,14 @@ export default function HeroSection() {
             alt={heroImage.alt}
             fill
             sizes="100vw"
-            priority
+            loading='lazy'
             className="object-cover"
             {...heroImage.transformations}
           />
-          <div className="absolute inset-0 bg-black bg-opacity-30"></div>
         </div>
 
         {/* Contenido del hero */}
-        <div className="relative z-10 text-white max-w-4xl bg-black bg-opacity-50 p-8 rounded-lg">
+        <div className="relative z-10 text-white max-w-4xl p-8 rounded-lg">
           <h1 className="text-4xl md:text-6xl font-serif font-bold tracking-wide italic">
             {translations.anuncio3?.title}
           </h1>
