@@ -1,6 +1,6 @@
 'use client';
 import { useTranslation } from '@/app/hooks/useTranslation';
-import Image from 'next/image';
+import { CldImage } from 'next-cloudinary'; // Asegúrate de tener el paquete de Cloudinary
 import React, { useState, useEffect } from 'react';
 
 export default function CategorySection() {
@@ -8,7 +8,7 @@ export default function CategorySection() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   // Lista de imágenes
-  const images = ["/galeria_2.webp", "/galeria_3.jpeg", "/galeria_6.jpeg", "/galeria_6.jpeg"];
+  const images = ["galeria_2_dfb2nj", "galeria_3_mage9c", "galeria_6_pacikz", "galeria_6_pacikz"];
 
   const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % images.length);
   const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + images.length) % images.length);
@@ -21,13 +21,13 @@ export default function CategorySection() {
   return (
     <div role="region" aria-labelledby="categorias-heading" className="relative">
       <section id='get to know our products' className="py-16 text-center bg-gradient-to-br  to-gray-200">
-      <h2 className="text-4xl md:text-5xl font-bold font-serif relative inline-block pb-3">
-            {translations.category?.title }
-            <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-green-500 to-transparent"></span>
-          </h2>
-          <p className="mt-6 text-lg max-w-3xl mx-auto font-serif mb-12">
-            {translations.category?.subtitle }
-          </p>
+        <h2 className="text-4xl md:text-5xl font-bold font-serif relative inline-block pb-3">
+          {translations.category?.title }
+          <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-green-500 to-transparent"></span>
+        </h2>
+        <p className="mt-6 text-lg max-w-3xl mx-auto font-serif mb-12">
+          {translations.category?.subtitle }
+        </p>
 
         {/* Carrusel */}
         <div className="relative w-full overflow-hidden max-w-5xl mx-auto flex justify-center space-x-4 items-center">
@@ -42,12 +42,14 @@ export default function CategorySection() {
                   position === 1 || position === images.length - 1 ? 'scale-90 opacity-50' : 'hidden'
                 }`}
               >
-                <Image
+                <CldImage
                   src={src}
                   alt={`Producto ${index + 1}`}
                   layout="fill"
                   className="object-cover rounded-3xl shadow-lg"
                   loading="lazy"
+                  quality="90" // Ajusta la calidad según lo necesites
+                  priority // Si deseas que la imagen se cargue con prioridad
                 />
               </div>
             );
@@ -87,8 +89,8 @@ export default function CategorySection() {
           ))}
         </div>
 
-       {/* Botón Ver Más */}
-       <a
+        {/* Botón Ver Más */}
+        <a
           href="/products"
           className="mt-12 inline-flex items-center text-green-600 font-semibold hover:text-green-800 transition duration-300 text-lg px-6 py-3 rounded-full border border-green-600 shadow-md"
           aria-label="Ver productos"

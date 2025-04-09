@@ -1,26 +1,61 @@
 'use client';
 import React from 'react';
+import { CldImage } from 'next-cloudinary';
 import { useTranslation } from '@/app/hooks/useTranslation';
+import Head from 'next/head';
 
 export default function HeroSection() {
   const translations = useTranslation();
+  
+  // Configuración de la imagen de Cloudinary
+  const heroImage = {
+    publicId: 'c1_uei6l3', // Reemplaza con tu publicId en Cloudinary
+    alt: translations.anuncio3?.title || 'Imagen de fondo heroica',
+    transformations: {
+      width: 1920,
+      height: 1080,
+      crop: 'fill',
+      quality: 'auto',
+      gravity: 'auto'
+    }
+  };
+
   return (
-    <section
-      className="w-full h-screen flex flex-col items-center justify-center text-center px-6 md:px-12 lg:px-20"
-      style={{
-        backgroundImage: "url('/12.jpeg')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
-      <div className="text-white max-w-4xl"> 
-        <h1 className="text-4xl md:text-6xl font-serif font-bold tracking-wide italic">
-          {translations.anuncio3?.title}
-        </h1>
-        <p className="text-lg md:text-2xl font-light mt-6 max-w-3xl mx-auto">
-          {translations.anuncio3?.description}
-        </p>
-      </div>
-    </section>
+    <>
+      <Head>
+        <title>{translations.anuncio3?.title || 'Página principal'} - Flores Sons Farms</title>
+        <meta name="description" content={translations.anuncio3?.description || 'Descripción de la página'} />
+      </Head>
+      
+      <section
+        className="w-full h-screen flex flex-col items-center justify-center text-center px-6 md:px-12 lg:px-20 relative"
+        role="img"
+        aria-label={heroImage.alt}
+      >
+        {/* Imagen de fondo con Cloudinary */}
+        <div className="absolute inset-0 z-0">
+          <CldImage
+            src={heroImage.publicId}
+            alt={heroImage.alt}
+            fill
+            sizes="100vw"
+            priority
+            className="object-cover"
+            {...heroImage.transformations}
+          />
+          <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+        </div>
+
+        {/* Contenido del hero */}
+        <div className="relative z-10 text-white max-w-4xl bg-black bg-opacity-50 p-8 rounded-lg">
+          <h1 className="text-4xl md:text-6xl font-serif font-bold tracking-wide italic">
+            {translations.anuncio3?.title}
+          </h1>
+          <p className="text-lg md:text-2xl font-light mt-6 max-w-3xl mx-auto">
+            {translations.anuncio3?.description}
+          </p>
+        </div>
+      </section>
+    </>
   );
 }

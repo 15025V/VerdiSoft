@@ -1,5 +1,5 @@
-'Use client'
-import Image from "next/image";
+'use client'
+import { CldImage } from 'next-cloudinary'; // Importamos CldImage de next-cloudinary
 import React, { useState } from "react";
 import { useTranslation } from "@/app/hooks/useTranslation";
 
@@ -10,21 +10,21 @@ export default function GallerySplitSection() {
   const [selectedImage, setSelectedImage] = useState(null); // Estado para el modal
 
   const enterpriseImages = [
-    { src: "/galeria_2.webp", alt: translations.galeria?.foto1},
-    { src: "/galeria_2.webp", alt: translations.galeria?.foto2},
-    { src: "/galeria_2.webp", alt: translations.galeria?.foto3},
-    { src: "/galeria_2.webp", alt: translations.galeria?.foto4 },
+    { src: "galeria_2_bbvnpg", alt: translations.galeria?.foto1 },
+    { src: "galeria_2_bbvnpg", alt: translations.galeria?.foto2 },
+    { src: "galeria_2_bbvnpg", alt: translations.galeria?.foto3 },
+    { src: "galeria_2_bbvnpg", alt: translations.galeria?.foto4 },
   ];
 
   const fieldImages = [
-    { src: "/galeria_2.webp", alt: translations.galeria1?.foto5 },
-    { src: "/galeria_2.webp", alt: translations.galeria1?.foto6 },
-    { src: "/galeria_2.webp", alt: translations.galeria1?.foto7},
-    { src: "/galeria_2.webp", alt: translations.galeria1?.foto8},
+    { src: "galeria_2_bbvnpg", alt: translations.galeria1?.foto5 },
+    { src: "galeria_2_bbvnpg", alt: translations.galeria1?.foto6 },
+    { src: "galeria_2_bbvnpg", alt: translations.galeria1?.foto7 },
+    { src: "galeria_2_bbvnpg", alt: translations.galeria1?.foto8 },
   ];
 
   return (
-    <section  id='gallery' className="relative py-8">
+    <section id='gallery' className="relative py-8">
       <div className="max-w-7xl mx-auto px-6">
         <GallerySection
           title={translations.galeria?.title}
@@ -46,7 +46,7 @@ export default function GallerySplitSection() {
   );
 }
 
-// Seccion de galeria con titulo, subtitulo y grid de imagenes
+// Sección de galería con título, subtítulo y grid de imágenes
 function GallerySection({ title, subtitle, images, onImageClick }) {
   return (
     <div className="mb-28">
@@ -69,21 +69,20 @@ function GallerySection({ title, subtitle, images, onImageClick }) {
   );
 }
 
-//  Tarjeta de imagen con hover y overlay elegante
+// Tarjeta de imagen con hover y overlay elegante
 function GalleryCard({ image, onClick }) {
   return (
     <div
       className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 bg-white dark:bg-gray-800 h-72 cursor-pointer"
       onClick={onClick}
     >
-      <Image
+      <CldImage
         src={image.src}
         alt={image.alt}
         fill
         className="object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
         quality={90}
-        placeholder="blur"
-        blurDataURL={image.src}
+        loading="lazy"
       />
 
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
@@ -94,7 +93,8 @@ function GalleryCard({ image, onClick }) {
     </div>
   );
 }
-//  Lightbox con animacion y boton de cierre elegante
+
+// Lightbox con animación y botón de cierre elegante
 function Lightbox({ image, onClose }) {
   return (
     <div
@@ -102,7 +102,7 @@ function Lightbox({ image, onClose }) {
       onClick={onClose}
     >
       <div className="relative max-w-4xl w-full p-4">
-        {/*  Boton de cierre elegante */}
+        {/* Botón de cierre elegante */}
         <button
           className="absolute top-5 right-5 bg-white/20 hover:bg-white/40 text-white rounded-full p-3 transition-all duration-300 shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-white/50"
           onClick={onClose}
@@ -119,12 +119,14 @@ function Lightbox({ image, onClose }) {
           </svg>
         </button>
 
-        <Image
+        <CldImage
           src={image.src}
           alt={image.alt}
           width={1200}
           height={800}
           className="rounded-lg shadow-lg object-contain w-full"
+          quality={100}
+          loading="lazy"
         />
       </div>
     </div>

@@ -14,9 +14,9 @@ export default function SomosSection() {
     >
       {/* Elementos decorativos */}
       <div className="absolute inset-0  duration-700">
-        <div className="absolute top-20 left-20 w-40 h-40 rounded-full bg-green-300 dark:bg-green-300 animate-blob animation-delay-2000 transition-colors duration-500"></div>
-        <div className="absolute top-1/3 right-32 w-48 h-48 rounded-full bg-green-200 dark:bg-green-200 animate-blob transition-colors duration-500"></div>
-        <div className="absolute bottom-20 left-1/3 w-52 h-52 rounded-full bg-green-100 dark:bg-green-100 animate-blob animation-delay-4000 transition-colors duration-500"></div>
+        <div className="absolute top-20 left-20 w-40 h-40 rounded-full bg-green-500 dark:bg-green-300 animate-blob animation-delay-2000 transition-colors duration-500"></div>
+        <div className="absolute top-1/3 right-32 w-48 h-48 rounded-full bg-green-500 dark:bg-green-500 animate-blob transition-colors duration-500"></div>
+        <div className="absolute bottom-20 left-1/3 w-52 h-52 rounded-full bg-green-500 dark:bg-green-500 animate-blob animation-delay-4000 transition-colors duration-500"></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-6">
@@ -30,8 +30,8 @@ export default function SomosSection() {
           </h2>
         </header>
 
-        <div className="max-w-4xl mx-auto bg-white/90 dark:bg-gray-800/80 backdrop-blur-sm p-10 md:p-14 rounded-2xl shadow-lg dark:shadow-xl dark:shadow-gray-900/50 border border-white/30 dark:border-gray-700/30 transition-all duration-500">
-          <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed md:leading-loose text-justify font-serif transition-colors duration-500">
+        <div className="max-w-4xl mx-auto backdrop-blur-sm p-10 md:p-14 rounded-2xl shadow-lg dark:shadow-xl dark:shadow-gray-900/50 border border-white/30 dark:border-gray-700/30 transition-all duration-500">
+          <p className="text-lg md:text-xl leading-relaxed md:leading-loose text-justify font-serif transition-colors duration-500">
             {translations.somos?.description }
           </p>
           

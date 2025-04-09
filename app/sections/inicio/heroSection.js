@@ -1,5 +1,5 @@
-import Image from "next/image";
-import { FaInstagram, FaFacebook,FaTiktok, FaTwitter, FaArrowDown } from "react-icons/fa";
+import { CldImage } from "next-cloudinary";
+import { FaInstagram, FaFacebook, FaTiktok, FaTwitter, FaArrowDown } from "react-icons/fa";
 import { useTranslation } from '@/app/hooks/useTranslation';
 
 export default function HeroSection() {
@@ -9,10 +9,10 @@ export default function HeroSection() {
     <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
       {/* Imagen de fondo con overlay */}
       <div className="absolute inset-0 z-0">
-        <Image
-          src="/12.jpeg"
+        <CldImage
+          src="12_fs6kw7"
           alt="Fondo Flores Sons Farms"
-          fill
+          layout="fill"
           className="object-cover"
           quality={100}
           priority
@@ -53,10 +53,10 @@ export default function HeroSection() {
           {/* Imagen destacada */}
           <div className="w-full md:w-1/2 flex justify-center">
             <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
-              <Image
-                src="/galeria_3.jpeg"
+              <CldImage
+                src="galeria_3_mage9c"
                 alt="Productos Flores Sons Farms"
-                fill
+                layout="fill"
                 className="rounded-full object-cover border-4 border-white/30 shadow-2xl"
                 quality={90}
                 priority
@@ -66,7 +66,6 @@ export default function HeroSection() {
           </div>
         </div>
 
-        
         {/* Redes sociales */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-6 text-white text-2xl">
           {[
@@ -87,13 +86,12 @@ export default function HeroSection() {
             </a>
           ))}
         </div>
-      
-    </div>
+      </div>
 
-      {/* Indicador de scroll */ }
-  <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 animate-bounce">
-    <FaArrowDown className="text-white text-2xl" />
-  </div>
-    </section >
+      {/* Indicador de scroll */}
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <FaArrowDown className="text-white text-2xl" />
+      </div>
+    </section>
   );
 }

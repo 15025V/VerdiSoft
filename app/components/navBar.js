@@ -26,7 +26,7 @@ export default function Navbar() {
     const savedTheme = localStorage.getItem('theme') || 'light';
     setTheme(savedTheme);
     document.documentElement.setAttribute('data-theme', savedTheme);
-    
+
     const savedLang = localStorage.getItem('language');
     if (savedLang && changeLanguage) {
       changeLanguage(savedLang);
@@ -244,9 +244,8 @@ export default function Navbar() {
             <li key={item.path}>
               <a
                 href={item.path}
-                className={`hover:text-[#49c351] transition-colors duration-300 ${
-                  pathname === item.path ? 'text-[#49c351] font-bold' : ''
-                }`}
+                className={`hover:text-[#49c351] transition-colors duration-300 ${pathname === item.path ? 'text-[#49c351] font-bold' : ''
+                  }`}
               >
                 {language === 'es' ? item.es : item.en}
               </a>
@@ -276,6 +275,7 @@ export default function Navbar() {
           <button
             onClick={handleLanguageChange}
             className="text-black text-xl cursor-pointer hover:text-[#49c351]"
+            aria-label={language === 'es' ? 'Cambiar idioma a inglés' : 'Change language to Spanish'}
           >
             {language === 'es' ? '🇪🇸' : '🇬🇧'}
           </button>
@@ -283,13 +283,16 @@ export default function Navbar() {
           <button
             onClick={toggleTheme}
             className="text-black text-xl cursor-pointer hover:text-[#49c351]"
+            aria-label={theme === 'light'
+              ? (language === 'es' ? 'Cambiar a modo oscuro' : 'Switch to dark mode')
+              : (language === 'es' ? 'Cambiar a modo claro' : 'Switch to light mode')}
           >
             {theme === 'light' ? <FaMoon /> : <FaSun />}
           </button>
 
-          <button 
+          <button
             ref={menuButtonRef}
-            className="md:hidden mobile-menu-button" 
+            className="md:hidden mobile-menu-button"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label={menuOpen ? 'Cerrar menú' : 'Abrir menú'}
           >
@@ -301,7 +304,7 @@ export default function Navbar() {
       {/* Mobile Menu Modal */}
       {menuOpen && (
         <div className="fixed inset-0 z-40 bg-black/30 backdrop-blur-md md:hidden">
-          <div 
+          <div
             ref={modalRef}
             className="fixed inset-x-4 top-24 bg-white rounded-2xl shadow-2xl p-6 z-50 animate-slide-down"
           >
@@ -309,7 +312,7 @@ export default function Navbar() {
               <h3 className="text-xl font-bold text-gray-800">
                 {language === 'es' ? 'Menú' : 'Menu'}
               </h3>
-              <button 
+              <button
                 onClick={() => setMenuOpen(false)}
                 className="p-2 rounded-full hover:bg-gray-100 transition-colors"
                 aria-label={language === 'es' ? 'Cerrar menú' : 'Close menu'}
@@ -354,11 +357,10 @@ export default function Navbar() {
                 <li key={item.path}>
                   <a
                     href={item.path}
-                    className={`flex items-center py-3 px-4 rounded-lg transition-colors duration-300 ${
-                      pathname === item.path 
-                        ? 'bg-[#49c351]/10 text-[#49c351] font-semibold border border-[#49c351]/20' 
-                        : 'hover:bg-gray-50 text-gray-700'
-                    }`}
+                    className={`flex items-center py-3 px-4 rounded-lg transition-colors duration-300 ${pathname === item.path
+                      ? 'bg-[#49c351]/10 text-[#49c351] font-semibold border border-[#49c351]/20'
+                      : 'hover:bg-gray-50 text-gray-700'
+                      }`}
                     onClick={() => setMenuOpen(false)}
                   >
                     <span className="flex-1 text-gray-800">{language === 'es' ? item.es : item.en}</span>

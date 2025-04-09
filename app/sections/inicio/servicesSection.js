@@ -1,6 +1,6 @@
 'use client';
 import { useTranslation } from '@/app/hooks/useTranslation';
-import Image from 'next/image';
+import { CldImage } from 'next-cloudinary'; // Importa CldImage
 import React from 'react';
 
 export default function VisualServicesSection() {
@@ -8,28 +8,29 @@ export default function VisualServicesSection() {
 
   const servicios = [
     {
-      image: '/galeria_2.webp',
+      image: 'galeria_2_bbvnpg',
       title: translations.servicios?.img1,
-      description: translations.servicios?.text1,}, 
+      description: translations.servicios?.text1,
+    },
     {
-      image: '/galeria_2.webp',
-      title:  translations.servicios?.img2,
+      image: 'galeria_2_bbvnpg',
+      title: translations.servicios?.img2,
       description: translations.servicios?.text2,
     },
     {
-      image: '/galeria_2.webp',
-      title:  translations.servicios?.img3,
-      description:  translations.servicios?.text3,
+      image: 'galeria_2_bbvnpg',
+      title: translations.servicios?.img3,
+      description: translations.servicios?.text3,
     },
     {
-      image: '/galeria_2.webp',
-      title:  translations.servicios?.img4,
+      image: 'galeria_2_bbvnpg',
+      title: translations.servicios?.img4,
       description: translations.servicios?.text4,
-    }
+    },
   ];
 
   return (
-    <section id='learn more about Flores Sons Farms' className="relative py-24overflow-hidden">
+    <section id='learn more about Flores Sons Farms' className="relative py-24 overflow-hidden">
       {/* Fondo decorativo */}
       <div className="absolute inset-0 opacity-5 dark:opacity-10">
         <div className="absolute top-1/4 left-1/4 w-48 h-48 rounded-full bg-green-100 mix-blend-multiply animate-blob"></div>
@@ -49,30 +50,31 @@ export default function VisualServicesSection() {
 
         {/* Grid de servicios con imágenes destacadas */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {servicios.map((servicios, index) => (
-            <div 
-              key={index} 
+          {servicios.map((servicio, index) => (
+            <div
+              key={index}
               className="group relative bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700"
             >
-              {/* Imagen con contenedor de altura fija */}
+              {/* Imagen con contenedor de altura fija usando CldImage */}
               <div className="relative h-48 w-full">
-                <Image
-                  src={servicios.image}
-                  alt={servicios.title}
-                  fill
+                <CldImage
+                  src={servicio.image} // Ruta de la imagen
+                  alt={servicio.title} // Descripción de la imagen
+                  width={500} // Especifica el tamaño de la imagen
+                  height={500} // Especifica el tamaño de la imagen
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                   quality={90}
                   priority={index < 2}
                 />
               </div>
-              
+
               {/* Contenido textual */}
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-3">
-                  {servicios.title}
+                  {servicio.title}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400">
-                  {servicios.description}
+                  {servicio.description}
                 </p>
               </div>
             </div>
@@ -82,12 +84,11 @@ export default function VisualServicesSection() {
         {/* Texto descriptivo adicional */}
         <div className="mt-16 text-center max-w-4xl mx-auto">
           <p className="italic">
-            {translations.text_final?.title }
+            {translations.text_final?.title}
           </p>
         </div>
       </div>
-      <br/>
+      <br />
     </section>
-    
   );
 }

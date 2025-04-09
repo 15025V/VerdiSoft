@@ -38,7 +38,7 @@ export default function UbicationSection() {
             {/* Información de contacto */}
             <div className="w-full md:w-1/2 text-left">
               <div className="p-8 md:p-14 rounded-xl shadow-2xl border-2 border-gray-400 dark:border-gray-600 bg-white dark:bg-gray-800 transition-all duration-500 hover:shadow-lg dark:hover:shadow-green-900/20">
-                <h1 className="text-3xl md:text-4xl font-bold mb-6 text-white font-['Playfair_Display'] tracking-wide uppercase relative">
+                <h1 className="text-3xl md:text-4xl font-bold mb-6 text-green-500 font-['Playfair_Display'] tracking-wide uppercase relative">
                   Flores Sons Farms
                   <span className="absolute bottom-0 left-0 w-16 h-1 bg-green-500 dark:bg-green-400"></span>
                 </h1>
