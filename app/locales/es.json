@@ -310,7 +310,7 @@
     "description": "Por favor rellene el siguiente formulario para ponerse en contacto con nosotros",
     "nombre": "Nombre",
     "tel": "Telefono",
-    "cor": "Coreo",
+    "cor": "Correo",
     "mens": "Mensaje"
   },
   "d_nom": {
