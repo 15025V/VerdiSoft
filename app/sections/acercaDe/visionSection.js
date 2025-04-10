@@ -1,31 +1,30 @@
 'use client';
 
-import React, { useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from '@/app/hooks/useTranslation';
 import { CldImage } from 'next-cloudinary';
 
 const images = [
-  "galeria_6_pacikz", // Asegúrate de que estos sean los publicId correctos en Cloudinary
-  "galeria_5_fwglum",
-  "galeria_2_bbvnpg",
+  'galeria_6_pacikz',
+  'galeria_5_fwglum',
+  'galeria_2_bbvnpg',
 ];
 
 export default function VisionSection() {
   const translations = useTranslation();
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+  const nextSlide = () => {
+    setCurrentIndex((prev) =>
+      prev === images.length - 1 ? 0 : prev + 1
     );
   };
 
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === images.length - 1 ? 0 : prevIndex + 1
-    );
-  };
+  // Auto-slide cada 5 segundos
+  useEffect(() => {
+    const interval = setInterval(nextSlide, 5000);
+    return () => clearInterval(interval);
+  }, [currentIndex]);
 
   return (
     <section
@@ -42,41 +41,50 @@ export default function VisionSection() {
         {translations.vision?.description}
       </p>
 
-      <div className="relative w-screen max-w-none overflow-hidden rounded-lg shadow-lg mt-9">
-        <CldImage
-          src={images[currentIndex]}
-          alt="Carrusel"
-          width={1600}
-          height={500}
-          className="w-full h-[500px] object-cover transition-transform duration-500"
-        />
-        <span className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-green-400 to-transparent dark:from-green-500 dark:to-transparent"></span>
+      <div className="relative w-full h-[22rem] sm:h-[24rem] md:h-[26rem] lg:h-[28rem] flex justify-center items-center overflow-hidden mt-8">
+        {images.map((src, index) => {
+          const position = (index - currentIndex + images.length) % images.length;
+          let style = '';
+          let blur = '';
 
-        {/* Botón izquierdo */}
-        <button
-          className="absolute left-0 top-1/2 transform -translate-y-1/2 p-4 bg-white/20 backdrop-blur-md border border-white/30 shadow-lg rounded-full transition hover:bg-white/40 hover:scale-110 hover:shadow-xl text-gray-800"
-          onClick={prevSlide}
-        >
-          <ChevronLeft size={40} />
-        </button>
+          if (position === 0) {
+            style = 'z-30 scale-110 sm:scale-120 translate-x-0 opacity-100';
+          } else if (position === 1) {
+            style = 'z-20 scale-95 translate-x-24 sm:translate-x-32 md:translate-x-40 opacity-60';
+            blur = 'blur-sm';
+          } else if (position === images.length - 1) {
+            style = 'z-20 scale-95 -translate-x-24 sm:-translate-x-32 md:-translate-x-40 opacity-60';
+            blur = 'blur-sm';
+          } else {
+            style = 'hidden sm:block opacity-0 scale-75';
+          }
 
-        {/* Botón derecho */}
-        <button
-          className="absolute top-1/2 right-0 transform -translate-y-1/2 p-4 bg-white/20 backdrop-blur-md border border-white/30 shadow-lg rounded-full transition hover:bg-white/40 hover:scale-110 hover:shadow-xl text-gray-800"
-          onClick={nextSlide}
-        >
-          <ChevronRight size={40} />
-        </button>
+          return (
+            <div
+              key={index}
+              className={`absolute transition-all duration-700 ease-in-out transform 
+                w-40 h-56 sm:w-64 sm:h-80 md:w-72 md:h-[22rem] lg:w-80 lg:h-[24rem] 
+                ${style}`}
+            >
+              <CldImage
+                src={src}
+                alt={`Imagen ${index + 1}`}
+                layout="fill"
+                className={`object-cover rounded-3xl shadow-xl ${blur}`}
+              />
+            </div>
+          );
+        })}
 
-        {/* Indicadores (puntos) */}
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
+        {/* Indicadores */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-2">
           {images.map((_, index) => (
             <div
               key={index}
-              className={`w-4 h-4 rounded-full cursor-pointer transition-all duration-300 ${
-                currentIndex === index ? "bg-green-600 w-5 h-5" : "bg-gray-400"
-              }`}
               onClick={() => setCurrentIndex(index)}
+              className={`w-4 h-4 rounded-full cursor-pointer transition-all duration-300 ${
+                currentIndex === index ? 'bg-green-600 w-5 h-5' : 'bg-gray-400'
+              }`}
             />
           ))}
         </div>
