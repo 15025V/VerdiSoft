@@ -1,5 +1,7 @@
 'use client';
 import { FaFacebook, FaInstagram, FaTiktok, FaEnvelope, FaPhoneAlt, FaTwitter } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+
 import { useTranslation } from "@/app/hooks/useTranslation";
 import Link from 'next/link'; // Importa el componente Link
 
@@ -86,7 +88,7 @@ const Footer = () => {
                 className="p-3 bg-white/10 hover:bg-white/20 rounded-full backdrop-blur-sm transition-all duration-300 hover:scale-110 text-xl"
                 aria-label="Twitter"
               >
-                <FaTwitter />
+                <FaXTwitter />
               </a>
             </div>
           </div>
