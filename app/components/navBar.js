@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
-import Image from 'next/image';
+import { CldImage } from 'next-cloudinary';
 import { FaBars, FaTimes, FaSun, FaMoon, FaMicrophone, FaSearch } from 'react-icons/fa';
 import { useLanguage } from '@/app/context/languageContext';
 
@@ -236,7 +236,12 @@ export default function Navbar() {
     <nav className="fixed top-4 left-0 right-0 z-50 flex justify-center">
       <div className="max-w-[1100px] w-full text-black bg-white shadow-md rounded-full px-6 lg:px-12 py-2 flex items-center justify-between">
         <div className="flex items-center">
-          <Image src="/flores.png" alt="Logo" width={200} height={90} priority />
+          <CldImage 
+          src="logo_2_x1qinc" 
+          alt="Logo" 
+          width={200} 
+          height={90} 
+          priority />
         </div>
 
         <ul className="hidden md:flex space-x-8 font-semibold">

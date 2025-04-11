@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { FaInstagram, FaFacebook, FaTiktok, FaTwitter, FaArrowDown } from "react-icons/fa";
+import { FaInstagram, FaFacebook, FaTiktok,  FaArrowDown} from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { useTranslation } from '@/app/hooks/useTranslation';
 
 export default function HeroSection() {
@@ -71,7 +72,7 @@ export default function HeroSection() {
             { icon: <FaFacebook />, url: "https://facebook.com", label: "Facebook" },
             { icon: <FaTiktok />, url: "https://tiktok.com", label: "TikTok" },
             { icon: <FaInstagram />, url: "https://instagram.com", label: "Instagram" },
-            { icon: <FaTwitter />, url: "https://twitter.com", label: "Twitter" }
+            { icon: <FaXTwitter  />, url: "https://twitter.com", label: "Twitter" }
           ].map((social, index) => (
             <a
               key={index}
