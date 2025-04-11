@@ -16,7 +16,7 @@ const Footer = () => {
             {/* Teléfono ahora aparece primero */}
             <div className="flex items-center justify-center md:justify-start mb-4">
               <a
-                href="tel:+1234567890"
+                href="tel:595-109-8274"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-white/10 hover:bg-white/20 rounded-full backdrop-blur-sm transition-all duration-300 hover:scale-110 text-xl gap-3"
@@ -24,7 +24,7 @@ const Footer = () => {
               >
                 <FaPhoneAlt />
               </a>
-              <a href="tel:+1234567890" className="hover:text-white ml-2">+123 456 7890</a>
+              <a href="tel:+1234567890" className="hover:text-white ml-2">595-109-8274</a>
             </div>
             {/* Correo electrónico ahora aparece después del teléfono */}
             <div className="flex items-center justify-center md:justify-start">

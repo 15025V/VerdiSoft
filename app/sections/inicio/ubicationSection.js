@@ -52,9 +52,17 @@ export default function UbicationSection() {
                     },
                     {
                       icon: <FaPhoneAlt className="text-2xl" />,
-                      label: translations.ubicacion?.telefono,
-                      aria: "Teléfono",
+                      label: (
+                        <div className="flex flex-col gap-1">
+                          <span className="font-medium"> {translations.ubicacion?.telname}</span>
+                          <span className="font-medium"> {translations.ubicacion?.telefono}</span>
+                          <span className="font-medium"> {translations.ubicacion?.tel2}</span>
+                          <span className="font-medium"> {translations.ubicacion?.tel1}</span>
+
+                        </div>
+                      )
                     },
+                    
                     {
                       icon: <FaEnvelope className="text-2xl" />,
                       label: translations.ubicacion?.correo,
@@ -73,6 +81,7 @@ export default function UbicationSection() {
                     </p>
                   ))}
                 </div>
+
 
 
                 <a

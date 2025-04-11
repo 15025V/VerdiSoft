@@ -54,12 +54,16 @@
     "foto8":"Agricultural technology"
   },
   "ubicacion": {
-    "title": "Find Us At",
+    "title": "Encuéntranos en",
     "description":" Flores Sons Farms",
-    "direccion": "Address: Froylán C. Manjarrez, 75470 Froylán C. Manjarrez, Pue.",
-    "telefono": "Phone: 0000-000-00-00",
-    "correo": "Email: ooooooogmail.com",
-    "boton": "Visit Us"
+    "direccion": " Dirección: Calle 3 Sur S/N, Froylán C. Manjarrez, Quecholac, Puebla. C.P 75470.",
+    "telname": "Teléfonos: ",
+    "telefono": " 249-147-6519 ",
+    "tel1": "  249-100-1492 ",
+    "tel2": " 595-109-8274",
+
+    "correo": " Correo electrónico: ",
+    "boton": "Visítanos"
   },
 "certi": {
   "title": "Certifications ",
