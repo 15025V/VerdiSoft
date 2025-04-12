@@ -26,17 +26,15 @@ export default function CategorySection() {
   return (
     <section
       id="category"
-      className="w-screen overflow-hidden px-6 py-14 md:px-20 lg:px-36 flex flex-col items-center text-center space-y-8 bg-white"
+      className="w-screen overflow-hidden px-6 py-14 md:px-20 lg:px-36 flex flex-col items-center text-center space-y-8 "
     >
-      <h2
-        id="categorias-heading"
-        className="text-5xl text-center font-bold text-[#014421] font-serif border-l-8 border-[#5DBE66] pl-4 mx-auto inline-block"
-      >
-        {translations.category?.title}
-      </h2>
-      <p className="text-justify font-serif max-w-4xl text-xl mx-auto px-6">
-        {translations.category?.subtitle}
-      </p>
+     <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-serif relative inline-block pb-3">
+          {translations.category?.title}
+          <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-green-500 to-transparent"></span>
+        </h2>
+        <p className="mt-6 text-base sm:text-lg max-w-3xl mx-auto font-serif mb-12">
+          {translations.category?.subtitle}
+        </p>
 
       <div className="relative w-full h-[22rem] sm:h-[24rem] md:h-[26rem] lg:h-[28rem] flex justify-center items-center overflow-hidden mt-8">
         {images.map((src, index) => {
