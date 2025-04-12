@@ -26,7 +26,7 @@ export default function UbicationSection() {
               <div className="overflow-hidden rounded-xl shadow-2xl border-2 border-gray-300 dark:border-gray-600 relative group">
                 <div className="absolute inset-0 bg-gradient-to-br from-transparent to-green-500 opacity-0 group-hover:opacity-10 transition-opacity duration-500 z-10"></div>
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10677.29880001141!2d-97.65535688162016!3d18.887294427587825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c565aa31a9d30b%3A0xa29268a004b4c9c8!2sSAN%20REY%20PRODUCE!5e0!3m2!1ses-419!2smx!4v1740106822096!5m2!1ses-419!2smx"
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3774.847936954381!2d-97.65377199999999!3d18.893826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTjCsDUzJzM3LjgiTiA5N8KwMzknMTMuNiJX!5e0!3m2!1ses-419!2smx!4v1744227943018!5m2!1ses-419!2smx"
                   className="w-full h-[300px] md:h-[450px] rounded-xl relative z-0"
                   title="Mapa de Ubicación de Flores Sons Farms"
                   aria-label="Mapa de Ubicación de Flores Sons Farms"

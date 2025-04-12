@@ -26,7 +26,7 @@ export default function UbiSection() {
 
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3774.847936954381!2d-97.65377199999999!3d18.893826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTjCsDUzJzM3LjgiTiA5N8KwMzknMTMuNiJX!5e0!3m2!1ses-419!2smx!4v1744227943018!5m2!1ses-419!2smx"
-              className="w-full h-[500px] md:h-[600px] lg:h-[700px] rounded-lg shadow-md transition-all duration-300 hover:scale-[1.02] mb-6"
+              className="w-full h-[300px] md:h-[450px] lg:h-[700px] rounded-lg shadow-md transition-all duration-300 hover:scale-[1.02] mb-6"
               title="Mapa de Ubicación de Flores Sons Farms"
               aria-label="Mapa de Ubicación de Flores Sons Farms"
               loading="lazy"
