@@ -19,11 +19,11 @@ export default function ProductsSection() {
     { name: translations.epazote?.nombre ?? "Nombre no disponible", category: translations.categ1?.option1, img: "epazote_sn2uij", presentacion: translations.epazote?.presentacion, piezas: translations.epazote?.piezas, kilos: "6 - 7" },
     { name: translations.betabel?.nombre ?? "Nombre no disponible", category: translations.categ2?.option2, img: "betabel_ti1igv", presentacion: translations.betabel?.presentacion, piezas: "24", kilos: "10" },
     { name: translations.hoja_de_platano?.nombre ?? "Nombre no disponible", category: translations.categ1?.option1, img: "cebollinn_y1fnpw", presentacion: translations.hoja_de_platano?.presentacion, piezas: translations.hoja_de_platano?.piezas, kilos: "8" },
-    { name: "Cilantro", category: translations.categ1?.option1, img: "cilantroo_tzjgva", presentacion: [], kilos: "" },
+    { name: translations.cilantro?.nombre ?? "Nombre no disponible", category: translations.categ1?.option1, img: "cebollinn_y1fnpw", presentacion: translations.cilantro?.presentacion, piezas: translations.cilantro?.piezas, kilos: "30-60 pieces" },
     { name: "Tuna verde", category: translations.categ3?.option3, img: "Tuna_verde_wdv7ok", presentacion: [], kilos: "" },
     { name: "Tuna roja", category: translations.categ3?.option3, img: "tunaa_hzpmit", presentacion: [], kilos: "" },
     { name: "Nopal", category: translations.categ3?.option3, img: "nopall_ckidee", presentacion: [], kilos: "" },
-    { name: "Cebollín", category: translations.categ1?.option1, img: "cebollinn_y1fnpw", presentacion: [], kilos: "" },
+
   ];
 
   const [search, setSearch] = useState('');

@@ -261,6 +261,13 @@
       "piezas": "6 paquetes por bolsa",
       "kilos": "8"
     },
+  "cilantro": {
+    "nombre":"Cilantro",
+    "categoria": "Hortaliza de Hoja",
+    "presentacion":  ["Caja de plástico","Caja de cartón"],
+    "piezas": "30-60 piezas"
+  
+  },
   
   "anuncio3": {
     "title": "¡Conéctate con Flores Sons Farms!",

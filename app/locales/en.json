@@ -1,301 +1,321 @@
- {
+{
   "navbar": {
     "home": "Home",
-    "about": "About",
-    "catalog": "Catalog",
+    "about": "About us",
+    "catalog": "Products",
     "contact": "Contact",
-    "contactUs": "Contact Us"
+    "contactUs": "Contáctanos"
   },
   "hero": {
     "title": "Flores Sons Farms",
-    "subtitle": "Quality you can feel, freshness you can see.",
-    "boton":" Contact Us",
-    "boton1":" Our Story"
-
+    "subtitle": "Quality you can feel, freshness you can notice.",
+    "boton":" Contact us",
+    "boton1":" Our history"
 
   },
   "somos": {
-    "title": "Who Are We?",
-    "description": "A family business dedicated to the production and export of vegetables, mainly cilantro, spring onion, zucchini, and broccoli of the highest quality, cultivated with passion and care in our fields. Our commitment to excellence, sustainability, and innovation has positioned us as a benchmark in the international market, reaching every corner. We guarantee an impeccable process, ensuring that each vegetable retains its freshness, color, and aroma, offering our customers a premium product that exceeds expectations. At Sons Farms, we bloom with every shipment."
+    "title": "¿Who are we?",
+    "description": "A family business dedicated to the production and export of vegetables, mainly coriander, onions, zucchini, and broccoli of the highest quality, growth with passion and care in our fields. Our commitment to excellence, sustainability, and innovation has positioned us as a leader in the market. We guarantee an impeccable process, ensuring that each vegetable retains its freshness, color, and smelt, offering to our customers a premium product that exceeds expectations. At Flores Sons Farms, we produce and export."
+  
   },
   "category": {
-    "title": "Discover Our Products",
-    "subtitle": "Explore the freshness and quality that define us.",
-    "button": "See More Products"
+    "title": "Learn about our products",
+    "subtitle": "Discover the freshness and quality that characterize us.",
+    "button": "See more products"
   },
-  "area": {
-    "title": "Company Area",
-    "cards": [
-      {
-        "title": "Field",
-        "description": "We have certified farms for the production of our products located in Puebla and Tlaxcala."
-      },
-      {
-        "title": "Company",
-        "description": "We have packaging certified by Primus GFS."
-      }
-    ]
-  },
+  
+    "area": {
+      "title": "Company area",
+      "cards": [
+        {
+          "title": "Field",
+          "description": "We have certified farms located in Puebla and Tlaxcala for the production of our products."
+        
+        },
+        {
+          "title": "Company",
+          "description": "We offer packaging certified by Primus GFS and SRRC by SENASICA."
+          
+        }
+      ]
+    },
+    
+
   "galeria": {
-    "title": "Discover and More",
-    "description": "Explouality and excellence.",
-    "foto1":"Our facilities",
-    "foto2":"Work team",
-    "foto3":"Packaging process",
-    "foto4":"Quality control"
+    "title": "Our Company",
+    "description": "Learn about our facilities and internal processes.",
+    "foto1":"Our Facilities",
+    "foto2":"Team Work",
+    "foto3":"Packaging Process",
+    "foto4":"Quality Control"
     
   },
   "galeria1": {
     "title": "Our Field",
     "description": "Discover our crops and sustainable practices",
-    "foto5":"Open field crops",
-    "foto6":"Production greenhouses",
-    "foto7":"Sustainable harvesting",
-    "foto8":"Agricultural technology"
+    "foto5":"Open Field Cultivation",
+    "foto6":"Production Greenhouses",
+    "foto7":"Sustainable Harvest",
+    "foto8":"Agricultural Technology"
   },
+  
   "ubicacion": {
-    "title": "Encuéntranos en",
+    "title": "Find us at",
     "description":" Flores Sons Farms",
-    "direccion": " Dirección: Calle 3 Sur S/N, Froylán C. Manjarrez, Quecholac, Puebla. C.P 75470.",
-    "telname": "Teléfonos: ",
+    "direccion": "3rd Street South, Froylán C. Manjarrez, Quecholac, Puebla. Zip Code 75470.",
+    "telname": "Phone: ",
     "telefono": " 249-147-6519 ",
     "tel1": "  249-100-1492 ",
     "tel2": " 595-109-8274",
 
-    "correo": " Correo electrónico: ",
-    "boton": "Visítanos"
+    "correo": " Email: ",
+    "boton": "Visit us"
   },
-"certi": {
-  "title": "Certifications ",
-  "description": "Guarantee of quality and excellence in our processes.",
-  "text":"Our certificates reflect our commitment to excellence and quality at every stage of production"
-},
-"primus": {
-  "title": "International Food Safety Certification"
-},
-"senasica": {
-  "title": "Official Plant Health Recognition"
-},
-"buma": {
-  "title": "Excellence in Good Agricultural Practices"
-},
-"servicios": {
-  "title": "Learn more about Flores Sons Farms",
-  "img1":"Specialized Crop",
-  "text1":"Advanced techniques for maximum quality and production",
-  "img2":"Selective Harvesting",
-  "text2":"Careful process to preserve freshness",
-  "img3":"Premium Packaging",
-  "text3":"Presentation that protects and highlights its quality",
-  "img4":"Global Logistics",
-  "text4":"Efficient distribution to international markets"
+  
+  "certi": {
+    "title": "Certifications",
+    "description": "Quality assurance and excellence in our processes.",
+    "text":"Our certificates reflect our commitment to excellence, safety, and quality at every stage of production."
+  },
+  "primus": {
+    "title": "International certification in food safety."
+  
+  },
+  "senasica": {
+    "title": "Official recognition of plant health."
 
-},
-"text_final": {
-  "title": "Each service designed to maintain the highest quality standards throughout the entire production chain."
-},
+  },
+  "buma": {
+    "title": "Excellence in good agricultural practices."
+  },
+
+
+    "servicios": {
+      "title": "Learn more about Flores Sons Farms",
+      "img1":"Specialized Crops",
+      "text1":"Advanced techniques for maximum quality and production",
+      "img2":"Selective Harvesting",
+      "text2":"Careful processing to preserve freshness",
+      "img3":"Premium Packaging",
+      "text3":"Presentation that protects and highlights its quality",
+      "img4":"Global Logistics",
+      "text4":"We have strategic alliances that allow us to deliver our products on time and in the correct manner."
+
+    },
+    "text_final": {
+      "title": "Each service is designed to maintain quality standards throughout the entire production chain."
+    },
+  
   "anuncio0": {
-    "title": "At Flores Sons Farms, we cultivate with passion and commitment, offering fresh and high-quality products."
+    "title": "At Flores Sons Farms, we grow with passion and commitment, offering fresh, quality products."
   },
   "conoce": {
-    "title": "Discover Our History",
-    "description": "Founded in 2007 as an initiative of the government at that time, since Puebla’s production was exclusively for the national market. With this initiative, several producers united and, over the years, created different packaging facilities. This led to the creation of what we now know as Flores Farms, a family business that has evolved over time to meet international market standards.",
+    "title": "Learn about our history",
+    "description":"We were founded in 2007 at the initiative of the government at the time, as Puebla's production was exclusively for the domestic market. With this initiative, several producers joined forces and, over the years, created different packaging options. In our case, this gave rise to what we know today as Flores Sons Farms, a family business that has evolved over time to adapt to market standards.",
     "button": "Since 2007",
-    "description2": "Since its inception, Flores Farms has worked with dedication and effort to offer the highest quality products, expanding its presence beyond national borders. Over the years, we have implemented cutting-edge technology in production processes, quality control systems, and sustainable farming methods, ensuring the freshness and excellence of our products. Our company has not only solidified itself in the export sector but has also fostered the development of the local agricultural community, creating jobs and providing growth opportunities for numerous families.",
-    "button2": "Our Beginnings"
+    "description2": "Since its inception, Flores Sons Farms has worked with dedication and effort to offer products of the highest quality, expanding its presence beyond its national borders. Over the years, we have implemented cutting-edge technology in the production process, quality control systems, and cultivation methods, thus ensuring the freshness and excellence of our products. Our company has not only established itself in the export sector but has also fostered the development of the local agricultural community, generating employment and providing growth opportunities for numerous families.",
+    "button2": "Its beginnings"
   },
   "mision": {
     "title": "Our Mission"
+   
   },
   "tar1": {
-    "description": "To be the leading company in the region in cilantro export, recognized for its quality and commitment to our customers. We focus on offering fresh and excellent products, meeting the highest international food safety and sustainability standards."
+    "description": "To be the leading coriander exporter in the region, recognized for its quality and commitment to our customers. We focus on offering fresh, excellent products, meeting our customers' international safety and quality standards."
   },
   "tar2": {
-    "title": "Innovation and Efficiency",
-    "description": "We work with a focus on innovation, sustainable development, and environmental respect, implementing responsible agricultural practices that guarantee the freshness and safety of our products."
+    "title:": "Innovación y Eficiencia",
+    "description": "We work with an approach based on innovation, agricultural development, and respect for the environment, implementing agricultural practices that guarantee the freshness and safety of our products."
   },
   "tar3": {
-    "title": "Responsibility and Sustainability",
-    "description": "We are committed to strengthening our business relationships with customers and strategic partners, providing a reliable, efficient, and personalized service. Additionally, we aim to generate a positive impact in our community."
+    "title:": "Responsabilidad y Sostenibilidad",
+    "description": "We are committed to strengthening our business relationships with clients and strategic partners by providing reliable, efficient, and personalized service. We also seek to make a positive impact on our community."
   },
   "vision": {
     "title": "Our Vision",
-    "description": "To be a leading company in production and export, supporting regional development and improving the quality of life of producers and staff working with us."
+    "description": "To be a leading company in the production and export sector, supporting the development of the region and improving the quality of life of our producers and staff."
   },
   "valores": {
     "title": "Our Values"
   },
   "valor2": {
     "title": "Honesty",
-    "description": "We strive to always guarantee and deliver what we promise to our customers."
+    "description": "We strive to always guarantee and deliver what we offer our customers."
   },
   "valor1": {
     "title": "Passion",
-    "description": "We have a deep love and admiration for agriculture and are committed to carrying out all our activities with enthusiasm."
+    "description": "We have love and passion for agriculture, which is why producing our products is more than just work."
   },
   "valor3": {
-    "title": "Teamwork",
-    "description": "We are a family business where each member contributes their best, and together we achieve each of our goals."
+    "title": "Team work",
+    "description": "We are a family business where each member contributes their best and together we achieve each of our goals."
   },
   "anuncio": {
-    "title": "Discover Our Selection of Fresh and High-Quality Products."
+    "title": "At Flores Sons Farms, we farm with passion and commitment, offering fresh, quality products."
   },
   "vendidos": {
-    "title": "Best-Selling Products"
+    "title": "Best Selling Products"
   },
   "eslogan": {
-    "title": "Bring the Freshness of Our Fields to Your Table: Building a Greener Future"
+    "title": "Bring the freshness of our fields to your table"
   },
   "catalogo": {
     "title": "Our Catalog"
   },
   "buscar_pro": {
-    "description": "Search for a product..."
+    "description": "Search product"
   },
   "catego": {
-    "description": "Categories"
+    "description": "Categories "
   },
   "pres": {
     "description": "Presentation"
   },
-  "pieza": {
-    "description": "Pieces"
+  "pieza":{
+    "description":"Pieces"
   },
   "kilos": {
-    "description": "Kilograms"
+    "description": "Kilos "
   },
   "but_contacto": {
-    "description": "Contact for Orders"
+    "description": "Contact for orders"
   },
   "categ0": {
-    "option0": "All Categories"
+    "option0": "All categories"
   },
   "categ1": {
-    "option1": "Leafy Vegetable"
+    "option1": "Leafy vegetables"
   },
   "categ2": {
-    "option2": "Root Vegetable"
+    "option2": "Root vegetables"
   },
   "categ3": {
-    "option3": "Cacti and Nopales"
+    "option3": "Cacti and nopales"
   },
   "categ4": {
-    "option4": "Fruit Vegetable"
+    "option4": "Fruit vegetables"
   },
   "ver_pro": {
-    "description": "View Product"
+    "description": "View product"
   },
   "no_encontrado": {
-    "description": "No product found."
+    "description": "The product was not found."
   },
-  "cebollita": {
-    "nombre": "Spring Onion",
-    "categoria": "Root Vegetable",
-    "presentacion": ["Tray", "Wooden Box"],
-    "piezas": "40 - 42  pcs",
-    "kilos": "Maximum 9 - 10"
-  },
-  "calabacita": {
-    "nombre": "Zucchini",
-    "categoria":  "Fruit Vegetable",
-    "presentacion":["Plastic Box"],
-    "kilos": "16"
-  },
-  "brocoli": {
-    "nombre": "Broccoli",
-    "categoria": "Leafy Vegetable",
-    "presentacion":["Generic Cardboard Box"],
-    "piezas": "24",
-    "kilos": "10"
-  },
-  "zanahoria": {
-    "nombre": "Carrot",
-    "categoria":  "Root Vegetable",
-    "presentacion": ["Plastic Bag"],
-    "kilos": "22"
-  },
-  "repollo": {
-    "nombre": "Cabbage",
-    "categoria":  "Leafy Vegetable",
-    "presentacion":  ["Cardboard Box"],
-    "piezas": "30",
-    "kilos": "23"
-  },
-  "tomatillo": {
-    "nombre": "Tomatillo",
-    "categoria": "Fruit Vegetable",
-    "presentacion": ["Plastic Box"],
-    "kilos": "18 ½"
-  },
-  "epazote": {
-    "nombre": "Epazote",
-    "categoria": "Leafy Vegetable",
-    "presentacion": ["Plastic Box", "Wooden Box"],
-    "piezas":"40 bundles per box",
-    "kilos": "6 - 7"
-  },
-  "betabel": {
-    "nombre":  "Beetroot",
-    "categoria": "Root Vegetable",
-    "presentacion":  ["Plastic Box"],
-    "piezas": "24",
-    "kilos": "10"
-  },
-  "hoja_de_platano": {
-    "nombre": "Banana Leaf",
-    "categoria":  "Leafy Vegetable",
-    "presentacion": ["Plastic Box"],
-    "piezas": "6 packages per bag",
-    "kilos": "8"
-  },
-
+    "cebollita": {
+      "nombre": "Onion",
+      "categoria": "Hortaliza de Raíz",
+      "presentacion":  ["Tray", "Wooden Box"],
+      "piezas": "40 - 42 pieces",
+      "kilos": "Maximum  9 - 10"
+    },
+    "calabacita": {
+      "nombre": "Zucchini",
+      "categoria": "Hortaliza de Fruto",
+      "presentacion":  ["Plastic box"],
+      "kilos": "16"
+    },
+    "brocoli": {
+      "nombre": "Broccoli",
+      "categoria": "Hortaliza de Fruto",
+      "presentacion":  ["Generic cardboard box"],
+      "piezas": "24",
+      "kilos": "10"
+    },
+    "zanahoria": {
+      "nombre": "Carrot",
+      "categoria": " Hortaliza de Raíz",
+      "presentacion":["Plastic bag"],
+      "kilos": "22"
+    },
+    "repollo": {
+      "nombre": "Cabbage",
+      "categoria": "Hortaliza de Hoja",
+      "presentacion":  ["Cardboard Box"],
+      "piezas": "30",
+      "kilos": "23"
+    },
+    "tomatillo": {
+      "nombre": "Small Green Tomato",
+      "categoria": "Hortaliza de Fruto",
+      "presentacion":["Plastic Box"],
+      "kilos": "18 ½"
+    },
+    "epazote": {
+      "nombre": "Epazote",
+      "categoria": "Hortaliza de Hoja",
+      "presentacion": ["Plastic Box", "Wooden Box"],
+      "piezas": "40 rolls per box",
+      "kilos": "6 - 7"
+    },
+    "betabel": {
+      "nombre": "Beet",
+      "categoria": "Hortaliza de Raíz",
+      "presentacion": ["Box of plastic"],
+      "piezas": "24",
+      "kilos": "10"
+    },
+    "hoja_de_platano": {
+      "nombre":"Banana Leaf",
+      "categoria": "Hortaliza de Hoja",
+      "presentacion":  ["Plastic Box"],
+      "piezas": "6 packs per bag",
+      "kilos": "8"
+    },
+    "cilantro": {
+      "nombre":"Cilantro",
+      "categoria": "Hortaliza de Hoja",
+      "presentacion":  ["Plastic Box","cardboard box"],
+      "piezas": "30-60 pieces"
+    
+    },
+  
   "anuncio3": {
-    "title": "Get in Touch with Flores Sons Farms!",
-    "description": "If you have any questions, comments, suggestions, or are interested in our products, please fill out the form below and we will contact you as soon as possible."
+    "title": "¡Connect with Flores Sons Farms!",
+    "description": "If you have any questions, comments, suggestions, or you are interested in any of our products, please fill out the following form and we will contact you as soon as possible."
   },
   "atencion": {
     "title": "Contact Information",
-    "description": "If you need telephone assistance, please contact us at the following number."
+    "description": "If you need assistance by phone, please contact us at the following number:"
   },
   "tele": {
     "title": "Phone",
-    "description": "222-222-2222"
+    "description": "249-147-6519"
   },
   "correo": {
     "title": "Email",
-    "description": "email@example.com"
+    "description": "correo@ejemplo.com"
   },
   "dire": {
     "title": "Address",
-    "description": "Froylán C. Manjarrez, 75470 Froylán C. Manjarrez, Pue."
+    "description": "3rd Street South, Froylán C. Manjarrez, Quecholac, Puebla. Zip Code 75470."
+
   },
   "hora": {
-    "title": "Customer Service Hours"
+
+    "title": "Opening Hours:"
   },
   "lunes": {
     "title": "Monday to Friday 8:00 am – 10:00 pm"
+ 
   },
   "sabado": {
-    "title": "Saturday 12:00 am – 06:00 pm"
+    "title": "Saturday 12:00 am – 6:00 pm"
+   
   },
-  "domi": {
-    "title": "Sunday 8:00 am – 10:00 pm"
-  },
+  
   "ubi": {
-    "title": "Located In",
-    "description": "Visit us at Froylán C. Manjarrez, 75470, where quality and commitment are packed for you."
+    "title": "Located at",
+    "description": "Visit us at Froylán C. Manjarrez, 75470, where quality and commitment come together for you."
   },
   "suc1": {
-    "title": "Branch 1",
-    "description": "Froylán C. Manjarrez, 75470 Froylán C. Manjarrez, Pue."
+    "title": "Matrix",
+    "description": "3rd Street South, Froylán C. Manjarrez, Quecholac, Puebla. Zip Code 75470."
+
   },
-  "suc2": {
-    "title": "Branch 2",
-    "description": "Froylán C. Manjarrez, 75470 Froylán C. Manjarrez, Pue."
-  },
+  
   "for": {
     "title": "Contact Us",
-    "description": "Please fill out the form below to get in touch with us.",
+    "description": "Please fill out the following form to get in touch with us.",
     "nombre": "Name",
     "tel": "Phone",
     "cor": "Email",
@@ -305,7 +325,7 @@
     "title": "Name is required"
   },
   "d_tel": {
-    "title": "Phone number is required"
+    "title": "Phone is required"
   },
   "d_cor": {
     "title": "Email is required"
@@ -317,10 +337,10 @@
     "title": "Send"
   },
   "notFound": {
-    "title": "404 - Page Not Found",
-    "description": "Sorry, the page you are looking for does not exist.",
-    "fu": "Oops! The page you are looking for is not available. It seems to have gotten lost like a cilantro leaf.",
-    "backToHome": "Return to Home"
+    "title":"404 - Page not found",
+    "description": "Sorry, the page you're looking for doesn't exist.",
+    "fu":"Oops! The page you're looking for isn't available. It seems to have gotten lost like a cilantro leaf.",
+    "backToHome": "Back to Home"
   },
 
   "foo": {
@@ -330,7 +350,8 @@
     "poli":"Privacy Policies",
     "ter":"Terms and Conditions",
     "redes":"Follow us",
-    "derechos_rosy":"TAll rights reserved"
+    "derechos_rosy":"All rights reserved"
   }
+
 
 }

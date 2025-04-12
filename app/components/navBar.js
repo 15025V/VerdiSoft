@@ -67,7 +67,7 @@ export default function Navbar() {
 
   const menuItems = [
     { path: '/', es: 'Inicio', en: 'Home' },
-    { path: '/about', es: 'Acerca de', en: 'About' },
+    { path: '/about', es: 'Acerca de', en: 'About us' },
     { path: '/products', es: 'Productos', en: 'Products' },
     { path: '/contact', es: 'Contacto', en: 'Contact' },
   ];
