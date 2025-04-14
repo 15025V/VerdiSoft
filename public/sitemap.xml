@@ -6,17 +6,17 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://flores-sons-farms.vercel.app/#somos</loc>
+    <loc>https://flores-sons-farms.vercel.app/about</loc>
     <lastmod>2025-04-14</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://flores-sons-farms.vercel.app/#servicios</loc>
+    <loc>https://flores-sons-farms.vercel.app/products</loc>
     <lastmod>2025-04-14</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://flores-sons-farms.vercel.app/#galeria</loc>
+    <loc>https://flores-sons-farms.vercel.app/contact/</loc>
     <lastmod>2025-04-14</lastmod>
     <priority>0.7</priority>
   </url>
