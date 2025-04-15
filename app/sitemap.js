@@ -1,5 +1,5 @@
 export default async function sitemap() {
-    const baseUrl = 'https://flores-sonsfarms.vercel.app/';
+    const baseUrl = 'https://flores-sonsfarms.vercel.app';
     
     return [
       {
