@@ -1,0 +1,26 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>https://flores-sonsfarms.vercel.app/</loc>
+<lastmod>2025-04-15T17:33:54.010Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>1</priority>
+</url>
+<url>
+<loc>https://flores-sonsfarms.vercel.app/about</loc>
+<lastmod>2025-04-15T17:33:54.010Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://flores-sonsfarms.vercel.app/products</loc>
+<lastmod>2025-04-15T17:33:54.010Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://flores-sonsfarms.vercel.app/contact</loc>
+<lastmod>2025-04-15T17:33:54.010Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+</urlset>
