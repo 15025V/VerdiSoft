@@ -10,18 +10,18 @@ export default function CertiSection() {
   const certifications = [
     { 
       src: "/primusGFS.png", 
-      alt:  translations.primus?.title ,
+      alt:  translations.primus?.title || "Certificación PrimusGFS",
       description: translations.primus?.title
     },
     { 
       src: "/senasica.png", 
       alt: "Certificación SENASICA",
-      description: translations.senasica?.title 
+      description: translations.senasica?.title || "Certificación SENASICA"
     },
     { 
       src: "/_buma_.png", 
       alt: "Certificación BUMA",
-      description: translations.buma?.title
+      description: translations.buma?.title || "Certificación BUMA"
     }
   ];
 

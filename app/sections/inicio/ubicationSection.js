@@ -26,7 +26,7 @@ export default function UbicationSection() {
               <div className="overflow-hidden rounded-xl shadow-2xl border-2 border-gray-300 dark:border-gray-600 relative group">
                 <div className="absolute inset-0 bg-gradient-to-br from-transparent to-green-500 opacity-0 group-hover:opacity-10 transition-opacity duration-500 z-10"></div>
                 <iframe
-              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3774.847936954381!2d-97.65377199999999!3d18.893826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTjCsDUzJzM3LjgiTiA5N8KwMzknMTMuNiJX!5e0!3m2!1ses-419!2smx!4v1744227943018!5m2!1ses-419!2smx"
+                  src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3774.847936954381!2d-97.65377199999999!3d18.893826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTjCsDUzJzM3LjgiTiA5N8KwMzknMTMuNiJX!5e0!3m2!1ses-419!2smx!4v1744227943018!5m2!1ses-419!2smx"
                   className="w-full h-[300px] md:h-[450px] rounded-xl relative z-0"
                   title="Mapa de Ubicación de Flores Sons Farms"
                   aria-label="Mapa de Ubicación de Flores Sons Farms"
@@ -62,14 +62,14 @@ export default function UbicationSection() {
                         </div>
                       )
                     },
-                    
+
                     {
                       icon: <FaEnvelope className="text-2xl" />,
                       label: translations.ubicacion?.correo,
                       aria: "Correo",
                     }
                   ].map((item, index) => (
-                    <p
+                    <div
                       key={index}
                       className="flex items-center gap-4 p-3 rounded-lg transition-all duration-300 hover:scale-[1.02] hover:bg-white/10 dark:hover:bg-white/10 backdrop-blur-sm"
                       aria-label={item.aria}
@@ -78,7 +78,8 @@ export default function UbicationSection() {
                         {item.icon}
                       </span>
                       <span>{item.label}</span>
-                    </p>
+                    </div>
+
                   ))}
                 </div>
 

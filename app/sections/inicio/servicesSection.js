@@ -58,8 +58,8 @@ export default function VisualServicesSection() {
               {/* Imagen con proporción */}
               <div className="relative aspect-[4/3] w-full">
                 <CldImage
-                  src={servicio.image}
-                  alt={servicio.title}
+                  src={servicio.image }
+                  alt={servicio.title || 'Imagen del servicio de Flores & Sons' }
                   width={500}
                   height={375}
                   className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"

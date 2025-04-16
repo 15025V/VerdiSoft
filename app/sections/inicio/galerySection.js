@@ -10,17 +10,17 @@ export default function GallerySplitSection() {
   const [selectedImage, setSelectedImage] = useState(null); // Estado para el modal
 
   const enterpriseImages = [
-    { src: "galeria_2_bbvnpg", alt: translations.galeria?.foto1 },
-    { src: "galeria_2_bbvnpg", alt: translations.galeria?.foto2 },
-    { src: "galeria_2_bbvnpg", alt: translations.galeria?.foto3 },
-    { src: "galeria_2_bbvnpg", alt: translations.galeria?.foto4 },
+    { src: "galeria_2_bbvnpg", alt: translations.galeria?.foto1 || "Descripción de la imagen 1" },
+    { src: "galeria_2_bbvnpg", alt: translations.galeria?.foto2 || "Descripción de la imagen 2" },
+    { src: "galeria_2_bbvnpg", alt: translations.galeria?.foto3 || "Descripción de la imagen 3" },
+    { src: "galeria_2_bbvnpg", alt: translations.galeria?.foto4 || "Descripción de la imagen 4" },
   ];
 
   const fieldImages = [
-    { src: "galeria_2_bbvnpg", alt: translations.galeria1?.foto5 },
-    { src: "galeria_2_bbvnpg", alt: translations.galeria1?.foto6 },
-    { src: "galeria_2_bbvnpg", alt: translations.galeria1?.foto7 },
-    { src: "galeria_2_bbvnpg", alt: translations.galeria1?.foto8 },
+    { src: "galeria_2_bbvnpg", alt: translations.galeria1?.foto5 || "Descripción de la imagen 5" },
+    { src: "galeria_2_bbvnpg", alt: translations.galeria1?.foto6 || "Descripción de la imagen 6" },
+    { src: "galeria_2_bbvnpg", alt: translations.galeria1?.foto7 || "Descripción de la imagen 7"},
+    { src: "galeria_2_bbvnpg", alt: translations.galeria1?.foto8 || "Descripción de la imagen 8"},
   ];
 
   return (

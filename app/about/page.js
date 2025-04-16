@@ -18,19 +18,20 @@ export default function Hero() {
     <>
       {/* Metadatos para SEO */}
       <Head>
-        <title>Flores Sons Farms</title>
-        <meta name="description" content="Explora la riqueza de productos agrícolas frescos y de alta calidad de Flores Sons Farms. Cultivados con pasión y dedicación en el Valle de Palmarito." />
-        <meta name="keywords" content="productos agrícolas, frescos, calidad, sostenibilidad, Flores Sons Farms" />
-        <link rel="canonical" href="https://www.floressonsfarms.com" />
-        <meta property="og:title" content="Flores Sons Farms - Productos Agrícolas Frescos y de Calidad" />
-        <meta property="og:description" content="Explora la riqueza de productos agrícolas frescos y de alta calidad de Flores Sons Farms. Cultivados con pasión y dedicación en el Valle de Palmarito." />
-        <meta property="og:image" content="https://www.floressonsfarms.com/logo.png" />
-        <meta property="og:url" content="https://www.floressonsfarms.com" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Flores Sons Farms - Productos Agrícolas Frescos y de Calidad" />
-        <meta name="twitter:description" content="Explora la riqueza de productos agrícolas frescos y de alta calidad de Flores Sons Farms. Cultivados con pasión y dedicación en el Valle de Palmarito." />
-        <meta name="twitter:image" content="https://www.floressonsfarms.com/logo.png" />
-      </Head>
+  <title>Flores Sons Farms</title>
+  <meta name="description" content="Explora la riqueza de productos agrícolas frescos y de alta calidad de Flores Sons Farms. Cultivados con pasión y dedicación en el Valle de Palmarito." />
+  <meta name="keywords" content="productos agrícolas, frescos, calidad, sostenibilidad, Flores Sons Farms" />
+  <link rel="canonical" href="https://www.floressonsfarms.com/about" />
+  <meta property="og:title" content="Flores Sons Farms - Productos Agrícolas Frescos y de Calidad" />
+  <meta property="og:description" content="Explora la riqueza de productos agrícolas frescos y de alta calidad de Flores Sons Farms. Cultivados con pasión y dedicación en el Valle de Palmarito." />
+  <meta property="og:image" content="https://res.cloudinary.com/dguinjztv/image/upload/v1744336833/logoo_gm49ee.jpg" />
+  <meta property="og:url" content="https://www.floressonsfarms.com/about" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Flores Sons Farms - Productos Agrícolas Frescos y de Calidad" />
+  <meta name="twitter:description" content="Explora la riqueza de productos agrícolas frescos y de alta calidad de Flores Sons Farms. Cultivados con pasión y dedicación en el Valle de Palmarito." />
+  <meta name="twitter:image" content="https://res.cloudinary.com/tu-cuenta/image/upload/v1710000000/logoo_gm49ee.png" />
+</Head>
+
   
 
       {/* Secciones de la página */}

@@ -1,25 +1,28 @@
 import Script from "next/script";
+import Head from "next/head";
+
 import Footer from "./components/footer";
 import NavBar from "./components/navBar";
 import { LanguageProvider } from "./context/languageContext";
 import "./globals.css";
+
 
 export const metadata = {
   title: 'Flores Sons Farms ',
   description: 'Explora la riqueza de productos agrícolas frescos y de alta calidad de Flores Sons Farms. Cultivados con pasión y dedicación en el Valle de Palmarito.',
   keywords: [
     // Core Business
-    'Flores Sons Farms','agricultural exporter', 'exportadora agrícola',
+    'Flores Sons Farms', 'agricultural exporter', 'exportadora agrícola',
     'packing house', 'empacadora de vegetales',
     'fresh vegetables', 'hortalizas frescas',
-    
+
     // Cilantro (Main Product)
     'fresh coriander export', 'exportación de cilantro ',
     'organic cilantro bulk', 'cilantro orgánico al mayoreo',
     'Mexican coriander supplier', 'proveedor mexicano de cilantro',
     'washed cilantro for export', 'cilantro lavado para exportación',
     'cilantro with long shelf life', 'cilantro con larga vida de anaquel',
-    
+
     // Other Products
     'green onions export', 'exportación de cebollín',
     'fresh scallions supplier', 'proveedor de cebollita fresca',
@@ -46,20 +49,20 @@ export const metadata = {
     'fresh epazote leaves', 'hojas frescas de epazote',
     'Mexican husk tomato export', 'exportación de tomatillo',
     'green husk tomatoes', 'tomate verde para salsas',
-    
+
     // Certifications & Processes
     'GlobalG.A.P. certified packing', 'empaque certificado GlobalG.A.P.',
     'USDA organic certified', 'certificado orgánico USDA',
     'FDA approved facility', 'instalaciones aprobadas por FDA',
     'HACCP compliance', 'cumplimiento HACCP',
     'cold chain logistics', 'logística de cadena de frío',
-    
+
     // Market-Specific
     'USA agricultural imports', 'importaciones agrícolas USA',
     'Canadian vegetable market', 'mercado canadiense de hortalizas',
     'Asian produce distributors', 'distribuidores asiáticos de vegetales',
     'European organic market', 'mercado orgánico europeo',
-    
+
     // Operational
     'field to port logistics', 'logística campo-puerto',
     'customs clearance produce', 'despacho aduanal agrícola',
@@ -74,7 +77,7 @@ export const metadata = {
     siteName: 'Flores Sons Farms',
     images: [
       {
-        url: 'https://www.floressonsfarms.com/logo.png',
+        url: 'https://res.cloudinary.com/dguinjztv/image/upload/v1744336833/logoo_gm49ee.jpg',
         width: 800,
         height: 600,
       },
@@ -86,7 +89,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Flores Sons Farms - Productos Agrícolas Frescos y de Calidad',
     description: 'Explora la riqueza de productos agrícolas frescos y de alta calidad de Flores Sons Farms.',
-    images: ['https://www.floressonsfarms.com/logo.png'],
+    images: ['https://res.cloudinary.com/dguinjztv/image/upload/v1744336833/logoo_gm49ee.jpg'],
   },
 };
 
@@ -94,7 +97,16 @@ export default function RootLayout({ children }) {
   return (
     <LanguageProvider>
       <html lang="es" translate="no">
-        <head />
+        
+        <Head>
+          <meta charSet="utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta name="robots" content="index, follow" />
+          <link rel="canonical" href="https://www.floressonsfarms.com/" />
+          <link rel="icon" href="/favicon.ico" />
+          <meta name="author" content="Flores Sons Farms" />
+        </Head>
+
         <body>
           {/* Google Analytics */}
           <Script
@@ -111,9 +123,9 @@ export default function RootLayout({ children }) {
           </Script>
 
           {/* Tu contenido */}
-          <NavBar />
+          {/*<NavBar />*/}
           {children}
-          <Footer />
+          {/*<Footer />*/}
         </body>
       </html>
     </LanguageProvider>
