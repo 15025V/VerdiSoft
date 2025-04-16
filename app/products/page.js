@@ -5,18 +5,10 @@ import Navbar from '../components/navBar';
 import Footer from '../components/footer';
 
 // Carga diferida de secciones
-const AnunciSection = dynamic(() => import('../sections/catalogo/anunciSection'), { 
-  loading: () => <p>Cargando...</p> 
-});
-const VendidoSection = dynamic(() => import('../sections/catalogo/vendidoSection'), { 
-  loading: () => <p>Cargando...</p> 
-});
-const ProductsSection = dynamic(() => import('../sections/catalogo/productsSection'), { 
-  loading: () => <p>Cargando...</p> 
-});
-const PubliSection = dynamic(() => import('../sections/catalogo/publiSection'), {
-  loading: () => <p>Cargando...</p>
-});
+const AnunciSection = dynamic(() => import('../sections/catalogo/anunciSection'), { loading: () => <p>Cargando...</p>});
+const VendidoSection = dynamic(() => import('../sections/catalogo/vendidoSection'), { loading: () => <p>Cargando...</p>});
+const ProductsSection = dynamic(() => import('../sections/catalogo/productsSection'), {loading: () => <p>Cargando...</p>});
+const PubliSection = dynamic(() => import('../sections/catalogo/publiSection'), {loading: () => <p>Cargando...</p>});
 
 export const metadata = {
   title: 'Catálogo | Flores Sons Farms - Productos Agrícolas Frescos',

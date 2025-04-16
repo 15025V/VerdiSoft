@@ -5,16 +5,16 @@ import { LanguageProvider } from "./context/languageContext";
 import "./globals.css";
 
 export const metadata = {
-  title: 'Flores Sons Farms - Productos Agrícolas Frescos y de Calidad',
+  title: 'Flores Sons Farms ',
   description: 'Explora la riqueza de productos agrícolas frescos y de alta calidad de Flores Sons Farms. Cultivados con pasión y dedicación en el Valle de Palmarito.',
   keywords: [
     // Core Business
-    'agricultural exporter', 'exportadora agrícola',
+    'Flores Sons Farms','agricultural exporter', 'exportadora agrícola',
     'packing house', 'empacadora de vegetales',
     'fresh vegetables', 'hortalizas frescas',
     
     // Cilantro (Main Product)
-    'fresh coriander export', 'exportación de cilantro fresco',
+    'fresh coriander export', 'exportación de cilantro ',
     'organic cilantro bulk', 'cilantro orgánico al mayoreo',
     'Mexican coriander supplier', 'proveedor mexicano de cilantro',
     'washed cilantro for export', 'cilantro lavado para exportación',
@@ -68,7 +68,7 @@ export const metadata = {
     'private label packing', 'empaque de marca privada'
   ],
   openGraph: {
-    title: 'Flores Sons Farms - Productos Agrícolas Frescos y de Calidad',
+    title: 'Flores Sons Farms ',
     description: 'Explora la riqueza de productos agrícolas frescos y de alta calidad de Flores Sons Farms.',
     url: 'https://www.floressonsfarms.com/',
     siteName: 'Flores Sons Farms',
