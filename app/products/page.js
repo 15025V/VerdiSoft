@@ -1,44 +1,49 @@
-'use client';
-
-import React from 'react';
-import Head from 'next/head';
-import dynamic from 'next/dynamic'; // Importar dynamic para lazy loading
-import Navbar from '../components/navBar';
-import Footer from '../components/footer';
+import dynamic from 'next/dynamic';
 import WhatsAppButton from '../components/Chatboot/whatsAppButton';
 import BotpressChatbot from '../components/Chatboot/bootpress';
-
+import Navbar from '../components/navBar';
+import Footer from '../components/footer';
 
 // Carga diferida de secciones
-const AnunciSection = dynamic(() => import('../sections/catalogo/anunciSection'), { loading: () => <p>Cargando...</p> });
-const VendidoSection = dynamic(() => import('../sections/catalogo/vendidoSection'), { loading: () => <p>Cargando...</p> });
-const ProductsSection = dynamic(() => import('../sections/catalogo/productsSection'), { loading: () => <p>Cargando...</p> });
-const PubliSection = dynamic(() => import('../sections/catalogo/publiSection'),{loading:() => <p>Cargando...</p>});
+const AnunciSection = dynamic(() => import('../sections/catalogo/anunciSection'), { 
+  loading: () => <p>Cargando...</p> 
+});
+const VendidoSection = dynamic(() => import('../sections/catalogo/vendidoSection'), { 
+  loading: () => <p>Cargando...</p> 
+});
+const ProductsSection = dynamic(() => import('../sections/catalogo/productsSection'), { 
+  loading: () => <p>Cargando...</p> 
+});
+const PubliSection = dynamic(() => import('../sections/catalogo/publiSection'), {
+  loading: () => <p>Cargando...</p>
+});
 
-export default function Hero() {
+export const metadata = {
+  title: 'Catálogo | Flores Sons Farms - Productos Agrícolas Frescos',
+  description: 'Explora nuestro catálogo de productos agrícolas frescos y de alta calidad cultivados en el Valle de Palmarito.',
+  keywords: [
+    'catálogo agrícola',
+    'productos frescos',
+    'hortalizas de exportación',
+    'cilantro fresco',
+    'vegetales premium México'
+  ],
+  openGraph: {
+    title: 'Catálogo de Productos | Flores Sons Farms',
+    description: 'Descubre nuestra selección de productos agrícolas para exportación',
+    images: [
+      {
+        url: 'https://www.floressonsfarms.com/logo.png',
+        width: 800,
+        height: 600,
+      },
+    ],
+  },
+};
+
+export default function CatalogoPage() {
   return (
-    <
-    >    
-      {/* Metadatos para SEO */}
-      <Head>
-        <title>Flores Sons Farms - Productos Agrícolas Frescos y de Calidad</title>
-        <meta name="description" content="Explora la riqueza de productos agrícolas frescos y de alta calidad de Flores Sons Farms. Cultivados con pasión y dedicación en el Valle de Palmarito." />
-        <meta name="keywords" content="productos agrícolas, frescos, calidad, sostenibilidad, Flores Sons Farms" />
-        <link rel="canonical" href="https://www.floressonsfarms.com" />
-        <meta property="og:title" content="Flores Sons Farms - Productos Agrícolas Frescos y de Calidad" />
-        <meta property="og:description" content="Explora la riqueza de productos agrícolas frescos y de alta calidad de Flores Sons Farms. Cultivados con pasión y dedicación en el Valle de Palmarito." />
-        <meta property="og:image" content="https://www.floressonsfarms.com/logo.png" />
-        <meta property="og:url" content="https://www.floressonsfarms.com" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Flores Sons Farms - Productos Agrícolas Frescos y de Calidad" />
-        <meta name="twitter:description" content="Explora la riqueza de productos agrícolas frescos y de alta calidad de Flores Sons Farms. Cultivados con pasión y dedicación en el Valle de Palmarito." />
-        <meta name="twitter:image" content="https://www.floressonsfarms.com/logo.png" />
-
-      </Head>
-    
-
-
-      {/* Secciones de la página */}
+    <>
       <WhatsAppButton/>
       <BotpressChatbot/>
       <Navbar/>

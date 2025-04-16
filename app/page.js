@@ -27,15 +27,15 @@ export default function Hero() {
         <title>Flores Sons Farms - Productos Agrícolas Frescos y de Calidad</title>
         <meta name="description" content="Explora la riqueza de productos agrícolas frescos y de alta calidad de Flores Sons Farms. Cultivados con pasión y dedicación en el Valle de Palmarito." />
         <meta name="keywords" content="productos agrícolas, frescos, calidad, sostenibilidad, Flores Sons Farms" />
-        <link rel="canonical" href="https://flores-sons-farms.vercel.app/" />
+        <link rel="canonical" href="https://www.floressonsfarms.com" />
         <meta property="og:title" content="Flores Sons Farms - Productos Agrícolas Frescos y de Calidad" />
         <meta property="og:description" content="Explora la riqueza de productos agrícolas frescos y de alta calidad de Flores Sons Farms. Cultivados con pasión y dedicación en el Valle de Palmarito." />
-        <meta property="og:image" content="https://flores-sons-farms.vercel.app//logo.png" />
-        <meta property="og:url" content="https://flores-sons-farms.vercel.app/" />
+        <meta property="og:image" content="https://www.floressonsfarms.com/logo.png" />
+        <meta property="og:url" content="https://www.floressonsfarms.com" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Flores Sons Farms - Productos Agrícolas Frescos y de Calidad" />
         <meta name="twitter:description" content="Explora la riqueza de productos agrícolas frescos y de alta calidad de Flores Sons Farms. Cultivados con pasión y dedicación en el Valle de Palmarito." />
-        <meta name="twitter:image" content="https://flores-sons-farms.vercel.app/logo.png" />
+        <meta name="twitter:image" content="https://www.floressonsfarms.com/logo.png" />
       </Head>
     
 
