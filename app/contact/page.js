@@ -19,18 +19,20 @@ export default function Hero() {
       {/* Metadatos para SEO */}
       <Head>
         <title>Contacto - Flores Sons Farms</title>
-        <meta name="description" content="Ponte en contacto con Flores Sons Farms para obtener más información sobre nuestros productos agrícolas frescos y servicios de exportación." />
+        <meta name="description" content="Ponte en contacto con Flores Sons Farms..." />
         <meta name="robots" content="index, follow" />
         <meta property="og:title" content="Contacto - Flores Sons Farms" />
-        <meta property="og:description" content="Ponte en contacto con Flores Sons Farms para obtener más información sobre nuestros productos agrícolas frescos y servicios de exportación." />
+        <meta property="og:description" content="Ponte en contacto con Flores Sons Farms..." />
         <meta property="og:url" content="https://www.floressonsfarms.com/contact" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://res.cloudinary.com/dguinjztv/image/upload/v1744336833/logoo_gm49ee.jpg" />
+        <meta property="og:site_name" content="Flores Sons Farms" /> {/* 👈 AÑADIDO */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Contacto - Flores Sons Farms" />
-        <meta name="twitter:description" content="Ponte en contacto con Flores Sons Farms para obtener más información sobre nuestros productos agrícolas frescos y servicios de exportación." />
+        <meta name="twitter:description" content="Ponte en contacto con Flores Sons Farms..." />
         <meta name="twitter:image" content="https://res.cloudinary.com/dguinjztv/image/upload/v1744336833/logoo_gm49ee.jpg" />
       </Head>
+
 
       {/* Secciones de la página */}
       <WhatsAppButton />

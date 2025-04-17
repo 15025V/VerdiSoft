@@ -33,6 +33,8 @@ export default function Hero() {
         <meta property="og:url" content="https://www.floressonsfarms.com/" />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://www.floressonsfarms.com/" />
+        <meta property="og:site_name" content="Flores Sons Farms" />
+
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

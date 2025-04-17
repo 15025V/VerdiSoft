@@ -19,6 +19,8 @@ export default function Hero() {
       {/* Metadatos para SEO */}
       <Head>
   <title>Flores Sons Farms</title>
+  <meta property="og:site_name" content="Flores Sons Farms" />
+
   <meta name="description" content="Explora la riqueza de productos agrícolas frescos y de alta calidad de Flores Sons Farms. Cultivados con pasión y dedicación en el Valle de Palmarito." />
   <meta name="keywords" content="productos agrícolas, frescos, calidad, sostenibilidad, Flores Sons Farms" />
   <link rel="canonical" href="https://www.floressonsfarms.com/about" />

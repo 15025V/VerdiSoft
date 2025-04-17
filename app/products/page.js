@@ -51,6 +51,8 @@ export default function CatalogoPage() {
       <meta name="twitter:title" content="Catálogo | Flores Sons Farms" />
       <meta name="twitter:description" content="Explora nuestro catálogo de productos agrícolas frescos y de alta calidad cultivados en el Valle de Palmarito." />
       <meta name="twitter:image" content="https://res.cloudinary.com/dguinjztv/image/upload/v1744336833/logoo_gm49ee.jpg" />
+      <meta property="og:site_name" content="Flores Sons Farms" />
+      <link rel="canonical" href="https://www.floressonsfarms.com/products" />
     </Head>
 
     {/* Secciones de la página */}
