@@ -1,5 +1,5 @@
 // app/contact/page.js (NO lleva "use client")
-import ClientContactPage from './ClientContactPage';
+import ClientContactPage from './clientContactPage';
 
 // Exporta metadata desde el componente del servidor
 export const metadata = {
