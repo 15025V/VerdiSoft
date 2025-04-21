@@ -1,14 +1,10 @@
 import Script from "next/script";
-import Head from "next/head";
-
-import Footer from "./components/footer";
-import NavBar from "./components/navBar";
 import { LanguageProvider } from "./context/languageContext";
+
 import "./globals.css";
 
-
 export const metadata = {
-  title: 'Flores Sons Farms ',
+  title: 'Flores Sons Farms',
   description: 'Explora la riqueza de productos agrícolas frescos y de alta calidad de Flores Sons Farms. Cultivados con pasión y dedicación en el Valle de Palmarito.',
   keywords: [
     // Core Business
@@ -17,7 +13,7 @@ export const metadata = {
     'fresh vegetables', 'hortalizas frescas',
 
     // Cilantro (Main Product)
-    'fresh coriander export', 'exportación de cilantro ',
+    'fresh coriander export', 'exportación de cilantro',
     'organic cilantro bulk', 'cilantro orgánico al mayoreo',
     'Mexican coriander supplier', 'proveedor mexicano de cilantro',
     'washed cilantro for export', 'cilantro lavado para exportación',
@@ -68,10 +64,10 @@ export const metadata = {
     'customs clearance produce', 'despacho aduanal agrícola',
     'phytosanitary certification', 'certificación fitosanitaria',
     'bulk vegetable packing', 'empaque de vegetales a granel',
-    'private label packing', 'empaque de marca privada'
+    'private label packing', 'empaque de marca privada',
   ],
   openGraph: {
-    title: 'Flores Sons Farms ',
+    title: 'Flores Sons Farms',
     description: 'Explora la riqueza de productos agrícolas frescos y de alta calidad de Flores Sons Farms.',
     url: 'https://www.floressonsfarms.com/',
     siteName: 'Flores Sons Farms',
@@ -95,23 +91,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <LanguageProvider>
-      <html lang="es" translate="no">
-
-        <Head>
-          <meta charSet="utf-8" />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <meta name="robots" content="index, follow" />
-          <link rel="canonical" href="https://www.floressonsfarms.com/" />
-          <link rel="icon" href="/favicon.ico" />
-          <meta name="author" content="Flores Sons Farms" />
-
-          {/* 👇 ESTE ES NUEVO 👇 */}
-          <meta property="og:site_name" content="Flores Sons Farms" />
-        </Head>
-
-
-        <body>
+    <html lang="es" translate="no">
+      <body>
+        <LanguageProvider>
           {/* Google Analytics */}
           <Script
             src="https://www.googletagmanager.com/gtag/js?id=G-CYMCBRPS98"
@@ -126,12 +108,11 @@ export default function RootLayout({ children }) {
             `}
           </Script>
 
-          {/* Tu contenido */}
           {/*<NavBar />*/}
           {children}
           {/*<Footer />*/}
-        </body>
-      </html>
-    </LanguageProvider>
+        </LanguageProvider>
+      </body>
+    </html>
   );
 }
