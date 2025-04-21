@@ -9,7 +9,7 @@ export default function HeroSection() {
   
   // Configuración de la imagen de Cloudinary
   const heroImage = {
-    publicId: 'c1_uei6l3', // Reemplaza con tu publicId en Cloudinary
+    publicId: 'galeria_2_dfb2nj', // Reemplaza con tu publicId en Cloudinary
     alt: translations.anuncio3?.title || 'Imagen de fondo heroica',
     transformations: {
       crop: 'fill',

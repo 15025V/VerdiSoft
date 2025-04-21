@@ -11,7 +11,7 @@ export default function AnunciSection() {
     <section className="relative h-screen flex items-center justify-center text-center p-10 overflow-hidden">
       {/* Imagen de fondo */}
       <CldImage
-        src="12_fs6kw7" // Asegúrate que el publicId "12" corresponde a tu imagen en Cloudinary
+        src="galeria_2_dfb2nj" // Asegúrate que el publicId "12" corresponde a tu imagen en Cloudinary
         alt="Fondo Anuncio"
         fill
         loading="lazy"

@@ -11,7 +11,7 @@ export default function HeroSection() {
     <section className="relative w-full h-screen flex flex-col md:flex-row items-center justify-between px-4 md:px-25 pt-28 overflow-hidden">
       {/* Imagen de fondo */}
       <CldImage
-        src="12_fs6kw7" // Asegúrate de que este sea tu `publicId` en Cloudinary
+        src="galeria_2_dfb2nj" // Asegúrate de que este sea tu `publicId` en Cloudinary
         alt="Fondo Hero"
         fill
         loading='lazy'

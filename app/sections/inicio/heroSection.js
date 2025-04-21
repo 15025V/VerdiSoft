@@ -1,5 +1,6 @@
+import { CldImage } from "next-cloudinary";
 import Image from "next/image";
-import { FaInstagram, FaFacebook, FaTiktok,  FaArrowDown} from "react-icons/fa";
+import { FaInstagram, FaFacebook, FaTiktok, FaArrowDown } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { useTranslation } from '@/app/hooks/useTranslation';
 
@@ -10,8 +11,8 @@ export default function HeroSection() {
     <section className="relative w-full h-screen flex items-center justify-center">
       {/* Imagen de fondo con overlay */}
       <div className="absolute inset-0 z-0">
-        <Image
-          src="/12.jpeg"
+        <CldImage
+          src="galeria_2_dfb2nj" // Reemplaza con tu publicId real
           alt="Fondo Flores Sons Farms"
           fill
           className="object-cover"
@@ -55,7 +56,7 @@ export default function HeroSection() {
           <div className="w-full md:w-1/2 flex justify-center">
             <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
               <Image
-                src="/galeria_3.jpeg"
+                src="/galeria_3.jpeg" // Reemplaza con tu publicId real
                 alt="Productos Flores Sons Farms"
                 fill
                 className="rounded-full object-cover border-4 border-white/30 shadow-2xl"
@@ -66,13 +67,13 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Redes sociales - STICKY en la parte inferior DEL HERO (no de la página) */}
+        {/* Redes sociales */}
         <div className="sticky bottom-8 left-0 right-0 flex justify-center gap-3 sm:gap-5 text-white text-xl sm:text-2xl w-full z-20 py-2">
           {[
             { icon: <FaFacebook />, url: "https://facebook.com", label: "Facebook" },
             { icon: <FaTiktok />, url: "https://tiktok.com", label: "TikTok" },
             { icon: <FaInstagram />, url: "https://instagram.com", label: "Instagram" },
-            { icon: <FaXTwitter  />, url: "https://twitter.com", label: "Twitter" }
+            { icon: <FaXTwitter />, url: "https://twitter.com", label: "Twitter" }
           ].map((social, index) => (
             <a
               key={index}
@@ -87,11 +88,6 @@ export default function HeroSection() {
           ))}
         </div>
       </div>
-
-      {/* Indicador de scroll (absoluto dentro del Hero) 
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 animate-bounce z-30">
-        <FaArrowDown className="text-white text-2xl" />
-      </div>*/}
     </section>
   );
 }

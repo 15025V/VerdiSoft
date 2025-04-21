@@ -10,7 +10,7 @@ export default function AreaEmpresaSection() {
       {/* Fondo con imagen y overlay */}
       <div className="absolute inset-0 w-full h-full">
         <CldImage 
-          src="galeria_5_fwglum" 
+          src="galeria_2_dfb2nj" 
           alt="Área de la empresa"
           fill
           
@@ -56,7 +56,7 @@ export default function AreaEmpresaSection() {
           {/* Sección visual (opcional) */}
           <div className="hidden lg:block relative h-full min-h-[500px] rounded-3xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-500">
             <CldImage
-              src="galeria_5_fwglum"
+              src="galeria_2_dfb2nj"
               alt="Detalle de la empresa"
               fill
               className="object-cover"
