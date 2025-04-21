@@ -4,7 +4,7 @@ import { useEffect } from "react";
 const BotpressChatbot = () => {
   useEffect(() => {
     const script1 = document.createElement("script");
-    script1.src = "https://cdn.botpress.cloud/webchat/v2.2/inject.js";
+    script1.src = "https://cdn.botpress.cloud/webchat/v2.3/inject.js";
     script1.async = true;
     document.body.appendChild(script1);
 
