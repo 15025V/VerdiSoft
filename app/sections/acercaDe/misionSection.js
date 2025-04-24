@@ -56,7 +56,7 @@ export default function MisionSection() {
 
         <div className="bg-white shadow-lg rounded-2xl overflow-hidden flex h-full">
           <CldImage
-            src="galeria_5_fwglum" // Reemplaza con el publicId correcto
+            src="galeria_6_pacikz" // Reemplaza con el publicId correcto
             alt="Uso de tecnología"
             width={500}
             height={500}

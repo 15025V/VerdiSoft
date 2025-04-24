@@ -5,8 +5,13 @@ import { useTranslation } from '@/app/hooks/useTranslation';
 import { CldImage } from 'next-cloudinary';
 
 const images = [
+  'i1_usqk45',
+  'i2_lrrh72',
+  'i3_lufuul',
+  'i4_cggdvq',
+  'i5_vh2bev',
+  'i7_cskgeu',
   'galeria_6_pacikz',
-  'galeria_5_fwglum',
   'galeria_2_bbvnpg',
 ];
 
