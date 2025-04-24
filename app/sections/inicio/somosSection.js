@@ -7,7 +7,7 @@ export default function SomosSection() {
 
   return (
     <section 
-    id='who we are'
+    id= 'whoweare'
       role="main" 
       className="relative py-28 md:py-36 overflow-hidden transition-colors duration-500"
       aria-labelledby="quienes-somos-heading"

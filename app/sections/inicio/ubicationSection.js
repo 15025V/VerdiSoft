@@ -8,7 +8,7 @@ export default function UbicationSection() {
 
   return (
     <div role="region" aria-labelledby="ubicacion-heading">
-      <section id='find us on' className="py-1 md:py-1 text-center transition-colors duration-500">
+      <section id='finduson' className="py-1 md:py-1 text-center transition-colors duration-500">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-center mb-12 md:mb-16">
             <h2

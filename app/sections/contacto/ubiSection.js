@@ -6,7 +6,7 @@ import { useTranslation } from '@/app/hooks/useTranslation';
 export default function UbiSection() {
   const translations = useTranslation();
   return (
-    <section id='located in' className="px-8 py-16 md:px-24 lg:px-40 ">
+    <section id='locatedin' className="px-8 py-16 md:px-24 lg:px-40 ">
       <h2 id="quienes-somos-heading" className="text-5xl font-bold text-[#014421] mb-10 font-serif ml-14  border-[#014421] pb-2 font-serif border-l-8 border-[#5DBE66] pl-4">
         {translations.ubi?.title}
       </h2>

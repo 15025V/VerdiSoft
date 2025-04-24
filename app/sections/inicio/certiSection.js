@@ -1,6 +1,6 @@
 'use client';
 
-import Image from 'next/image';
+import  { CldImage } from 'next-cloudinary';
 import React from 'react';
 import { useTranslation } from '@/app/hooks/useTranslation';
 
@@ -9,17 +9,17 @@ export default function CertiSection() {
 
   const certifications = [
     { 
-      src: "/primusGFS.png", 
+      src: "primusGFS_f9yzol", 
       alt:  translations.primus?.title || "Certificación PrimusGFS",
       description: translations.primus?.title
     },
     { 
-      src: "/senasica.png", 
+      src: "senasica_lyaxfj", 
       alt: "Certificación SENASICA",
       description: translations.senasica?.title || "Certificación SENASICA"
     },
     { 
-      src: "/_buma_.png", 
+      src: "_buma__cvihbc", 
       alt: "Certificación BUMA",
       description: translations.buma?.title || "Certificación BUMA"
     }
@@ -47,7 +47,7 @@ export default function CertiSection() {
               className="group relative bg-white dark:bg-[#1f2937] rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-600 flex flex-col items-center"
             >
               <div className="mb-6 p-4 bg-gray-50 dark:bg-white rounded-lg w-full flex justify-center">
-                <Image 
+                <CldImage 
                   src={cert.src} 
                   alt={cert.alt}
                   width={220}

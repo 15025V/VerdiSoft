@@ -25,7 +25,7 @@ export default function CategorySection() {
 
   return (
     <section
-      id="category"
+      id="gettoknowourproducts"
       className="w-screen overflow-hidden px-6 py-14 md:px-20 lg:px-36 flex flex-col items-center text-center space-y-8 "
     >
      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-serif relative inline-block pb-3">

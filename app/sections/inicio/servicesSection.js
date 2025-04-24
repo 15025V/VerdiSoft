@@ -30,7 +30,7 @@ export default function VisualServicesSection() {
   ];
 
   return (
-    <section id="learn more about Flores Sons Farms" className="relative py-24 overflow-hidden">
+    <section id="weknow" className="relative py-24 overflow-hidden">
       {/* Fondo decorativo */}
       <div className="absolute inset-0 opacity-5 dark:opacity-10 pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-48 h-48 rounded-full bg-green-100 mix-blend-multiply animate-blob"></div>

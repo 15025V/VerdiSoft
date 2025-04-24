@@ -1,5 +1,4 @@
 import { CldImage } from "next-cloudinary";
-import Image from "next/image";
 import { FaInstagram, FaFacebook, FaTiktok, FaArrowDown } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { useTranslation } from '@/app/hooks/useTranslation';
@@ -55,8 +54,8 @@ export default function HeroSection() {
           {/* Imagen destacada */}
           <div className="w-full md:w-1/2 flex justify-center">
             <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
-              <Image
-                src="/galeria_3.jpeg" // Reemplaza con tu publicId real
+              <CldImage
+                src="galeria_3_pi7tgq" // Reemplaza con tu publicId real
                 alt="Productos Flores Sons Farms"
                 fill
                 className="rounded-full object-cover border-4 border-white/30 shadow-2xl"

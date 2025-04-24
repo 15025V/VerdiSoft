@@ -6,7 +6,7 @@ export default function AreaEmpresaSection() {
   const translations = useTranslation();
 
   return (
-    <section id='área' className="relative py-28 md:py-36 overflow-hidden">
+    <section id='area' className="relative py-28 md:py-36 overflow-hidden">
       {/* Fondo con imagen y overlay */}
       <div className="absolute inset-0 w-full h-full">
         <CldImage 

@@ -43,11 +43,11 @@ const Footer = () => {
           <div className="text-center">
             <p className="text-lg font-semibold mb-4">{translations?.foo?.rapidos}</p>
             <nav className="flex flex-col space-y-2">
-              <Link href="/legal/politicas" legacyBehavior>
-                <a className="hover:text-white transition-colors duration-200">{translations?.foo?.poli}</a>
+              <Link href="/legal/politicas" className="hover:text-white transition-colors duration-200">
+                {translations?.foo?.poli}
               </Link>
-              <Link href="/legal/terminos" legacyBehavior>
-                <a className="hover:text-white transition-colors duration-200">{translations?.foo?.ter}</a>
+              <Link href="/legal/terminos" className="hover:text-white transition-colors duration-200">
+                {translations?.foo?.ter}
               </Link>
             </nav>
           </div>

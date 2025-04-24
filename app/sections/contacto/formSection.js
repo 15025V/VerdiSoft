@@ -1,4 +1,5 @@
 'use client';
+import { CldImage } from "next-cloudinary";
 import React, { useState, useRef } from 'react';
 import { useTranslation } from '@/app/hooks/useTranslation';
 import emailjs from '@emailjs/browser';
@@ -91,21 +92,26 @@ export default function FormSection() {
   };
 
   return (
-    <section id='contact-form' className="relative flex justify-center items-center min-h-screen px-6 py-10 font-serif">
+    <section id='contactform' className="relative flex justify-center items-center min-h-screen px-6 py-10 font-serif">
       {/* Fondo de cilantro para móvil */}
       <div className="md:hidden absolute inset-0 overflow-hidden z-0">
-        <img
-          src="/cill.png"
+        <CldImage
+          src="cill_plkkbr"
           alt="Hoja de cilantro"
+          width={1200}  // Ajusta según necesites
+          height={800}  // Ajusta según necesites
           className="w-full h-full object-cover opacity-90"
+          sizes="100vw" // Para responsive
         />
       </div>
 
       <div className="relative w-full max-w-5xl flex rounded-tl-[80px] rounded-br-[80px] shadow-2xl overflow-hidden z-10">
         {/* Imagen de cilantro para desktop (posición absoluta) */}
-        <img
-          src="/cill.png"
+        <CldImage
+          src="cill_plkkbr"
           alt="Hoja de cilantro"
+          width={1200}
+          height={800}
           className="hidden md:block absolute w-72 z-20 left-3/4 transform -translate-x-1/2 top-1/2 -translate-y-1/2"
         />
 
