@@ -1,20 +1,21 @@
 // app/not-found.js
+'use client';
 import Link from 'next/link';
-import Image from 'next/image';
+import { CldImage } from 'next-cloudinary';
 
 
-export const metadata = {
+{/*export const metadata = {
   title: '404 - Página no encontrada',
   description: 'Lo sentimos, la página que estás buscando no existe.',
-};
+};*/}
 
 export default function NotFound() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-white text-center p-6">
       {/* Imagen de cilantro (parte superior) */}
       <div className="mb-8">
-        <Image
-          src="/404.jpeg" // Ruta de la imagen en la carpeta public
+        <CldImage
+          src="404_pxbddj" // Ruta de la imagen en la carpeta public
           alt="Error 404"
           width={300} // Ancho de la imagen
           height={300} // Alto de la imagen
