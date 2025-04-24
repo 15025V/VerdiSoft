@@ -186,7 +186,7 @@ export default function FormSection() {
         </div>
 
         {/* Barra lateral */}
-        <div className="hidden md:block w-1/4 bg-gradient-to-r from-[#5DBE66] to-[#A7ECA4] relative"></div>
+        <div className="hidden md:block w-1/4 bg-gradient-to-r from-[#5DBE66] to-[#A7ECA4] relative "></div>
       </div>
     </section>
   );
