@@ -81,7 +81,7 @@ export default function VisionSection() {
           );
         })}
 
-        {/* Indicadores */}
+        {/* Indicadores 
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-2">
           {images.map((_, index) => (
             <div
@@ -92,7 +92,7 @@ export default function VisionSection() {
               }`}
             />
           ))}
-        </div>
+        </div>*/}
       </div>
     </section>
   );

@@ -1,17 +1,20 @@
-import { CldImage } from "next-cloudinary";
-import { FaInstagram, FaFacebook, FaTiktok, FaArrowDown } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
-import { useTranslation } from '@/app/hooks/useTranslation';
+'use client'
+
+import { CldImage } from 'next-cloudinary'
+import { FaInstagram, FaFacebook, FaTiktok, FaArrowDown } from 'react-icons/fa'
+import { FaXTwitter } from 'react-icons/fa6'
+import { useTranslation } from '@/app/hooks/useTranslation'
+import { motion } from 'framer-motion'
 
 export default function HeroSection() {
-  const translations = useTranslation();
+  const translations = useTranslation()
 
   return (
     <section className="relative w-full h-screen flex items-center justify-center">
       {/* Imagen de fondo con overlay */}
       <div className="absolute inset-0 z-0">
         <CldImage
-          src="galeria_2_dfb2nj" // Reemplaza con tu publicId real
+          src="galeria_2_dfb2nj"
           alt="Fondo Flores Sons Farms"
           fill
           className="object-cover"
@@ -25,8 +28,13 @@ export default function HeroSection() {
       {/* Contenido principal */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 w-full h-full flex flex-col">
         <div className="flex-grow flex flex-col md:flex-row items-center justify-center gap-12">
-          {/* Texto y CTA */}
-          <div className="w-full md:w-1/2 text-center md:text-left pt-12 md:pt-0">
+          {/* Texto y CTA con animación */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="w-full md:w-1/2 text-center md:text-left pt-12 md:pt-0"
+          >
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white font-serif italic mb-6 leading-tight">
               Flores Sons Farms
             </h1>
@@ -36,26 +44,31 @@ export default function HeroSection() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <a
                 href="/contact"
-                className="px-8 py-3 bg-green-600 hover:bg-green-700 text-white rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300 text-lg"
-                aria-label="Contáctanos"
+                className="px-8 py-3 bg-green-600 hover:bg-green-700 text-white rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300 text-lg animate-pulse hover:animate-none"
               >
                 {translations.hero?.boton}
               </a>
+
               <a
                 href="/about"
                 className="px-8 py-3 bg-white/10 hover:bg-white/20 text-white rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300 text-lg flex items-center justify-center gap-2"
                 aria-label="Conoce nuestros servicios"
               >
-                {translations.hero?.boton1}<FaArrowDown className="animate-bounce" />
+                {translations.hero?.boton1}
+                <FaArrowDown className="animate-bounce" />
               </a>
             </div>
-          </div>
+          </motion.div>
 
-          {/* Imagen destacada */}
-          <div className="w-full md:w-1/2 flex justify-center">
-            <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
+          {/* Imagen destacada con animación flotante */}
+          <motion.div
+            whileHover={{ scale: 1.05, rotate: 2 }}
+            transition={{ type: 'spring', stiffness: 200 }}
+            className="w-full md:w-1/2 flex justify-center"
+          >
+            <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 transition-transform duration-300">
               <CldImage
-                src="galeria_3_pi7tgq" // Reemplaza con tu publicId real
+                src="galeria_3_pi7tgq"
                 alt="Productos Flores Sons Farms"
                 fill
                 className="rounded-full object-cover border-4 border-white/30 shadow-2xl"
@@ -63,16 +76,17 @@ export default function HeroSection() {
                 priority
               />
             </div>
-          </div>
+          </motion.div>
+
         </div>
 
         {/* Redes sociales */}
         <div className="sticky bottom-8 left-0 right-0 flex justify-center gap-3 sm:gap-5 text-white text-xl sm:text-2xl w-full z-20 py-2">
           {[
-            { icon: <FaFacebook />, url: "https://facebook.com", label: "Facebook" },
-            { icon: <FaTiktok />, url: "https://tiktok.com", label: "TikTok" },
-            { icon: <FaInstagram />, url: "https://instagram.com", label: "Instagram" },
-            { icon: <FaXTwitter />, url: "https://twitter.com", label: "Twitter" }
+            { icon: <FaFacebook />, url: 'https://facebook.com', label: 'Facebook' },
+            { icon: <FaTiktok />, url: 'https://tiktok.com', label: 'TikTok' },
+            { icon: <FaInstagram />, url: 'https://instagram.com', label: 'Instagram' },
+            { icon: <FaXTwitter />, url: 'https://twitter.com', label: 'Twitter' },
           ].map((social, index) => (
             <a
               key={index}
@@ -88,5 +102,5 @@ export default function HeroSection() {
         </div>
       </div>
     </section>
-  );
+  )
 }

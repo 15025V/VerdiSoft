@@ -1,7 +1,9 @@
 'use client';
+
 import { useTranslation } from '@/app/hooks/useTranslation';
 import { CldImage } from 'next-cloudinary';
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 export default function CategorySection() {
   const translations = useTranslation();
@@ -26,16 +28,30 @@ export default function CategorySection() {
   return (
     <section
       id="gettoknowourproducts"
-      className="w-screen overflow-hidden px-6 py-14 md:px-20 lg:px-36 flex flex-col items-center text-center space-y-8 "
+      className="w-screen overflow-hidden px-6 py-14 md:px-20 lg:px-36 flex flex-col items-center text-center space-y-8"
     >
-     <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-serif relative inline-block pb-3">
-          {translations.category?.title}
-          <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-green-500 to-transparent"></span>
-        </h2>
-        <p className="mt-6 text-base sm:text-lg max-w-3xl mx-auto font-serif mb-12">
-          {translations.category?.subtitle}
-        </p>
+      <motion.h2
+        className="text-3xl sm:text-4xl md:text-5xl font-bold font-serif relative inline-block pb-3"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
+        {translations.category?.title}
+        <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-green-500 to-transparent"></span>
+      </motion.h2>
 
+      <motion.p
+        className="mt-6 text-base sm:text-lg max-w-3xl mx-auto font-serif mb-12"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.3, duration: 0.8 }}
+        viewport={{ once: true }}
+      >
+        {translations.category?.subtitle}
+      </motion.p>
+
+      {/* Carrusel original sin framer motion */}
       <div className="relative w-full h-[22rem] sm:h-[24rem] md:h-[26rem] lg:h-[28rem] flex justify-center items-center overflow-hidden mt-8">
         {images.map((src, index) => {
           const position = (index - currentIndex + images.length) % images.length;
@@ -71,7 +87,7 @@ export default function CategorySection() {
           );
         })}
 
-        {/* Indicadores */}
+        {/* Indicadores 
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-2">
           {images.map((_, index) => (
             <div
@@ -82,17 +98,21 @@ export default function CategorySection() {
               }`}
             />
           ))}
-        </div>
+        </div>*/}
       </div>
 
-      {/* Botón Ver más */}
-      <a
+      {/* Botón */}
+      <motion.a
         href="/products"
         className="mt-12 inline-flex items-center text-green-600 font-semibold hover:text-green-800 transition duration-300 text-lg px-6 py-3 rounded-full border-2 border-green-600"
         aria-label="Ver productos"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.6, duration: 0.8 }}
+        viewport={{ once: true }}
       >
         {translations.category?.button}
-      </a>
+      </motion.a>
     </section>
   );
 }

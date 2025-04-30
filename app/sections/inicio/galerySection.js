@@ -24,7 +24,7 @@ export default function GallerySplitSection() {
   ];
 
   return (
-    <section id='gallery' className="relative py-8">
+    <section id='gallery' className="relative py-14">
       <div className="max-w-7xl mx-auto px-6">
         <GallerySection
           title={translations.galeria?.title}
@@ -60,7 +60,7 @@ function GallerySection({ title, subtitle, images, onImageClick }) {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {images.map((image, index) => (
           <GalleryCard key={index} image={image} onClick={() => onImageClick(image)} />
         ))}
