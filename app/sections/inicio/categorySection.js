@@ -11,7 +11,7 @@ export default function CategorySection() {
 
   const images = [
     "galeria_2_dfb2nj", 
-    "galeria_3_mage9c", 
+    "galeria_2_dfb2nj", 
     "galeria_6_pacikz", 
     "galeria_6_pacikz"
   ];

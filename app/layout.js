@@ -69,8 +69,8 @@ export const metadata = {
   openGraph: {
     title: 'Flores Sons Farms',
     description: 'Explora la riqueza de productos agrícolas frescos y de alta calidad de Flores Sons Farms.',
-    url: 'https://www.floressonsfarms.com/',
     siteName: 'Flores Sons Farms',
+    url: 'https://www.floressonsfarms.com',
     images: [
       {
         url: 'https://res.cloudinary.com/dguinjztv/image/upload/v1744336833/logoo_gm49ee.jpg',

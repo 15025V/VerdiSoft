@@ -68,7 +68,7 @@ export default function HeroSection() {
           >
             <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 transition-transform duration-300">
               <CldImage
-                src="galeria_3_pi7tgq"
+                src="galeria_2_dfb2nj"
                 alt="Productos Flores Sons Farms"
                 fill
                 className="rounded-full object-cover border-4 border-white/30 shadow-2xl"

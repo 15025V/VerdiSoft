@@ -23,7 +23,7 @@ export const metadata = {
     siteName: 'Flores Sons Farms',
     images: [
       {
-        url: 'https://www.floressonsfarms.com/logo.png',
+        url: 'https://www.floressonsfarms.com',
         width: 800,
         height: 600,
         alt: 'Flores Sons Farms Logo',
