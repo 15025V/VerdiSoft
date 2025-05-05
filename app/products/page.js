@@ -1,3 +1,4 @@
+import Script from "next/script";
 import ClientCatalogoPage from './ClientCatalogoPage';
 
 export const metadata = {
@@ -30,5 +31,45 @@ export const metadata = {
 };
 
 export default function CatalogoPage() {
-  return <ClientCatalogoPage />;
+  return (
+    <>
+      <Script id="json-ld-catalogo" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "OfferCatalog",
+          "name": "Catálogo de Productos Agrícolas - Flores Sons Farms",
+          "description": "Catálogo de hortalizas frescas listas para exportación desde México. ",
+          "url": "https://www.floressonsfarms.com/catalogo",
+          "provider": {
+            "@type": "Organization",
+            "name": "Flores Sons Farms",
+            "url": "https://www.floressonsfarms.com",
+            "logo": "https://res.cloudinary.com/dguinjztv/image/upload/v1744336833/logoo_gm49ee.jpg"
+          },
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Product",
+                "name": "Cilantro fresco lavado",
+                "description": "Cilantro de exportación lavado y empacado, alta calidad.",
+                "image": "https://www.floressonsfarms.com/images/cilantro.jpg"
+              }
+            },
+           {/* {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Product",
+                "name": "Cebollín fresco",
+                "description": "Cebollín mexicano de exportación, limpio y empacado.",
+                "image": "https://www.floressonsfarms.com/images/cebollin.jpg"
+              }
+            }*/}
+            // Puedes seguir agregando más productos aquí
+          ]
+        })}
+      </Script>
+      <ClientCatalogoPage />
+    </>
+  );
 }

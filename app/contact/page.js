@@ -1,14 +1,14 @@
-// app/contact/page.js (NO lleva "use client")
+// app/contact/page.js
+import Script from "next/script";
 import ClientContactPage from './clientContactPage';
 
-// Exporta metadata desde el componente del servidor
 export const metadata = {
   title: 'Contacto - Flores Sons Farms',
-  description: 'Ponte en contacto con Flores Sons Farms...',
+  description: 'Ponte en contacto con Flores Sons Farms, exportadora de hortalizas frescas de calidad desde México.',
   robots: 'index, follow',
   openGraph: {
     title: 'Contacto - Flores Sons Farms',
-    description: 'Ponte en contacto con Flores Sons Farms...',
+    description: 'Ponte en contacto con Flores Sons Farms, exportadora de hortalizas frescas de calidad desde México.',
     url: 'https://www.floressonsfarms.com/contact',
     type: 'website',
     images: [
@@ -23,11 +23,35 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Contacto - Flores Sons Farms',
-    description: 'Ponte en contacto con Flores Sons Farms...',
+    description: 'Ponte en contacto con Flores Sons Farms, exportadora de hortalizas frescas de calidad desde México.',
     images: ['https://res.cloudinary.com/dguinjztv/image/upload/v1744336833/logoo_gm49ee.jpg'],
   },
 };
 
 export default function ContactPage() {
-  return <ClientContactPage/>;
+  return (
+    <>
+      <Script id="json-ld-contact" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ContactPage",
+          "mainEntity": {
+            "@type": "Organization",
+            "name": "Flores Sons Farms",
+            "url": "https://www.floressonsfarms.com",
+            "logo": "https://res.cloudinary.com/dguinjztv/image/upload/v1744336833/logoo_gm49ee.jpg",
+            "description": "Exportadora de hortalizas frescas desde México. ",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+52-249-147-6519",
+              "contactType": "customer service",
+              "areaServed": "MX, US, CA, EU",
+              "availableLanguage": ["es", "en"]
+            }
+          }
+        })}
+      </Script>
+      <ClientContactPage />
+    </>
+  );
 }

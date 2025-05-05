@@ -108,9 +108,23 @@ export default function RootLayout({ children }) {
             `}
           </Script>
 
-          {/*<NavBar />*/}
+          {/* JSON-LD Global Structured Data */}
+          <Script id="json-ld-global" type="application/ld+json" strategy="afterInteractive">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Flores Sons Farms",
+              "description": "Exportadora de hortalizas frescas desde México. ",
+              "url": "https://www.floressonsfarms.com",
+              "logo": "https://res.cloudinary.com/dguinjztv/image/upload/v1744336833/logoo_gm49ee.jpg",
+              "sameAs": [
+                "https://www.instagram.com/floressonsfarms",
+                "https://www.linkedin.com/company/floressonsfarms"
+              ]
+            })}
+          </Script>
+
           {children}
-          {/*<Footer />*/}
         </LanguageProvider>
       </body>
     </html>

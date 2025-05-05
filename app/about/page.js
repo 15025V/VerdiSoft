@@ -1,21 +1,20 @@
 import ClientAboutPage from './clientAbout';
 
 export const metadata = {
-  title: 'Flores Sons Farms - Productos Agrícolas Frescos y de Calidad',
-  description: 'Explora la riqueza de productos agrícolas frescos y de alta calidad de Flores Sons Farms. Cultivados con pasión y dedicación en el Valle de Palmarito.',
+  title: 'Flores Sons Farms - Exportación de Hortalizas Frescas desde México',
+  description: 'Empresa exportadora de productos agrícolas frescos y de alta calidad. Cultivamos y exportamos desde el Valle de Palmarito, México.',
   keywords: [
+    'exportación agrícola',
+    'hortalizas frescas',
     'productos agrícolas',
-    'frescos',
-    'calidad',
-    'sostenibilidad',
-    'Flores Sons Farms'
+    'Flores Sons Farms',
+    'Valle de Palmarito',
+    'no vendemos flores'
   ],
-  alternates: {
-    canonical: 'https://www.floressonsfarms.com/about',
-  },
+  
   openGraph: {
-    title: 'Flores Sons Farms - Productos Agrícolas Frescos y de Calidad',
-    description: 'Explora la riqueza de productos agrícolas frescos y de alta calidad de Flores Sons Farms. Cultivados con pasión y dedicación en el Valle de Palmarito.',
+    title: 'Flores Sons Farms - Exportación de Hortalizas Frescas',
+    description: 'Empresa exportadora de hortalizas frescas desde el Valle de Palmarito.',
     url: 'https://www.floressonsfarms.com/about',
     siteName: 'Flores Sons Farms',
     images: [
@@ -30,11 +29,12 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Flores Sons Farms - Productos Agrícolas Frescos y de Calidad',
-    description: 'Explora la riqueza de productos agrícolas frescos y de alta calidad de Flores Sons Farms. Cultivados con pasión y dedicación en el Valle de Palmarito.',
-    images: ['https://res.cloudinary.com/tu-cuenta/image/upload/v1710000000/logoo_gm49ee.png'],
+    title: 'Flores Sons Farms - Exportación de Hortalizas Frescas',
+    description: 'Exportadora de hortalizas desde México. Productos de calidad del campo mexicano.',
+    images: ['https://res.cloudinary.com/dguinjztv/image/upload/v1710000000/logoo_gm49ee.png'],
   },
 };
+
 
 export default function AboutPage() {
   return <ClientAboutPage />;
