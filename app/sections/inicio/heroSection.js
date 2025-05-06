@@ -1,7 +1,7 @@
 'use client'
 
 import { CldImage } from 'next-cloudinary'
-import { FaInstagram, FaFacebook, FaTiktok, FaArrowDown } from 'react-icons/fa'
+import { FaInstagram, FaFacebook, FaTiktok, FaPagelines,FaSeedling  } from 'react-icons/fa'
 import { FaXTwitter } from 'react-icons/fa6'
 import { useTranslation } from '@/app/hooks/useTranslation'
 import { motion } from 'framer-motion'
@@ -54,8 +54,9 @@ export default function HeroSection() {
                 className="px-8 py-3 bg-white/10 hover:bg-white/20 text-white rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300 text-lg flex items-center justify-center gap-2"
                 aria-label="Conoce nuestros servicios"
               >
+               
                 {translations.hero?.boton1}
-                <FaArrowDown className="animate-bounce" />
+                <FaPagelines className=" text-4xl animate-bounce" />
               </a>
             </div>
           </motion.div>
