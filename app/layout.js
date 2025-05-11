@@ -135,53 +135,8 @@ export default function RootLayout({ children }) {
                 "https://www.linkedin.com/company/floressonsfarms",
                 "https://twitter.com/floressonsfarms"
               ],
-              "areaServed": ["North America", "Europe", "Asia"],
-              "hasOfferCatalog": {
-                "@type": "OfferCatalog",
-                "name": "Productos Agrícolas",
-                "itemListElement": [
-                  {
-                    "@type": "OfferCatalog",
-                    "name": "Hierbas Frescas",
-                    "itemListElement": [
-                      {
-                        "@type": "Offer",
-                        "itemOffered": {
-                          "@type": "Product",
-                          "name": "Cilantro Fresco"
-                        }
-                      },
-                      {
-                        "@type": "Offer",
-                        "itemOffered": {
-                          "@type": "Product",
-                          "name": "Cebollín"
-                        }
-                      }
-                    ]
-                  },
-                  {
-                    "@type": "OfferCatalog",
-                    "name": "Vegetales",
-                    "itemListElement": [
-                      {
-                        "@type": "Offer",
-                        "itemOffered": {
-                          "@type": "Product",
-                          "name": "Calabacita Mexicana"
-                        }
-                      },
-                      {
-                        "@type": "Offer",
-                        "itemOffered": {
-                          "@type": "Product",
-                          "name": "Brócoli Orgánico"
-                        }
-                      }
-                    ]
-                  }
-                ]
-              }
+              "areaServed": ["North America", "Europe", "Asia"]
+
             })}
           </Script>
 
@@ -195,14 +150,39 @@ export default function RootLayout({ children }) {
                   "@type": "ListItem",
                   "position": 1,
                   "name": "Inicio",
-                  "item": "https://www.floressonsfarms.com"
+                  "item": "https://www.floressonsfarms.com/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Productos",
+                  "item": "https://www.floressonsfarms.com/products"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Contacto",
+                  "item": "https://www.floressonsfarms.com/contact"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 4,
+                  "name": "Sobre Nosotros",
+                  "item": "https://www.floressonsfarms.com/about"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 5,
+                  "name": "Políticas",
+                  "item": "https://www.floressonsfarms.com/legal/politicas"
                 }
               ]
             })}
           </Script>
 
+
           {/* Product Schemas */}
-          
+
 
           {children}
         </LanguageProvider>
