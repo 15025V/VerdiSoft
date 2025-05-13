@@ -154,22 +154,23 @@ export default function RootLayout({ children }) {
                 },
                 {
                   "@type": "ListItem",
-                  "position": 2,
+                  "position":2 ,
+                  "name": "Sobre Nosotros",
+                  "item": "https://www.floressonsfarms.com/about"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
                   "name": "Productos",
                   "item": "https://www.floressonsfarms.com/products"
                 },
                 {
                   "@type": "ListItem",
-                  "position": 3,
+                  "position": 4,
                   "name": "Contacto",
                   "item": "https://www.floressonsfarms.com/contact"
                 },
-                {
-                  "@type": "ListItem",
-                  "position": 4,
-                  "name": "Sobre Nosotros",
-                  "item": "https://www.floressonsfarms.com/about"
-                },
+                
                 {
                   "@type": "ListItem",
                   "position": 5,
