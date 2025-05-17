@@ -28,7 +28,7 @@ const nextConfig = {
                 https://files.bpcontent.cloud;
               img-src 'self' data: https:;
               font-src 'self' https://fonts.gstatic.com;
-              connect-src 'self' https://www.google-analytics.com https://*.vercel-insights.com https://*.botpress.cloud;
+              connect-src 'self' https://www.google-analytics.com https://*.vercel-insights.com https://*.botpress.cloud https://api.emailjs.com;
               frame-src 'self' https://www.google.com https://www.google.com/maps https://cdn.botpress.cloud;
               worker-src 'self' blob:;
             `.replace(/\n/g, '').replace(/\s{2,}/g, ' ').trim()
