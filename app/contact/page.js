@@ -51,6 +51,27 @@ export default function ContactPage() {
           }
         })}
       </Script>
+      <Script id="breadcrumb-contact" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Flores Sons Farms",
+              "item": "https://www.floressonsfarms.com"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Contacto",
+              "item": "https://www.floressonsfarms.com/contact"
+            }
+          ]
+        })}
+      </Script>
+
       <ClientContactPage />
     </>
   );
