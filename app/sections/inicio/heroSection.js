@@ -84,7 +84,7 @@ export default function HeroSection() {
         {/* Redes sociales */}
         <div className="sticky bottom-8 left-0 right-0 flex justify-center gap-3 sm:gap-5 text-white text-xl sm:text-2xl w-full z-20 py-2">
           {[
-            { icon: <FaFacebook />, url: 'https://facebook.com', label: 'Facebook' },
+            { icon: <FaFacebook />, url: 'https://www.facebook.com/share/1HmTyTB5LW', label: 'Facebook' },
             { icon: <FaTiktok />, url: 'https://tiktok.com', label: 'TikTok' },
             { icon: <FaInstagram />, url: 'https://instagram.com', label: 'Instagram' },
             { icon: <FaXTwitter />, url: 'https://twitter.com', label: 'Twitter' },

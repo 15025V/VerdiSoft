@@ -55,7 +55,7 @@ const Footer = () => {
             <p className="text-lg font-semibold mb-4">{translations?.foo?.redes}</p>
             <div className="flex justify-center md:justify-end space-x-4">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/share/1HmTyTB5LW/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-white/10 hover:bg-white/20 rounded-full backdrop-blur-sm transition-all duration-300 hover:scale-110 text-xl"

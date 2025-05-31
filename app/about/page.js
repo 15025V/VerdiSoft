@@ -38,7 +38,7 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <>
-      <Script id="json-ld-about" type="application/ld+json" strategy="afterInteractive">
+      {/* `<Script id="json-ld-about" type="application/ld+json" strategy="afterInteractive">
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "AboutPage",
@@ -57,7 +57,7 @@ export default function AboutPage() {
             }
           }
         })}
-      </Script>
+      </Script>` */}
       <ClientAboutPage />
     </>
   );
