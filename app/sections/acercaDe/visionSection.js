@@ -13,6 +13,7 @@ const images = [
   'i7_cskgeu',
   'galeria_6_pacikz',
   'galeria_2_bbvnpg',
+  'campo-amarillo_wo1hhy'
 ];
 
 export default function VisionSection() {
