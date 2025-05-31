@@ -20,7 +20,7 @@ export default function UbiSection() {
 
         {/* Mapa */}
         <div className=" w-full h-[400px] md:h-[500px] lg:h-[600px]">
-          <iframe
+          {/* <iframe
             src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3774.847936954381!2d-97.65377199999999!3d18.893826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTjCsDUzJzM3LjgiTiA5N8KwMzknMTMuNiJX!5e0!3m2!1ses-419!2smx!4v1744227943018!5m2!1ses-419!2smx"
             className="w-full h-full border-0"
             title="Mapa de Ubicación de Flores Sons Farms"
@@ -28,7 +28,14 @@ export default function UbiSection() {
             loading="lazy"
             allowFullScreen
             referrerPolicy="no-referrer-when-downgrade"
-          />
+          /> */}
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.847297515729!2d-97.65647192533913!3d18.89385435766649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c565007e40e58d%3A0xa1e827010fcd9082!2sFLORES%20SON&#39;S%20FARMS!5e0!3m2!1ses!2smx!4v1748653077290!5m2!1ses!2smx" 
+               className="w-full h-full border-0"
+            title="Mapa de Ubicación de Flores Sons Farms"
+            aria-label="Mapa de Ubicación de Flores Sons Farms"
+            loading="lazy"
+            allowFullScreen
+            referrerPolicy="no-referrer-when-downgrade" ></iframe>
         </div>
 
 
@@ -43,7 +50,7 @@ export default function UbiSection() {
               <FaMapMarkerAlt className="text-2xl text-green-500" />
             </span>
             <span className="text-gray-800 dark:text-gray-200 font-serif">
-              Calle 3 Sur S/N, Froylán C. Manjarrez, Quecholac, Puebla. C.P. 75470.
+              Calle 3 Sur S/N, Froylán C. Manjarrez, Palmarito Tochapan, Puebla. C.P. 75470.
             </span>
           </div>
         </div>
