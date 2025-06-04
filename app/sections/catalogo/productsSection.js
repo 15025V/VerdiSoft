@@ -44,13 +44,13 @@ export default function ProductsSection() {
 
   return (
     <section className="bg-[#f3fdf3] py-20 scroll-mt-20">
-      <div  id='cata'  className="container mx-auto px-4">
+      <div id='cata' className="container mx-auto px-4">
         <h2 className="text-5xl font-bold text-[#014421] text-center mb-10 font-serif border-b-2 pb-2 border-[#014421]">
           {translations.catalogo?.title}
         </h2>
 
         {/* Búsqueda y filtro */}
-        <div  className="flex flex-col md:flex-row justify-center gap-4 mb-10 font-serif relative">
+        <div className="flex flex-col md:flex-row justify-center gap-4 mb-10 font-serif relative">
           <input
             type="text"
             placeholder={translations.buscar_pro?.description}
@@ -78,7 +78,7 @@ export default function ProductsSection() {
         </div>
 
         {/* Productos */}
-        <div  className="grid font-serif sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid font-serif sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {filteredProducts.length > 0 ? (
             filteredProducts.map((product, index) => (
               <div
@@ -119,83 +119,109 @@ export default function ProductsSection() {
       </div>
 
       {/* Modal */}
+      {/* Modal */}
       {modalIsOpen && selectedProduct && (
-        <div
-          className="fixed inset-0 z-50 font-serif flex items-center justify-center p-4 bg-black bg-opacity-70 backdrop-blur-sm"
+        <div className="fixed inset-0 flex items-end md:items-center justify-center z-50 bg-black bg-opacity-50 overflow-y-auto"
           onClick={() => setModalIsOpen(false)}
         >
-          <div
-            className="relative bg-white rounded-xl shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-hidden"
+          <div className="bg-white rounded-t-2xl md:rounded-lg shadow-lg w-full md:w-1/2 h-[85vh] md:max-h-[90vh] flex flex-col relative"
             onClick={(e) => e.stopPropagation()}
           >
+            {/* Botón de cerrar - Mejor posicionado */}
             <button
               onClick={() => setModalIsOpen(false)}
-              className="absolute top-4 right-4 z-10 p-2 rounded-full bg-white/80 hover:bg-gray-100 transition-all shadow-md"
+              className="absolute top-3 right-3 z-10 p-1.5 rounded-full bg-white hover:bg-gray-100 transition-all shadow-md border border-gray-200"
               aria-label="Cerrar modal"
             >
-              <X className="w-6 h-6 text-gray-700" />
+              <X className="w-5 h-5 text-gray-700" />
             </button>
 
-            <div className="flex flex-col md:flex-row h-full">
-              <div className="md:w-1/2 h-64 md:h-auto relative group overflow-hidden">
-                <CldImage
-                  src={selectedProduct.img}
-                  alt={selectedProduct.name}
-                  fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
-                  priority
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-              </div>
+            {/* Contenido del modal con scroll interno */}
+            <div className="flex-1 overflow-y-auto">
+              <div className="flex flex-col md:flex-row">
+                {/* Imagen */}
+                <div className="w-full md:w-1/2 h-56 md:h-auto relative group overflow-hidden">
+                  <CldImage
+                    src={selectedProduct.img}
+                    alt={selectedProduct.name}
+                    fill
+                    className="object-cover"
+                    priority
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                </div>
 
-              <div className="md:w-1/2 p-6 md:p-8 overflow-y-auto">
-                <div className="space-y-6">
-                  <h1 className="text-3xl font-bold text-gray-900">{selectedProduct.name}</h1>
+                {/* Contenido */}
+                <div className="w-full md:w-1/2 p-4 md:p-6 pb-20 md:pb-6">
+                  <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mt-2">{selectedProduct.name}</h1>
 
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-900 border-b pb-2">{translations.catego?.description}</h3>
-                    <span className="inline-block mt-3 px-4 py-1 text-sm font-serif font-semibold text-green-800">
+                  <div className="mt-4">
+                    <h3 className="text-base md:text-lg font-semibold text-gray-900 border-b pb-1">
+                      {translations.catego?.description}
+                    </h3>
+                    <span className="inline-block mt-2 px-3 py-1 text-xs md:text-sm font-serif font-semibold text-green-800">
                       {selectedProduct.category}
                     </span>
                   </div>
 
                   {selectedProduct.presentacion?.length > 0 && (
-                    <div>
-                      <h3 className="text-lg font-semibold text-gray-900 border-b pb-2">{translations.pres?.description}</h3>
-                      {selectedProduct.presentacion.map((pres, index) => (
-                        <span key={index} className="inline-block mt-3 px-4 py-1 text-sm font-serif font-semibold text-green-800">
-                          {pres}
-                        </span>
-                      ))}
+                    <div className="mt-4">
+                      <h3 className="text-base md:text-lg font-semibold text-gray-900 border-b pb-1">
+                        {translations.pres?.description}
+                      </h3>
+                      <div className="mt-2 space-y-1">
+                        {selectedProduct.presentacion.map((pres, index) => (
+                          <span key={index} className="inline-block px-3 py-1 text-xs md:text-sm font-serif font-semibold text-green-800">
+                            {pres}
+                          </span>
+                        ))}
+                      </div>
                     </div>
                   )}
 
                   {selectedProduct.piezas && (
-                    <div>
-                      <h3 className="text-lg font-semibold text-gray-900 border-b pb-2">{translations.pieza?.description}</h3>
-                      <span className="inline-block mt-3 px-4 py-1 text-sm font-serif font-semibold text-green-800">
+                    <div className="mt-4">
+                      <h3 className="text-base md:text-lg font-semibold text-gray-900 border-b pb-1">
+                        {translations.pieza?.description}
+                      </h3>
+                      <span className="inline-block mt-2 px-3 py-1 text-xs md:text-sm font-serif font-semibold text-green-800">
                         {selectedProduct.piezas}
                       </span>
                     </div>
                   )}
 
                   {selectedProduct.kilos && (
-                    <div>
-                      <h3 className="text-lg font-semibold text-gray-900 border-b pb-2">{translations.kilos?.description}</h3>
-                      <span className="inline-block mt-3 px-4 py-1 text-sm font-serif font-semibold text-green-800">
+                    <div className="mt-4">
+                      <h3 className="text-base md:text-lg font-semibold text-gray-900 border-b pb-1">
+                        {translations.kilos?.description}
+                      </h3>
+                      <span className="inline-block mt-2 px-3 py-1 text-xs md:text-sm font-serif font-semibold text-green-800">
                         {selectedProduct.kilos}
                       </span>
                     </div>
                   )}
-
-                  <button
-                    onClick={() => window.location.href = '/contact'}
-                    className="w-full px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-medium rounded-lg transition-colors shadow-md"
-                  >
-                    {translations.but_contacto?.description}
-                  </button>
                 </div>
               </div>
+            </div>
+
+            {/* Botón fijo en móvil */}
+            <div className="md:hidden absolute bottom-15 left-1/2 transform -translate-x-1/2">
+              <button
+                onClick={() => window.location.href = '/contact'}
+                className="justify-context px-4 py-2 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-md transition-colors"
+              >
+                {translations.but_contacto?.description}
+              </button>
+            </div>
+
+            {/* Botón en desktop */}
+            <div className="hidden md:block p-4 md:p-6">
+              <button
+                onClick={() => window.location.href = '/contact'}
+                className="w-full px-4 py-2 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-md transition-colors"
+              >
+                {translations.but_contacto?.description}
+              </button>
             </div>
           </div>
         </div>

@@ -6,6 +6,43 @@ import { CldImage } from 'next-cloudinary';
 import { FaBars, FaTimes, FaSun, FaMoon, FaMicrophone, FaSearch } from 'react-icons/fa';
 import { useLanguage } from '@/app/context/languageContext';
 
+export const sectionMap = {
+    '¿quiénes somos?': { page: '/', id: 'whoweare' },
+    'who we are': { page: '/', id: 'whoweare' },
+    '¿conoce nuestros productos?': { page: '/', id: 'gettoknowourproducts' },
+    'get to know our products': { page: '/', id: 'gettoknowourproducts' },
+    'área de la empresa': { page: '/', id: 'area' },
+    'galería': { page: '/', id: 'gallery' },
+    'gallery': { page: '/', id: 'gallery' },
+    'ubicacion': { page: '/', id: 'finduson' },
+    'find us on': { page: '/', id: 'finduson' },
+    'certificaciones': { page: '/', id: 'certifications' },
+    'certifications': { page: '/', id: 'certifications' },
+    'conoce más de flores sons farms': { page: '/', id: 'weknow' },
+    'learn more about flores sons farms': { page: '/', id: 'weknow' },
+    'conoce nuesta historia': { page: '/about', id: 'history' },
+    'history': { page: '/about', id: 'history' },
+    'nuestra misión': { page: '/about', id: 'mission' },
+    'misión': { page: '/about', id: 'mission' },
+    'mission': { page: '/about', id: 'mission' },
+    'nuestra visión': { page: '/about', id: 'vision' },
+    'visión': { page: '/about', id: 'vision' },
+    'vision': { page: '/about', id: 'vision' },
+    'nuestros valores': { page: '/about', id: 'values' },
+    'valores': { page: '/about', id: 'values' },
+    'values': { page: '/about', id: 'values' },
+    'productos más vendidos': { page: '/products', id: 'product' },
+    'catalogo': { page: '/products', id: 'cata' },
+    'información de contacto': { page: '/contact', id: 'information' },
+    'information': { page: '/contact', id: 'information' },
+    'horario de atención': { page: '/contact', id: 'schedule' },
+    'schedule': { page: '/contact', id: 'schedule' },
+    'sucursales': { page: '/contact', id: 'locatedin' },
+    'located in': { page: '/contact', id: 'locatedin' },
+    'formulario': { page: '/contact', id: 'contactform' },
+    'contact form': { page: '/contact', id: 'contactform' },
+  };
+
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [theme, setTheme] = useState('light');
@@ -72,42 +109,7 @@ export default function Navbar() {
     { path: '/contact', es: 'Contacto', en: 'Contact' },
   ];
 
-  const sectionMap = {
-    '¿quiénes somos?': { page: '/', id: 'whoweare' },
-    'who we are': { page: '/', id: 'whoweare' },
-    '¿conoce nuestros productos?': { page: '/', id: 'gettoknowourproducts' },
-    'get to know our products': { page: '/', id: 'gettoknowourproducts' },
-    'área de la empresa': { page: '/', id: 'area' },
-    'galería': { page: '/', id: 'gallery' },
-    'gallery': { page: '/', id: 'gallery' },
-    'ubicacion': { page: '/', id: 'finduson' },
-    'find us on': { page: '/', id: 'finduson' },
-    'certificaciones': { page: '/', id: 'certifications' },
-    'certifications': { page: '/', id: 'certifications' },
-    'conoce más de flores sons farms': { page: '/', id: 'weknow' },
-    'learn more about flores sons farms': { page: '/', id: 'weknow' },
-    'conoce nuesta historia': { page: '/about', id: 'history' },
-    'history': { page: '/about', id: 'history' },
-    'nuestra misión': { page: '/about', id: 'mission' },
-    'misión': { page: '/about', id: 'mission' },
-    'mission': { page: '/about', id: 'mission' },
-    'nuestra visión': { page: '/about', id: 'vision' },
-    'visión': { page: '/about', id: 'vision' },
-    'vision': { page: '/about', id: 'vision' },
-    'nuestros valores': { page: '/about', id: 'values' },
-    'valores': { page: '/about', id: 'values' },
-    'values': { page: '/about', id: 'values' },
-    'productos más vendidos': { page: '/products', id: 'product' },
-    'catalogo': { page: '/products', id: 'cata' },
-    'información de contacto': { page: '/contact', id: 'information' },
-    'information': { page: '/contact', id: 'information' },
-    'horario de atención': { page: '/contact', id: 'schedule' },
-    'schedule': { page: '/contact', id: 'schedule' },
-    'sucursales': { page: '/contact', id: 'locatedin' },
-    'located in': { page: '/contact', id: 'locatedin' },
-    'formulario': { page: '/contact', id: 'contactform' },
-    'contact form': { page: '/contact', id: 'contactform' },
-  };
+  
 
   const normalizeText = (text) =>
     text.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
