@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Presentation, X } from 'lucide-react';
+import { Presentation, X, ShoppingCart, Leaf, Scale, Package } from 'lucide-react';
 import { CldImage } from 'next-cloudinary';
 import { useTranslation } from '@/app/hooks/useTranslation';
 import { FaAngleDown } from 'react-icons/fa';
@@ -23,13 +23,13 @@ export default function ProductsSection() {
     { name: "Tuna verde", category: translations.categ3?.option3, img: "Tuna_verde_wdv7ok", presentacion: [], kilos: "" },
     { name: "Tuna roja", category: translations.categ3?.option3, img: "tunaa_hzpmit", presentacion: [], kilos: "" },
     { name: "Nopal", category: translations.categ3?.option3, img: "nopall_ckidee", presentacion: [], kilos: "" },
-
   ];
 
   const [search, setSearch] = useState('');
   const [filter, setFilter] = useState('');
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   useEffect(() => {
     document.body.style.overflow = modalIsOpen ? 'hidden' : 'auto';
@@ -83,9 +83,9 @@ export default function ProductsSection() {
             filteredProducts.map((product, index) => (
               <div
                 key={index}
-                className="p-4 text-center bg-white hover:shadow-lg transition-shadow border border-green-100 rounded-lg flex flex-col"
+                className="p-4 text-center bg-white hover:shadow-lg transition-shadow border border-green-100 rounded-lg flex flex-col group"
               >
-                <div className="h-48 mb-4 relative">
+                <div className="h-48 mb-4 relative overflow-hidden rounded-md">
                   <CldImage
                     src={product.img}
                     alt={product.name}
@@ -93,19 +93,22 @@ export default function ProductsSection() {
                     height={200}
                     crop="fill"
                     gravity="auto"
-                    className="rounded-md object-cover"
+                    className={`rounded-md object-cover transition-transform duration-500 group-hover:scale-110 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
                     sizes="(max-width: 768px) 100vw, 300px"
+                    onLoad={() => setImageLoaded(true)}
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-800">{product.name}</h3>
+                <h3 className="text-lg font-semibold text-gray-800 group-hover:text-green-700 transition-colors">{product.name}</h3>
                 <p className="text-gray-500 text-sm mb-4">{product.category}</p>
                 <button
                   onClick={() => {
                     setSelectedProduct(product);
                     setModalIsOpen(true);
                   }}
-                  className="mt-auto px-4 py-2 bg-green-100 text-green-700 rounded hover:bg-green-200 transition-colors"
+                  className="mt-auto px-4 py-2 bg-green-100 text-green-700 rounded hover:bg-green-200 transition-colors flex items-center justify-center gap-2"
                 >
+                  <Presentation size={16} />
                   {translations.ver_pro?.description}
                 </button>
               </div>
@@ -118,60 +121,64 @@ export default function ProductsSection() {
         </div>
       </div>
 
-      {/* Modal */}
-      {/* Modal */}
+      {/* Modal Mejorado */}
       {modalIsOpen && selectedProduct && (
-        <div className="fixed inset-0 flex items-end md:items-center justify-center z-50 bg-black bg-opacity-50 overflow-y-auto"
+        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black/70 backdrop-blur-sm p-4 overflow-y-auto"
           onClick={() => setModalIsOpen(false)}
         >
-          <div className="bg-white rounded-t-2xl md:rounded-lg shadow-lg w-full md:w-1/2 h-[85vh] md:max-h-[90vh] flex flex-col relative"
+          <div className="bg-white rounded-xl shadow-2xl w-full max-w-4xl max-h-[90vh] flex flex-col relative overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Botón de cerrar - Mejor posicionado */}
+            {/* Botón de cerrar */}
             <button
               onClick={() => setModalIsOpen(false)}
-              className="absolute top-3 right-3 z-10 p-1.5 rounded-full bg-white hover:bg-gray-100 transition-all shadow-md border border-gray-200"
+              className="absolute top-4 right-4 z-20 p-2 rounded-full bg-white hover:bg-gray-100 transition-all shadow-lg border border-gray-200 hover:scale-110"
               aria-label="Cerrar modal"
             >
               <X className="w-5 h-5 text-gray-700" />
             </button>
 
-            {/* Contenido del modal con scroll interno */}
-            <div className="flex-1 overflow-y-auto">
-              <div className="flex flex-col md:flex-row">
-                {/* Imagen */}
-                <div className="w-full md:w-1/2 h-56 md:h-auto relative group overflow-hidden">
-                  <CldImage
-                    src={selectedProduct.img}
-                    alt={selectedProduct.name}
-                    fill
-                    className="object-cover"
-                    priority
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
-                </div>
+            {/* Contenido del modal */}
+            <div className="flex flex-col md:flex-row h-full overflow-y-auto">
+              {/* Imagen con efecto de zoom */}
+              <div className="w-full md:w-1/2 h-64 md:h-auto relative overflow-hidden bg-gray-100">
+                <CldImage
+                  src={selectedProduct.img}
+                  alt={selectedProduct.name}
+                  fill
+                  className="object-cover transition-transform duration-300 hover:scale-105"
+                  priority
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+                <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black/60 to-transparent" />
+                <span className="absolute bottom-4 left-4 text-white font-bold text-xl drop-shadow-md">
+                  {selectedProduct.name}
+                </span>
+              </div>
 
-                {/* Contenido */}
-                <div className="w-full md:w-1/2 p-4 md:p-6 pb-20 md:pb-6">
-                  <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mt-2">{selectedProduct.name}</h1>
+              {/* Contenido */}
+              <div className="w-full md:w-1/2 p-6 md:p-8 flex flex-col">
+                <div className="flex-1">
+                  <span className="inline-block px-3 py-1 text-xs font-semibold text-green-800 bg-green-100 rounded-full mb-4">
+                    {selectedProduct.category}
+                  </span>
 
-                  <div className="mt-4">
-                    <h3 className="text-base md:text-lg font-semibold text-gray-900 border-b pb-1">
-                      {translations.catego?.description}
-                    </h3>
-                    <span className="inline-block mt-2 px-3 py-1 text-xs md:text-sm font-serif font-semibold text-green-800">
-                      {selectedProduct.category}
-                    </span>
-                  </div>
-
+                  {/* Sección de Presentación */}
                   {selectedProduct.presentacion?.length > 0 && (
-                    <div className="mt-4">
-                      <h3 className="text-base md:text-lg font-semibold text-gray-900 border-b pb-1">
-                        {translations.pres?.description}
-                      </h3>
-                      <div className="mt-2 space-y-1">
+                    <div className="mb-6">
+                      <div className="flex items-center gap-2 mb-3">
+                        <Package className="text-green-600" size={20} />
+                        <h3 className="text-lg font-bold text-gray-800">
+                          {translations.pres?.description}
+                        </h3>
+                      </div>
+                      <div className="grid grid-cols-2 gap-2">
                         {selectedProduct.presentacion.map((pres, index) => (
-                          <span key={index} className="inline-block px-3 py-1 text-xs md:text-sm font-serif font-semibold text-green-800">
+                          <span 
+                            key={index} 
+                            className="px-3 py-2 text-sm bg-gray-50 rounded-lg border border-gray-200 text-gray-700 flex items-center gap-2"
+                          >
+                            <Presentation size={14} className="text-green-500" />
                             {pres}
                           </span>
                         ))}
@@ -179,49 +186,46 @@ export default function ProductsSection() {
                     </div>
                   )}
 
+                  {/* Sección de Piezas */}
                   {selectedProduct.piezas && (
-                    <div className="mt-4">
-                      <h3 className="text-base md:text-lg font-semibold text-gray-900 border-b pb-1">
-                        {translations.pieza?.description}
-                      </h3>
-                      <span className="inline-block mt-2 px-3 py-1 text-xs md:text-sm font-serif font-semibold text-green-800">
+                    <div className="mb-6">
+                      <div className="flex items-center gap-2 mb-3">
+                        <ShoppingCart className="text-green-600" size={20} />
+                        <h3 className="text-lg font-bold text-gray-800">
+                          {translations.pieza?.description}
+                        </h3>
+                      </div>
+                      <div className="px-4 py-3 bg-gray-50 rounded-lg border border-gray-200 text-gray-700">
                         {selectedProduct.piezas}
-                      </span>
+                      </div>
                     </div>
                   )}
 
+                  {/* Sección de Kilos */}
                   {selectedProduct.kilos && (
-                    <div className="mt-4">
-                      <h3 className="text-base md:text-lg font-semibold text-gray-900 border-b pb-1">
-                        {translations.kilos?.description}
-                      </h3>
-                      <span className="inline-block mt-2 px-3 py-1 text-xs md:text-sm font-serif font-semibold text-green-800">
+                    <div className="mb-6">
+                      <div className="flex items-center gap-2 mb-3">
+                        <Scale className="text-green-600" size={20} />
+                        <h3 className="text-lg font-bold text-gray-800">
+                          {translations.kilos?.description}
+                        </h3>
+                      </div>
+                      <div className="px-4 py-3 bg-gray-50 rounded-lg border border-gray-200 text-gray-700">
                         {selectedProduct.kilos}
-                      </span>
+                      </div>
                     </div>
                   )}
                 </div>
+
+                {/* Botón de contacto */}
+                <button
+                  onClick={() => window.location.href = '/contact'}
+                  className="w-full px-6 py-3 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-medium rounded-lg transition-all flex items-center justify-center gap-2 mt-4 shadow-md hover:shadow-lg"
+                >
+                  <Leaf size={18} />
+                  {translations.but_contacto?.description}
+                </button>
               </div>
-            </div>
-
-            {/* Botón fijo en móvil */}
-            <div className="md:hidden absolute bottom-15 left-1/2 transform -translate-x-1/2">
-              <button
-                onClick={() => window.location.href = '/contact'}
-                className="justify-context px-4 py-2 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-md transition-colors"
-              >
-                {translations.but_contacto?.description}
-              </button>
-            </div>
-
-            {/* Botón en desktop */}
-            <div className="hidden md:block p-4 md:p-6">
-              <button
-                onClick={() => window.location.href = '/contact'}
-                className="w-full px-4 py-2 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-md transition-colors"
-              >
-                {translations.but_contacto?.description}
-              </button>
             </div>
           </div>
         </div>
