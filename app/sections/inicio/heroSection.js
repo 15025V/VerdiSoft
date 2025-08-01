@@ -49,7 +49,7 @@ export default function HeroSection() {
                 Flores Sons Farms
               </h1>
               <p className="text-2xl text-gray-200 italic mb-8 font-serif">
-                Exportación de cilantro fresco desde México al mundo
+                {translations.hero?.subtitle || 'Exportación de cilantro fresco desde México al mundo'}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                 <a
