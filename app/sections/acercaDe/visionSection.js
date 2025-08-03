@@ -43,7 +43,7 @@ export default function VisionSection() {
       >
         {translations.vision?.title}
       </h2>
-      <p className="text-justify font-serif max-w-4xl text-xl mx-auto px-6">
+      <p className="text-center font-serif max-w-4xl text-xl mx-auto px-6">
         {translations.vision?.description}
       </p>
 

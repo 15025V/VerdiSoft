@@ -32,7 +32,7 @@ export default function MisionSection() {
         </div>
 
         <div className="bg-green-600 text-white p-8 rounded-2xl flex flex-col justify-center h-full">
-          <p className="text-x4 leading-loose text-justify font-serif flex-grow">
+          <p className="text-x4 leading-loose font-serif flex-grow">
             {translations.tar1?.description}
           </p>
         </div>
@@ -49,7 +49,7 @@ export default function MisionSection() {
 
         {/* Segunda fila */}
         <div className="bg-green-600 text-white p-8 rounded-2xl flex flex-col justify-center h-full">
-          <p className="text-x4 leading-loose text-justify font-serif flex-grow">
+          <p className="text-x4 leading-loose  font-serif flex-grow">
             {translations.tar2?.description}
           </p>
         </div>
@@ -65,7 +65,7 @@ export default function MisionSection() {
         </div>
 
         <div className="bg-green-600 text-white p-8 rounded-2xl flex flex-col justify-center h-full">
-          <p className="text-x4 leading-loose text-justify font-serif flex-grow">
+          <p className="text-x4 leading-loose  font-serif flex-grow">
             {translations.tar3?.description}
           </p>
         </div>

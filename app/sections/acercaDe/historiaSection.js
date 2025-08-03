@@ -17,7 +17,7 @@ export default function HistoriaSection() {
           >
             {translations.conoce?.title}
           </h2>
-          <p className="text-lg leading-relaxed text-justify px-7 font-serif">
+          <p className="text-lg leading-relaxed  px-7 font-serif">
             {translations.conoce?.description}
           </p>
         </div>
@@ -49,7 +49,7 @@ export default function HistoriaSection() {
         </div>
 
         <div>
-          <p className="text-lg leading-relaxed text-justify px-7 font-serif">
+          <p className="text-lg leading-relaxed  px-7 font-serif">
             {translations.conoce?.description2}
           </p>
         </div>

@@ -52,7 +52,7 @@ export default function SomosSection() {
           viewport={{ once: true }}
           className="max-w-4xl mx-auto backdrop-blur-sm p-10 md:p-14 rounded-2xl shadow-lg dark:shadow-xl dark:shadow-gray-900/50 border border-white/30 dark:border-gray-700/30 transition-all duration-500"
         >
-          <p className="text-lg md:text-xl leading-relaxed md:leading-loose text-justify font-serif transition-colors duration-500">
+          <p className="text-lg md:text-xl leading-relaxed md:leading-loose text-center font-serif transition-colors duration-500">
             {translations.somos?.description}
           </p>
 
