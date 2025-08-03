@@ -52,9 +52,17 @@ export default function SomosSection() {
           viewport={{ once: true }}
           className="max-w-4xl mx-auto backdrop-blur-sm p-10 md:p-14 rounded-2xl shadow-lg dark:shadow-xl dark:shadow-gray-900/50 border border-white/30 dark:border-gray-700/30 transition-all duration-500"
         >
-          <p className="text-lg md:text-xl leading-relaxed md:leading-loose text-center font-serif transition-colors duration-500">
-            {translations.somos?.description}
-          </p>
+          {/* Párrafos divididos */}
+          {translations.somos?.description
+            ?.split('\n')
+            .map((paragraph, index) => (
+              <p
+                key={index}
+                className="text-lg md:text-xl leading-relaxed md:leading-loose text-justify font-serif mt-4 transition-colors duration-500"
+              >
+                {paragraph}
+              </p>
+            ))}
 
           {/* Misión, Visión, Valores - animados en cascada */}
           <motion.div
@@ -76,7 +84,7 @@ export default function SomosSection() {
                   visible: { opacity: 1, y: 0 }
                 }}
                 transition={{ duration: 0.6 }}
-                className="flex items-center gap-3 bg-green-50/80  px-6 py-3 rounded-full border border-green-100 dark:border-gray-600 transition-all duration-500 hover:scale-105"
+                className="flex items-center gap-3 bg-green-50/80 px-6 py-3 rounded-full border border-green-100 dark:border-gray-600 transition-all duration-500 hover:scale-105 hover:bg-green-100/80 cursor-pointer"
               >
                 <div className="w-3 h-3 rounded-full bg-green-500 dark:bg-green-400 animate-pulse transition-colors duration-500"></div>
                 <span className="font-medium text-green-800 dark:text-green-200 transition-colors duration-500">

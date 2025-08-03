@@ -17,8 +17,18 @@ export default function HistoriaSection() {
           >
             {translations.conoce?.title}
           </h2>
-          <p className="text-lg leading-relaxed  px-7 font-serif">
-            {translations.conoce?.description}
+          <p >
+            {translations.conoce?.description
+            ?.split('\n')
+            .map((paragraph, index) => (
+              <p
+                key={index}
+                className="text-lg md:text-xl leading-relaxed md:leading-loose text-justify font-serif mt-4 transition-colors duration-500"
+              >
+                {paragraph}
+              </p>
+            ))}
+
           </p>
         </div>
 
@@ -49,8 +59,17 @@ export default function HistoriaSection() {
         </div>
 
         <div>
-          <p className="text-lg leading-relaxed  px-7 font-serif">
-            {translations.conoce?.description2}
+          <p >
+            {translations.conoce?.description2
+             ?.split('\n')
+            .map((paragraph, index) => (
+              <p
+                key={index}
+                className="text-lg md:text-xl leading-relaxed md:leading-loose text-justify font-serif mt-4 transition-colors duration-500"
+              >
+                {paragraph}
+              </p>
+            ))}
           </p>
         </div>
       </div>

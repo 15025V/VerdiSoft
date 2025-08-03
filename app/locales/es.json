@@ -15,7 +15,7 @@
   },
   "somos": {
     "title": "¿Quiénes somos?",
-    "description": "Una empresa familiar dedicada a la producción y exportación de hortalizas, principalmente cilantro, cebollita, calabacita y brocoli de la más alta calidad, cultivadas con pasión y cuidado en nuestros campos. Nuestro compromiso con la excelencia, la sostenibilidad y la innovación nos ha posicionado como un referente en el mercado. Garantizamos un proceso impecable, asegurando que cada hortaliza conserve su frescura, color y aroma, ofreciendo a nuestros clientes un producto premium que supera las expectativas. En Flores Sons Farms producción y exportación."
+    "description": "Una empresa familiar dedicada a la producción y exportación de hortalizas, principalmente cilantro, cebollita, calabacita y brocoli de la más alta calidad, cultivadas con pasión y cuidado en nuestros campos. \nNuestro compromiso con la excelencia, la sostenibilidad y la innovación nos ha posicionado como un referente en el mercado. \nGarantizamos un proceso impecable, asegurando que cada hortaliza conserve su frescura, color y aroma, ofreciendo a nuestros clientes un producto premium que supera las expectativas."
   
   },
   "category": {
@@ -111,9 +111,9 @@
   },
   "conoce": {
     "title": "Conoce nuestra historia",
-    "description":"Se fundó en el año 2007 con la iniciativa del gobierno de aquella época, ya que la producción de Puebla era exclusivamente para el mercado nacional. Con esta iniciativa, varios productores se unieron y con el paso de los años, fueron creando diferentes empaques. En nuestro caso, esto dio origen a lo que hoy conocemos como Flores Sons Farms, una empresa familiar que ha evolucionado con el tiempo para adaptarse a los estándares del mercado.",
+    "description":"Se fundó en el año 2007 con la iniciativa del gobierno de aquella época, ya que la producción de Puebla era exclusivamente para el mercado nacional. \nCon esta iniciativa, varios productores se unieron y con el paso de los años, fueron creando diferentes empaques. \nEn nuestro caso, esto dio origen a lo que hoy conocemos como Flores Sons Farms, una empresa familiar que ha evolucionado con el tiempo para adaptarse a los estándares del mercado.",
     "button": "Desde 2007",
-    "description2": "Desde sus inicios, Flores Sons Farms ha trabajado con dedicación y esfuerzo para ofrecer productos de la más alta calidad, expandiendo su presencia más allá de las fronteras nacionales. A través de los años, hemos implementado tecnología de vanguardia en el proceso de producción, sistemas de control de calidad y métodos de cultivo, asegurando así la frescura y excelencia de nuestros productos. Nuestra empresa no solo se ha consolidado en el ámbito de la exportación, sino que también ha fomentado el desarrollo de la comunidad agrícola local, generando empleo y brindando oportunidades de crecimiento a numerosas familias.",
+    "description2": "Desde sus inicios, Flores Sons Farms ha trabajado con dedicación y esfuerzo para ofrecer productos de la más alta calidad, expandiendo su presencia más allá de las fronteras nacionales. \nA través de los años, hemos implementado tecnología de vanguardia en el proceso de producción, sistemas de control de calidad y métodos de cultivo, asegurando así la frescura y excelencia de nuestros productos. \nNuestra empresa no solo se ha consolidado en el ámbito de la exportación, sino que también ha fomentado el desarrollo de la comunidad agrícola local, generando empleo y brindando oportunidades de crecimiento a numerosas familias.",
     "button2": "Sus inicios"
   },
   "mision": {
@@ -121,7 +121,7 @@
    
   },
   "tar1": {
-    "description": "Ser la empresa líder en la zona en la exportación de cilantro, reconocida por su calidad y compromiso con nuestros clientes. Nos enfocamos en ofrecer productos frescos y de excelencia, cumpliendo con los estándares internacionales de inocuidad y calidad de nuestros clientes."
+    "description": "Ser la empresa líder en la zona en la exportación de cilantro, reconocida por su calidad y compromiso con nuestros clientes. \nNos enfocamos en ofrecer productos frescos y de excelencia, cumpliendo con los estándares internacionales de inocuidad y calidad de nuestros clientes."
   },
   "tar2": {
     "title:": "Innovación y Eficiencia",

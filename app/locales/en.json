@@ -15,8 +15,8 @@
   },
   "somos": {
     "title": "¿Who are we?",
-    "description": "A family business dedicated to the production and export of vegetables, mainly coriander, onions, zucchini, and broccoli of the highest quality, growth with passion and care in our fields. Our commitment to excellence, sustainability, and innovation has positioned us as a leader in the market. We guarantee an impeccable process, ensuring that each vegetable retains its freshness, color, and smelt, offering to our customers a premium product that exceeds expectations. At Flores Sons Farms, we produce and export."
-  
+  "description": "A family business dedicated to the production and export of vegetables, mainly coriander, onions, zucchini, and broccoli of the highest quality, growth with passion and care in our fields. \nOur commitment to excellence, sustainability, and innovation has positioned us as a leader in the market. \nWe guarantee an impeccable process, ensuring that each vegetable retains its freshness, color, and smelt, offering to our customers a premium product that exceeds expectations."
+
   },
   "category": {
     "title": "Learn about our products",
@@ -111,9 +111,9 @@
   },
   "conoce": {
     "title": "Learn about our history",
-    "description":"We were founded in 2007 at the initiative of the government at the time, as Puebla's production was exclusively for the domestic market. With this initiative, several producers joined forces and, over the years, created different packaging options. In our case, this gave rise to what we know today as Flores Sons Farms, a family business that has evolved over time to adapt to market standards.",
+    "description":"We were founded in 2007 at the initiative of the government at the time, as Puebla's production was exclusively for the domestic market. \nWith this initiative, several producers joined forces and, over the years, created different packaging options. \nIn our case, this gave rise to what we know today as Flores Sons Farms, a family business that has evolved over time to adapt to market standards.",
     "button": "Since 2007",
-    "description2": "Since its inception, Flores Sons Farms has worked with dedication and effort to offer products of the highest quality, expanding its presence beyond its national borders. Over the years, we have implemented cutting-edge technology in the production process, quality control systems, and cultivation methods, thus ensuring the freshness and excellence of our products. Our company has not only established itself in the export sector but has also fostered the development of the local agricultural community, generating employment and providing growth opportunities for numerous families.",
+    "description2": "Since its inception, Flores Sons Farms has worked with dedication and effort to offer products of the highest quality, expanding its presence beyond its national borders. \nOver the years, we have implemented cutting-edge technology in the production process, quality control systems, and cultivation methods, thus ensuring the freshness and excellence of our products. \nOur company has not only established itself in the export sector but has also fostered the development of the local agricultural community, generating employment and providing growth opportunities for numerous families.",
     "button2": "Its beginnings"
   },
   "mision": {
